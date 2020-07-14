@@ -1,3 +1,5 @@
+require('../../node_modules/bootstrap/dist/js/bootstrap.js');
+
 new Swiper('.swiper-container', {
     loop: true,
 })

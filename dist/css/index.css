@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Noto Sans TC", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -50,7 +50,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4277,7 +4277,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Noto Sans TC", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4362,7 +4362,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Noto Sans TC", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7162,15 +7162,26 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1rem;
-  color: #292929; }
+  font-size: 16px; }
 
-.container {
-  max-width: 1080px; }
+.dropdown-menu-center {
+  right: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
+
+.dropdown-toggle::after {
+  content: none; }
 
 nav.navbar {
-  font-size: 14px; }
+  font-size: 13px; }
+  nav.navbar .nav-item:not(.search) {
+    min-width: 100px; }
+  nav.navbar .nav-item a {
+    text-align: center; }
+  nav.navbar .nav-item img {
+    height: 18px; }
 
 .banner {
   height: 357px;
@@ -7214,7 +7225,8 @@ nav.navbar {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000000BB; }
+    line-height: 15px;
+    background-color: #000000AA; }
     .feature-item p i.fas.fa-chevron-right {
       position: absolute;
       right: 5px;
@@ -7237,11 +7249,18 @@ nav.navbar {
     line-height: 15px;
     font-size: 10px; }
 
+.fancy-number {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 5px 5px 0px black;
+  -webkit-text-stroke: 1px black; }
+
 .resource-item {
   border: 4px solid #136AD5;
   border-radius: 10px;
-  box-shadow: 10px 10px 0px #136AD5;
-  position: relative; }
+  box-shadow: 8px 8px 0px #136AD5;
+  position: relative;
+  width: 220px; }
   .resource-item i.fas.fa-chevron-right {
     position: absolute;
     right: 5px;
@@ -7253,9 +7272,34 @@ nav.navbar {
     line-height: 20px;
     text-align: center;
     font-size: 0.5rem; }
+  .resource-item .title {
+    font-size: 1.7rem;
+    color: #fff;
+    -webkit-text-stroke: 1px #136AD5; }
 
 .fancy-shadow {
   box-shadow: 10px 10px 0px #136AD5; }
+
+.fancy-times {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%); }
+  .fancy-times::after, .fancy-times::before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #FF8A2E; }
+  .fancy-times::after {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .fancy-times::before {
+    transform: translate(-50%, -50%) rotate(-45deg); }
 
 .member-avator {
   width: 182px;

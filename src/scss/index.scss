@@ -1,22 +1,45 @@
-$theme-colors: ("primary": #136AD5, "secondary": #FF8A2E) !default;
+$primary: #136AD5;
+$secondary: #FF8A2E;
+
+$theme-colors: ("primary": $primary, "secondary": $secondary) !default;
 
 $link-color: #707070;
 $link-hover-color:  #505050;
 
+$text-color: #292929;
+$font-family-sans-serif: 'Noto Sans TC', sans-serif;
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1rem;
-    color: #292929;
+    font-size: 16px;
 }
 
-.container {
-    max-width: 1080px;
+.dropdown-menu-center {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.dropdown-toggle::after { 
+    content: none; 
 }
 
 nav.navbar {
-    font-size: 14px;
+    font-size: 13px;
+    .nav-item:not(.search) {
+        min-width: 100px;
+    }
+    .nav-item {
+        a {
+            text-align: center;
+        }
+        img {
+            height: 18px;
+        }
+    }
 }
 
 .banner {
@@ -67,7 +90,8 @@ nav.navbar {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #000000BB;
+        line-height: 15px;
+        background-color: #000000AA;
         i.fas.fa-chevron-right {
             position: absolute;
             right: 5px;
@@ -96,11 +120,19 @@ nav.navbar {
     }
 }
 
+.fancy-number {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 5px 5px 0px black;
+    -webkit-text-stroke: 1px black;
+}
+
 .resource-item {
     border: 4px solid #136AD5;
     border-radius: 10px;
-    box-shadow: 10px 10px 0px #136AD5;
+    box-shadow: 8px 8px 0px #136AD5;
     position: relative;
+    width: 220px;
     i.fas.fa-chevron-right {
         position: absolute;
         right: 5px;
@@ -113,10 +145,42 @@ nav.navbar {
         text-align: center;
         font-size: 0.5rem;
     }
+
+    .title {
+        font-size: 1.7rem;
+        color: #fff;
+        -webkit-text-stroke: 1px #136AD5;
+    }
 }
 
 .fancy-shadow {
     box-shadow: 10px 10px 0px #136AD5;
+}
+
+.fancy-times {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+
+    &::after, &::before {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        content: "";
+        display: block;
+        width: 40px;
+        height: 4px;
+        background-color: #FF8A2E;
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
 }
 
 .member {
