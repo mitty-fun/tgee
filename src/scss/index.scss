@@ -7,7 +7,7 @@ $link-color: #707070;
 $link-hover-color:  #505050;
 
 $text-color: #292929;
-$font-family-sans-serif: 'Noto Sans TC', sans-serif;
+$font-family-sans-serif: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -97,6 +97,10 @@ nav.navbar {
     cursor: pointer;
     &:hover .bg-cover {
         background-size: 135%;
+    }
+    .fancy-card-date {
+        position: absolute;
+        bottom: 10px;
     }
 }
 
