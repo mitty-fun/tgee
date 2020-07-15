@@ -3,56 +3,100 @@ extends ./partials/layout.pug
 block content
   .container
     .banner(style="background-image: url('../static/banner.jpg')")
-    
+  
   .container
     .text-center.py-md-5.py-3
-      .small.d-block.text-secondary TGEE
+      .small.d-block.text-secondary •TGEE•
       h2.text-center 精選項目
       .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
-    .row.justify-content-md-center.slider
-      i.fas.fa-chevron-left.bg-primary.text-white.hover-scale-icon
-      i.fas.fa-chevron-right.bg-primary.text-white
-      .col-md-4
-        .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-1.png')")
-          p.small.p-3.mb-0.text-white 小聚點 遊戲團隊場地專案
-            i.fas.fa-chevron-right
-      .col-md-4
-        .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-2.png')")
-          p.small.p-3.mb-0.text-white 全球跨區域、多平台遊戲發行商
-            i.fas.fa-chevron-right
-      .col-md-4
-        .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-3.png')")
-          p.small.p-3.mb-0.text-white 全台唯一透過加速器投資獨立遊戲的新創平台
-            i.fas.fa-chevron-right
-      
+    
+    .slider(style="height: 220px")
+      .js-prev.prev-btn
+        i.fas.fa-chevron-left.bg-primary.text-white
+      .js-prev.next-btn
+        i.fas.fa-chevron-right.bg-primary.text-white
+      .js-slick
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-1.png')")
+              p.small.p-3.mb-0.text-white 小聚點 遊戲團隊場地專案
+                i.fas.fa-chevron-right
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-2.png')")
+              p.small.p-3.mb-0.text-white 全球跨區域、多平台遊戲發行商
+                i.fas.fa-chevron-right
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-3.png')")
+              p.small.p-3.mb-0.text-white 全台唯一透過加速器投資獨立遊戲的新創平台
+                i.fas.fa-chevron-right
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-1.png')")
+              p.small.p-3.mb-0.text-white 小聚點 遊戲團隊場地專案
+                i.fas.fa-chevron-right
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-2.png')")
+              p.small.p-3.mb-0.text-white 全球跨區域、多平台遊戲發行商
+                i.fas.fa-chevron-right
+        .p-3
+          .fancy-card
+            .rounded.overflow-hidden.shadow.bg-cover.feature-item(style="background-image: url('../static/feature-3.png')")
+              p.small.p-3.mb-0.text-white 全台唯一透過加速器投資獨立遊戲的新創平台
+                i.fas.fa-chevron-right
+    
+  //- .container
+  //-   .text-center.py-md-5.py-3
+  //-     .small.d-block.text-secondary •TGEE•
+  //-     h2.text-center 精選項目
+  //-     .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
+  //-   .row.justify-content-md-center.slider
+  //-     .prev-btn
+  //-       i.fas.fa-chevron-left.bg-primary.text-white
+  //-     .next-btn
+  //-       i.fas.fa-chevron-right.bg-primary.text-white
+  //-     .col-md-4.fancy-card
+  //-       .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-1.png')")
+  //-         p.small.p-3.mb-0.text-white 小聚點 遊戲團隊場地專案
+  //-           i.fas.fa-chevron-right
+  //-     .col-md-4.fancy-card
+  //-       .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-2.png')")
+  //-         p.small.p-3.mb-0.text-white 全球跨區域、多平台遊戲發行商
+  //-           i.fas.fa-chevron-right
+  //-     .col-md-4.fancy-card
+  //-       .rounded.overflow-hidden.shadow-lg.bg-cover.feature-item(style="background-image: url('../static/feature-3.png')")
+  //-         p.small.p-3.mb-0.text-white 全台唯一透過加速器投資獨立遊戲的新創平台
+  //-           i.fas.fa-chevron-right
 
   .container
     .text-center.py-md-5.py-3
-      .small.d-block.text-secondary TGEE
+      .small.d-block.text-secondary •TGEE•
       h2.text-center 最新消息
       .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
     
     .d-flex.justify-content-center.mb-md-5.mb-4
-      .py-2.px-3.mx-2.btn.border-primary.text-muted 官方消息
-      .py-2.px-3.mx-2.btn.border-primary.text-muted 產業訊息
-      .py-2.px-3.mx-2.btn.border-primary.text-primary 遊戲新聞
-      .py-2.px-3.mx-2.btn.border-primary.text-muted 活動看板
+      .fancy-pills.py-2.px-3.mx-2.btn.border-primary 官方消息
+      .fancy-pills.py-2.px-3.mx-2.btn.border-primary 產業訊息
+      .fancy-pills.py-2.px-3.mx-2.btn.border-primary.text-primary 遊戲新聞
+      .fancy-pills.py-2.px-3.mx-2.btn.border-primary 活動看板
     
     .row
-      .col-md-7
+      .col-md-7.fancy-card
         .rounded.overflow-hidden.main-new.shadow.bg-cover.feature-item(style="background-image: url('../static/news-1.png')")
           p.p-4.mb-0.text-white 原創獨立遊戲開發者與生態圈加速計畫 7/16 公開
             i.fas.fa-chevron-right
       .col-md-5
         .second-new.rounded.overflow-hidden.shadow
-          .row.no-gutters
+          .row.no-gutters.fancy-card
             .col-6.bg-cover(style="background-image: url('../static/news-2.png')")
             .col-6.p-4
               p 「數位內容產業發展補助計畫」於109年6月29日通過名單
               small 2020-11-12
               i.fas.fa-chevron-right.bg-primary.text-white
         .second-new.rounded.overflow-hidden.shadow(style="margin-top: 30px;")
-          .row.no-gutters
+          .row.no-gutters.fancy-card
             .col-6.bg-cover(style="background-image: url('../static/news-3.png')")
             .col-6.p-4
               p 「獨立遊戲開發獎勵計畫」審查結果及獲獎名單
@@ -61,7 +105,7 @@ block content
   
   .container.pt-md-5
     .text-center.pb-md-5
-      .small.d-block.text-secondary TGEE
+      .small.d-block.text-secondary •TGEE•
       h2.text-center 相關資源
       .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
     
@@ -100,7 +144,7 @@ block content
   
   .container.pt-md-5
     .text-center.pb-md-5
-      .small.d-block.text-secondary TGEE
+      .small.d-block.text-secondary •TGEE•
       h2.text-center 目前累積
       .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
 
@@ -121,23 +165,55 @@ block content
   
   .container.py-md-5
     .text-center.pb-md-5
-      .small.d-block.text-secondary TGEE
+      .small.d-block.text-secondary •TGEE•
       h2.text-center 各界推薦
       .mx-auto.bg-secondary(style="width: 50px; height: 2px;")
     
     .pb-md-5
-      .slider
-        i.fas.fa-chevron-left.bg-primary.text-white
-        i.fas.fa-chevron-right.bg-primary.text-white
+      .slider(style="height: 200px")
+        .js-member-prev.prev-btn
+          i.fas.fa-chevron-left.bg-primary.text-white
+        .js-member-next.next-btn
+          i.fas.fa-chevron-right.bg-primary.text-white
+        .js-member-slick
+          .member
+            .mx-auto(style="max-width: 700px;")
+              .d-inline-block.fancy-shadow.member-avator.shadow-primary(style="background-image: url('../static/avator.svg')")
+              .d-inline-block.member-info.pl-5
+                .mb-3.bg-secondary(style="width: 50px; height: 5px;")
+                h3.mb-2.h4 鄭&nbsp;祤&nbsp;呈
+                h4.mb-1.h5.font-weight-light 好 奇 心 創 意&nbsp;&nbsp;營 運 長
+                p.mt-3
+                  |這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+                  |一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+                  |作旅程從這開始吧。
+          .member
+            .mx-auto(style="max-width: 700px;")
+              .d-inline-block.fancy-shadow.member-avator.shadow-primary(style="background-image: url('../static/avator.svg')")
+              .d-inline-block.member-info.pl-5
+                .mb-3.bg-secondary(style="width: 50px; height: 5px;")
+                h3.mb-2.h4 鄭&nbsp;祤&nbsp;呈
+                h4.mb-1.h5.font-weight-light 好 奇 心 創 意&nbsp;&nbsp;營 運 長
+                p.mt-3
+                  |這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+                  |一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+                  |作旅程從這開始吧。
+
+    //- .pb-md-5
+    //-   .slider
+    //-     .prev-btn
+    //-       i.fas.fa-chevron-left.bg-primary.text-white
+    //-     .next-btn
+    //-       i.fas.fa-chevron-right.bg-primary.text-white
         
-        .member.mx-auto(style="max-width: 700px;")
-          .d-inline-block.fancy-shadow.member-avator.shadow-primary(style="background-image: url('../static/avator.svg')")
-          .d-inline-block.member-info.pl-5
-            .mb-3.bg-secondary(style="width: 50px; height: 5px;")
-            h3.mb-2.h4 鄭&nbsp;祤&nbsp;呈
-            h4.mb-1.h5.font-weight-light 好 奇 心 創 意&nbsp;&nbsp;營 運 長
-            p.mt-3
-              |這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
-              |一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
-              |作旅程從這開始吧。
+        //- .member.mx-auto(style="max-width: 700px;")
+        //-   .d-inline-block.fancy-shadow.member-avator.shadow-primary(style="background-image: url('../static/avator.svg')")
+        //-   .d-inline-block.member-info.pl-5
+        //-     .mb-3.bg-secondary(style="width: 50px; height: 5px;")
+        //-     h3.mb-2.h4 鄭&nbsp;祤&nbsp;呈
+        //-     h4.mb-1.h5.font-weight-light 好 奇 心 創 意&nbsp;&nbsp;營 運 長
+        //-     p.mt-3
+        //-       |這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+        //-       |一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+        //-       |作旅程從這開始吧。
         
