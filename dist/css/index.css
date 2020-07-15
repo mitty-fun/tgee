@@ -7225,13 +7225,13 @@ nav.navbar {
 .bg-cover {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 110%;
+  background-size: 120%;
   transition: background-size 0.25s ease; }
 
 .fancy-card {
   cursor: pointer; }
   .fancy-card:hover .bg-cover {
-    background-size: 125%; }
+    background-size: 135%; }
 
 .feature-item {
   position: relative;
@@ -7276,7 +7276,8 @@ nav.navbar {
   border-radius: 10px;
   box-shadow: 8px 8px 0px #136AD5;
   position: relative;
-  width: 220px; }
+  width: 220px;
+  cursor: pointer; }
   .resource-item i.fas.fa-chevron-right {
     position: absolute;
     right: 5px;
@@ -7288,6 +7289,8 @@ nav.navbar {
     line-height: 20px;
     text-align: center;
     font-size: 0.5rem; }
+  .resource-item:hover {
+    background-color: #d2e2f9; }
   .resource-item .title {
     font-size: 1.7rem;
     color: #fff;
