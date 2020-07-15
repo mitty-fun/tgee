@@ -9,7 +9,7 @@ sass.compiler = require('node-sass');
 function html() {
   return src('src/pug/*.pug')
     .pipe(pug())
-    .pipe(dest('dist/html/'));
+    .pipe(dest('dist/'));
 }
 
 function javascript() {
