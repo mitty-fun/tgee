@@ -22,3 +22,19 @@ $(document).ready(function () {
         nextArrow: '.js-member-next'
     });
 });
+
+$('.js-show-avator').click(function () {
+    $('.js-avator-nav-item').removeClass('d-none');
+    $(this).hide();
+});
+
+$('.js-oh-my-tab').click(function (){
+    var targetId = $(this).data('target');
+
+    $('.js-oh-my-tab-content > div').hide();
+    $(targetId).fadeIn();
+    
+    $('.js-oh-my-tab').removeClass('text-primary');
+    $(this).addClass('text-primary');
+    
+})

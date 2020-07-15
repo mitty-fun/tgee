@@ -12,27 +12,30 @@ nav.navbar.navbar-expand-lg.shadow.py-0
       
     .collapse.navbar-collapse#navbarTogglerDemo02
       ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
+        li.nav-item.py-3.border-right.border-muted.dropdown
+          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             img(src="../static/icon-2.svg")
             |&nbsp;最新消息
+          .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
+            a.py-2.dropdown-item.text-muted(href="#") 官方訊息
+            a.py-2.dropdown-item.border-top.text-muted(href="#") 產業訊息
         li.nav-item.py-3.border-right.border-muted
           a.nav-link(href="#")
             img(src="../static/icon-3.svg")
             |&nbsp;遊戲新聞
-        li.nav-item.py-3.border-right.border-muted.dropdown
-          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        li.nav-item.py-3.border-right.border-muted
+          a.nav-link(href="#")
             img(src="../static/icon-4.svg")
             |&nbsp;活動看板
+        li.nav-item.py-3.border-right.border-muted.dropdown
+          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            img(src="../static/icon-5.svg")
+            |&nbsp;相關資源
           .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
             a.py-2.dropdown-item.text-muted(href="#") 競賽獎賞
             a.py-2.dropdown-item.border-top.text-muted(href="#") 政府計劃
             a.py-2.dropdown-item.border-top.text-muted(href="#") 遊戲社群
             a.py-2.dropdown-item.border-top.text-muted(href="#") 會計法務
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
-            img(src="../static/icon-5.svg")
-            |&nbsp;相關資源
         li.nav-item.py-3.border-right.border-muted
           a.nav-link(href="#")
             img(src="../static/icon-6.svg")
@@ -47,10 +50,19 @@ nav.navbar.navbar-expand-lg.shadow.py-0
           a.nav-link(href="#")
             img(src="../static/icon-8.svg")
             |&nbsp;合作聯繫
-        li.nav-item.py-3.border-left.border-muted
+        li.nav-item.py-3.border-left.border-muted.js-show-avator
           a.nav-link(href="#")
             img(src="../static/icon-9.svg")
             |&nbsp;登入/註冊
+        li.nav-item.py-3.border-left.border-muted.dropdown.d-none.js-avator-nav-item
+          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            img.mr-3(src="../static/avator.svg" style="transform: scale(1.5); border-radius: 5px;")
+            i.fas.fa-chevron-down
+          .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
+            a.py-2.dropdown-item.text-muted(href="#") 個人資料
+            a.py-2.dropdown-item.border-top.text-muted(href="#") 新聞稿管理
+            a.py-2.dropdown-item.border-top.text-muted(href="#") 專屬服務一覽
+            a.py-2.dropdown-item.border-top.text-muted(href="#") 登入
         li.nav-item.py-3.border-left.border-muted.px-3.search
           a.nav-link(href="#")
             img(src="../static/icon-10.svg")
