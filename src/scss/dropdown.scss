@@ -1,0 +1,99 @@
+$radius: 30px;
+
+.tgee-dropdown {
+  
+  position: relative;
+  z-index: 10;
+
+  &:not(.active) &-menu {
+    display: none;
+  }
+
+  &.active &-trigger i {
+    transform: rotate(180deg);
+  }
+
+  &-trigger {
+    @extend .px-2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    border-radius: $radius;
+    background-color: $gray-4;
+
+    i {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      display: block;
+      transition: all 0.1s;
+      transform: rotate(0deg);
+    }
+  }
+
+  &-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  
+    border-radius: $radius;
+    background-color: $gray-4;
+
+    @extend .shadow-lg;
+    @extend .border-0;
+    @extend .pb-0;
+    @extend .w-100;
+    @extend .mt-0;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: $radius * 1.5;
+      display: block;
+      
+      background-color: $gray-4;
+      transform: translateY($radius);
+    }
+
+    &-body {
+      @extend .d-flex;
+      @extend .justify-content-between;
+      @extend .flex-wrap;
+      @extend .shadow-lg;
+
+      padding: $radius;
+      border-radius: $radius;
+      background-color: $gray-4;
+    } 
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .tgee-dropdown.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    background-color: $gray-4;
+    .tgee-dropdown-menu { 
+      box-shadow: none !important;
+      &-body {
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none !important;
+        .item {
+          border: 1px solid #ccc;
+        }
+      }
+    }
+    
+  }
+}

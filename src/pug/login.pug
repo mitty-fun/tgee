@@ -1,0 +1,25 @@
+extends ./layout/layout.pug
+
+block content
+  .container.py-5
+    .row.py-2
+      .col-7
+        .d-flex
+          h1.mb-3.mr-auto 會員登入
+          p
+            | 還不是會員？
+            a(href="#") 註冊會員
+        .form-group
+          label 電子郵件
+          input.form-control(placeholder="example@gmail.com")
+        .form-group
+          label 密碼
+          input.form-control(placeholder="6-12 個字元，中英混合")
+        
+        .form-group
+          input(type="checkbox" placeholder="https://example.com")
+          | 我同意&nbsp;
+          a(href="#") 使用條款與隱私權政策說明
+        button.btn.rounded-pill.btn-orange 註冊
+        
+    img.fancy-banner(src="images/登入_註冊/login@2x.png")

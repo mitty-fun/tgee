@@ -1,0 +1,39 @@
+.tgee-tabs .item {
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    color: $blue;
+  }
+
+  &.active::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: $blue;
+  }
+}
+
+.tgee-block-tabs .item {
+  cursor: pointer;
+  position: relative;
+  background-color: $gray-4;
+
+  &.active {
+    color: $blue;
+    background-color: #ffffff;
+  }
+
+  &.active::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: $blue;
+  }
+}

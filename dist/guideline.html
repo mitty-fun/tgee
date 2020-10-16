@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RGEE - TGEE</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="https://kit.fontawesome.com/cf18e00edc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="fixed-top f-16">
+      <div class="bg-blue d-md-none">
+        <div class="p-2">
+          <div class="position-relative d-flex justify-content-between align-items-center">
+            <div class="text-white" data-toggle="collapse" data-target="#navbar-mobile-collapse"><i class="fas fa-bars"></i></div>
+            <h3 class="mb-0 text-white">TGEE</h3><span class="ml-3 text-white searchbox"><i class="fas fa-search js-toggle-searchbox"></i>
+              <input placeholder="搜尋"/></span>
+          </div>
+        </div>
+        <div class="collapse" id="navbar-mobile-collapse">
+          <div class="d-flex text-white bg-blue">
+            <div class="p-2 flex-fill text-center border border-light-blue border-left-0 border-right-0" data-toggle="collapse" data-target="#navbar-collapse-my">登入註冊</div>
+            <div class="p-2 flex-fill text-center border border-light-blue border-right-0">合作聯繫</div>
+          </div>
+          <div class="list-group list-group-flush collapse" id="navbar-collapse-my" data-parent="#navbar-mobile-collapse"><a class="list-group-item">個人資料</a><a class="list-group-item">文章管理</a><a class="list-group-item">專屬服務</a><a class="list-group-item">登出</a></div>
+          <div class="list-group list-group-flush" data-parent="#navbar-mobile-collapse"><a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse" data-target="#navbar-collapse-1">最新消息<i class="fas fa-chevron-up ml-auto"></i></a>
+            <div class="collapse" id="navbar-collapse-1" data-parent="#navbar-mobile-collapse"><a class="list-group-item bg-light-blue">官方消息</a><a class="list-group-item bg-light-blue">產業訊息</a></div><a class="list-group-item">遊戲新聞</a><a class="list-group-item">知識文章</a><a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse" data-target="#navbar-collapse-2">活動看板<i class="fas fa-chevron-up ml-auto"></i></a>
+            <div class="collapse" id="navbar-collapse-2" data-parent="#navbar-mobile-collapse"><a class="list-group-item bg-light-blue">國際展會</a><a class="list-group-item bg-light-blue">活動課程</a></div><a class="list-group-item">專屬服務</a><a class="list-group-item">遊戲一覽</a><a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse" data-target="#navbar-collapse-3">相關資源<i class="fas fa-chevron-up ml-auto"></i></a>
+            <div class="collapse" id="navbar-collapse-3" data-parent="#navbar-mobile-collapse"><a class="list-group-item bg-light-blue">競賽獎項</a><a class="list-group-item bg-light-blue">政府計畫</a><a class="list-group-item bg-light-blue">遊戲社群</a><a class="list-group-item bg-light-blue">會計法務</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="tgee-navbar d-none d-md-flex px-5"><a class="mr-5" href="#">TGEE</a><a class="mr-4" href="/news">最新消息</a><a class="mr-4" href="/gamenews">遊戲新聞</a><a class="mr-4" href="/posts">知識文章</a><a class="mr-4" href="/campaign">活動看板</a><a class="mr-4" href="/service">專屬服務</a><a class="mr-4" href="/games">遊戲一覽</a><a class="mr-4" href="/resource">相關資源</a>
+        <div class="d-flex ml-auto align-items-center position-relative"><a class="btn btn-sm btn-outline-gray-4 rounded-pill ml-3" href="/contact">合作聯繫</a>
+          <div class="ml-3 text-white"><i class="fas fa-user-circle"></i></div>
+          <div class="ml-3 text-white searchbox"><i class="fas fa-search js-toggle-searchbox"></i>
+            <input placeholder="搜尋"/>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div style="padding-top: 62px;">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-6">
+            <h2>Typography Noto Sans CJK TC</h2>
+            <hr/>
+            <h1>H1 36pt medium</h1>
+            <h2>H2 24pt medium</h2>
+            <h3>H3 21pt medium</h3>
+            <h2>Paragraphs</h2>
+            <hr/>
+            <p>p 18pt medium</p>
+            <p>p 18pt regular</p>
+            <p>p 16pt medium</p>
+            <p>p 16pt regular</p>
+            <h2>labels</h2>
+            <labels>labels 14pt medium</labels><br/>
+            <labels>labels 14pt regular</labels><br/>
+            <labels>labels 12pt medium</labels><br/>
+            <labels>labels 12pt regular</labels>
+          </div>
+          <div class="col-6">
+            <h2>colors</h2>
+            <hr/>
+            <p class="text-primary">.text-primary</p>
+            <p class="text-secondary">.text-secondary</p>
+            <p class="text-blue">.text-blue</p>
+            <p class="text-orange">.text-orange</p>
+            <p class="text-gray-1">.text-gray-1</p>
+            <p class="text-gray-2">.text-gray-2</p>
+            <p class="text-gray-3">.text-gray-3</p>
+            <p class="text-gray-4">.text-gray-4</p>
+            <p class="text-gray-5">.text-gray-5</p>
+            <div class="p-2 bg-primary">.bg-primary</div>
+            <div class="p-2 bg-secondary">.bg-secondary</div>
+            <div class="p-2 bg-blue">.bg-blue</div>
+            <div class="p-2 bg-orange">.bg-orange</div>
+            <div class="p-2 bg-gray-1">.bg-gray-1</div>
+            <div class="p-2 bg-gray-2">.bg-gray-2</div>
+            <div class="p-2 bg-gray-3">.bg-gray-3</div>
+            <div class="p-2 bg-gray-4">.bg-gray-4</div>
+            <div class="p-2 bg-gray-5">.bg-gray-5</div>
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <h2>Button</h2>
+        <hr/>
+        <button class="btn rounded-pill btn-outline-primary btn-lg">normal</button>
+        <button class="btn rounded-pill btn-outline-primary">normal</button>
+        <button class="btn rounded-pill btn-outline-primary btn-sm">normal</button><br/>
+        <button class="btn rounded-pill btn-orange btn-lg">normal</button>
+        <button class="btn rounded-pill btn-orange">normal</button>
+        <button class="btn rounded-pill btn-orange btn-sm">normal</button><br/>
+        <button class="btn rounded-pill btn-white btn-lg">normal</button>
+        <button class="btn rounded-pill btn-white">normal</button>
+        <button class="btn rounded-pill btn-white btn-sm">normal</button><br/>
+        <button class="btn-circle btn-primary"><span>&times;</span></button>
+        <button class="btn-circle btn-primary hover"><span>&times;</span></button>
+        <button class="btn-circle btn-primary focus"><span>&times;</span></button>
+        <h2>Link</h2>
+        <hr/><a href="#">《螢幕判官》開發團隊新作《棄海：波弟大冒險》正式揭曉 即日起開放預先登錄 - GNN 記者 Jessica 報導</a><br/><a href="#">《螢幕判官》開發團隊新作《棄海：波弟大冒險》正式揭曉 即日起開放預先登錄 - GNN 記者 Jessica 報導</a><br/><a href="#">《螢幕判官》開發團隊新作《棄海：波弟大冒險》正式揭曉 即日起開放預先登錄 - GNN 記者 Jessica 報導</a>
+        <h2>Form</h2>
+        <hr/>
+        <label>信箱</label>
+        <input class="form-control" placeholder="example@gmail.com"/>
+        <label>信箱</label>
+        <div class="position-relative">
+          <input class="form-control" placeholder="example@gmail.com"/>
+          <button class="btn-circle btn-primary close-btn btn-sm"><span>&times;</span></button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="bg-light-blue text-dark">
+        <div class="py-5 container f-14" id="footer-collapse">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="py-2 my-pd-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-1"><span>關於我們</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">關於我們</a></div>
+              <div class="collapse d-md-block" id="footer-collapse-1" data-parent="#footer-collapse"><a class="py-1" href="#">計畫團隊</a><a class="py-1" href="#">媒體素材</a></div>
+            </div>
+            <div class="col-md-3">
+              <div class="py-2 mb-py-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-2"><span>條款相關</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">條款相關</a></div>
+              <div class="collapse d-md-block" id="footer-collapse-2" data-parent="#footer-collapse"><a class="py-1" href="#">常見問題</a><a class="py-1" href="#">版權說明</a><a class="py-1" href="#">隱私權政策</a></div>
+            </div>
+            <div class="col-md-3">
+              <div class="py-2 mb-py-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-2"><span>相關連結</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">相關連結</a></div>
+              <div class="collapse d-md-block" id="footer-collapse-2" data-parent="#footer-collapse"><a class="py-1" href="#">TIGEA</a><a class="py-1" href="#">創夢市集</a><a class="py-1" href="#">好奇心創意</a><a class="py-1" href="#">Another indie</a></div>
+            </div>
+            <div class="col-md-3">
+              <div class="py-2 mb-py-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-3"><span>與我們聯絡</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">與我們聯絡</a></div>
+              <div class="collapse d-md-block" id="footer-collapse-3" data-parent="#footer-collapse"><a class="py-1" href="#">FB粉絲團</a><a class="py-1" href="#">Gamesupport01@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark-blue text-white">
+        <div class="container py-2 d-md-flex justify-content-between align-items-center">
+          <p class="mb-0">TGEE</p>
+          <p class="mb-0 f-12">創夢市集版權所有 © Copyright 2019, ditlabs Co., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

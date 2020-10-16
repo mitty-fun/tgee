@@ -1,0 +1,59 @@
+.tgee-navbar {
+  height: 65px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: $primary;
+
+  a {
+    color: #ffffff;
+    transition: color 0.2s;
+    &:hover {
+      color:#ffffff55;
+    }
+  }
+}
+
+.searchbox:not(.active) {
+  input {
+    display: none;
+  }
+}
+
+.searchbox.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  
+  i {
+    z-index: 1;
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 0;
+    border-bottom: 1px solid #fff;
+    background-color: $primary;
+    outline: none;
+    color: #fff;
+  }
+  
+  i.fas.fa-times {
+    position: absolute;
+    right: 0;
+  }
+}

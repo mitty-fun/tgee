@@ -1,42 +1,50 @@
-.bg-primary
-  .container.py-3.border-right.border-white(style="border-right-width: 4px !important;")
-    .d-flex.align-items-center
-      img(src="./static/icon-1.svg" height="40")
-      p.h4.pl-2.mb-0.text-white TGEE
-      .ml-auto
-        img(src="./static/icon-1.png" height="30")
-        span.small.mb-0.pl-2.text-white 讓你的遊戲創作旅程從這開始
-        span.px-2.align-middle
-          i.fas.fa-chevron-up.bg-primary.text-white(style="font-size: 1.5rem;")
+footer
+  .bg-light-blue.text-dark
+    #footer-collapse.py-5.container.f-14
+      .row
+        .col-md-3
+          .py-2.my-pd-3
+            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-1')
+              span 關於我們
+              i.fas.fa-chevron-up.ml-auto
+            a.d-none.d-md-block 關於我們
+          #footer-collapse-1.collapse.d-md-block(data-parent='#footer-collapse')
+            a.py-1(href="#") 計畫團隊
+            a.py-1(href="#") 媒體素材
+        .col-md-3
+          .py-2.mb-py-3
+            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-2')
+              span 條款相關
+              i.fas.fa-chevron-up.ml-auto
+            a.d-none.d-md-block 條款相關
+          #footer-collapse-2.collapse.d-md-block(data-parent='#footer-collapse')
+            a.py-1(href="#") 常見問題
+            a.py-1(href="#") 版權說明
+            a.py-1(href="#") 隱私權政策
+        .col-md-3
+          .py-2.mb-py-3
+            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-2')
+              span 相關連結
+              i.fas.fa-chevron-up.ml-auto
+            a.d-none.d-md-block 相關連結
+          #footer-collapse-2.collapse.d-md-block(data-parent='#footer-collapse')
+            a.py-1(href="#") TIGEA
+            a.py-1(href="#") 創夢市集
+            a.py-1(href="#") 好奇心創意
+            a.py-1(href="#") Another indie
+        .col-md-3
+          .py-2.mb-py-3
+            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-3')
+              span 與我們聯絡
+              i.fas.fa-chevron-up.ml-auto
+            a.d-none.d-md-block 與我們聯絡
+          #footer-collapse-3.collapse.d-md-block(data-parent='#footer-collapse')
+            a.py-1(href="#") FB粉絲團
+            a.py-1(href="#") Gamesupport01@gmail.com
+  
 
-.container
-  .row.py-5
-    .col-md-3
-      .h5.px-2.border-left.border-primary.text-primary(style="border-left-width: 2px !important;") 關於我們
-      a.px-2.mt-3.d-block.text-muted(href="#") 隱私權政策
-      a.px-2.mt-3.d-block.text-muted(href="#") 版權說明
-      a.px-2.mt-3.d-block.text-muted(href="#") 計劃團隊
-      a.px-2.mt-3.d-block.text-muted(href="#") 媒體素材(LOGO)
-    
-    .col-md-3
-      .h5.px-2.border-left.border-primary.text-primary(style="border-left-width: 2px !important;") 重點連結
-      a.px-2.mt-3.d-block.text-gray(href="#") 常見問題
-      a.px-2.mt-3.d-block.text-gray(href="#") FB粉絲團
+  .bg-dark-blue.text-white
+    .container.py-2.d-md-flex.justify-content-between.align-items-center
+      p.mb-0 TGEE
+      p.mb-0.f-12 創夢市集版權所有 © Copyright 2019, ditlabs Co., Ltd. All rights reserved.
 
-    .offset-md-2.col-md-4
-      .mt-0
-        .mb-1.bg-secondary(style="width: 40px; height: 4px;")
-        .h5.mb-0.mt-3.text-primary 合作聯繫
-        a.mt-3.d-block.text-gray(href="mailto:gamesupport01@gmail.com")
-          i.fas.fa-envelope
-          |&nbsp;gamesupport01@gmail.com
-      .mt-4
-        .mb-1.bg-secondary(style="width: 40px; height: 4px;")
-        .h5.mb-0.mt-3.text-primary 聯繫我們
-        a.mt-3.d-block.text-gray(href="mailto:gamesupport01@gmail.com")
-          i.fas.fa-envelope
-          |&nbsp;gamesupport01@gmail.com
-
-.border-top.border-primary
-  .container.pt-3.pb-4
-    span.small.text-gray Copyright ©

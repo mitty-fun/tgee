@@ -1,48 +1,51 @@
-const { parallel, src, dest, watch } = require('gulp');
-const sass = require('gulp-sass');
-const pug = require('gulp-pug');
-const webserver = require('gulp-webserver');
-const browserify = require('gulp-browserify');
+const { watch, src, dest, parallel } = require('gulp')
+const sass = require('gulp-sass')
+const pug = require('gulp-pug')
+const browserify = require('gulp-browserify')
+const image = require('gulp-image')
 
-sass.compiler = require('node-sass');
+const data = require('./src/json/games.json')
 
-function html() {
-  return src('src/pug/*.pug')
-    .pipe(pug())
-    .pipe(dest('dist/'));
+
+function html (cb) {
+    src('src/pug/*.pug')
+    .pipe(pug({
+        data: { title: 'TGEE', games: data},
+        pretty: true
+        
+    }).on('error', console.log))
+    .pipe(dest('./dist'))
+    cb()
 }
 
-function javascript() {
-  return src('src/js/*.js')
+function css(cb) {
+    src('./src/scss/index.scss')
+    .pipe(sass({
+        includePaths: ['node_modules/bootstrap/scss/', 'node_modules/bootstrap/scss/']
+    }).on('error', sass.logError))
+    .pipe(dest('./dist'))
+    cb()
+}
+
+function javascript (cb) {
+    src('./src/javascript/index.js')
     .pipe(browserify())
-    .pipe(dest('dist/js/'));
+    .on('error', console.log)
+    .pipe(dest('./dist'))
+    cb()
 }
 
-function css() {
-  return src('src/scss/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(dest('dist/css/'));
+function optimize (cb) {
+    src('./src/images/**/*.{png,gif,jpg}')
+    // .pipe(image())
+    .pipe(dest('./dist/images'))
+    cb()
 }
 
-function server() {
-  return src('./')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: true,
-      open: true
-    }));
-};
-
-function copyAssets () {
-  return src('./static/*')
-    .pipe(dest('dist/static/'))
-
+exports.default = function () {
+    watch('src/javascript/*.js', javascript)
+    watch(['src/scss/*.scss', 'src/**/*.scss'], css)
+    watch(['src/pug/*.pug', 'src/pug/**/*.pug'], html)
 }
-exports.default = function() {
-  
-  watch('src/js/*.js', javascript);
-  watch('src/scss/*.scss', css);
-  watch(['src/pug/*.pug', 'src/pug/*/*.pug'], html);
 
-  parallel(html, javascript, css, server, copyAssets)();
-};
+exports.build = parallel(html, css, javascript, optimize)

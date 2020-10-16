@@ -1,68 +1,68 @@
+nav.fixed-top.f-16
+  
+  //- 手機版
+  .bg-blue.d-md-none
+    .p-2
+      .position-relative.d-flex.justify-content-between.align-items-center
+        .text-white(data-toggle='collapse' data-target='#navbar-mobile-collapse')
+          i.fas.fa-bars
+        h3.mb-0.text-white TGEE
+        span.ml-3.text-white.searchbox
+          i.fas.fa-search.js-toggle-searchbox
+          input(placeholder="搜尋")
 
-nav.navbar.navbar-expand-lg.shadow.py-0
-  .container
-    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation")
-      span.navbar-toggler-icon
+    #navbar-mobile-collapse.collapse
+      .d-flex.text-white.bg-blue
+        .p-2.flex-fill.text-center.border.border-light-blue.border-left-0.border-right-0(data-toggle='collapse' data-target='#navbar-collapse-my') 登入註冊
+        .p-2.flex-fill.text-center.border.border-light-blue.border-right-0 合作聯繫
     
-    .py-3.border-right.border-muted.bg-primary.px-3
-      a.nav-link.text-white(href="#")
-        img(src="./static/icon-1.svg")
-        |&nbsp;&nbsp;
-        span.strong(style="font-size: 16px; font-weight: 900") TGEE
-      
-    .collapse.navbar-collapse#navbarTogglerDemo02
-      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-        li.nav-item.py-3.border-right.border-muted.dropdown
-          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-            img(src="./static/icon-2.svg")
-            |&nbsp;最新消息
-          .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
-            a.py-2.dropdown-item.text-muted(href="#") 官方訊息
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 產業訊息
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
-            img(src="./static/icon-3.svg")
-            |&nbsp;遊戲新聞
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
-            img(src="./static/icon-4.svg")
-            |&nbsp;活動看板
-        li.nav-item.py-3.border-right.border-muted.dropdown
-          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-            img(src="./static/icon-5.svg")
-            |&nbsp;相關資源
-          .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
-            a.py-2.dropdown-item.text-muted(href="#") 競賽獎賞
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 政府計劃
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 遊戲社群
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 會計法務
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
-            img(src="./static/icon-6.svg")
-            |&nbsp;遊戲一覽
-        li.nav-item.py-3.border-right.border-muted
-          a.nav-link(href="#")
-            img.align-middle(src="./static/icon-7.svg")
-            span &nbsp;專屬服務
-      
-      ul.navbar-nav.mt-2.mt-lg-0
-        li.nav-item.py-3.border-left.border-muted
-          a.nav-link(href="#")
-            img(src="./static/icon-8.svg")
-            |&nbsp;合作聯繫
-        li.nav-item.py-3.border-left.border-muted.js-show-avator
-          a.nav-link(href="#")
-            img(src="./static/icon-9.svg")
-            |&nbsp;登入/註冊
-        li.nav-item.py-3.border-left.border-muted.dropdown.d-none.js-avator-nav-item
-          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-            img.mr-3(src="./static/avator.svg" style="transform: scale(1.5); border-radius: 5px;")
-            i.fas.fa-chevron-down
-          .dropdown-menu.py-0.border-0.shadow.dropdown-menu-center(aria-labelledby="navbarDropdown")
-            a.py-2.dropdown-item.text-muted(href="#") 個人資料
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 新聞稿管理
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 專屬服務一覽
-            a.py-2.dropdown-item.border-top.text-muted(href="#") 登出
-        li.nav-item.py-3.border-left.border-muted.px-3.search
-          a.nav-link(href="#")
-            img(src="./static/icon-10.svg")
+      .list-group.list-group-flush#navbar-collapse-my.collapse(data-parent='#navbar-mobile-collapse')
+        a.list-group-item 個人資料
+        a.list-group-item 文章管理
+        a.list-group-item 專屬服務
+        a.list-group-item 登出
+
+      .list-group.list-group-flush(data-parent='#navbar-mobile-collapse')
+        a.collapsed.d-flex.list-group-item.collapse-trigger(data-toggle='collapse' data-target='#navbar-collapse-1')
+          | 最新消息
+          i.fas.fa-chevron-up.ml-auto
+        #navbar-collapse-1.collapse(data-parent='#navbar-mobile-collapse')
+          a.list-group-item.bg-light-blue 官方消息
+          a.list-group-item.bg-light-blue 產業訊息
+        a.list-group-item 遊戲新聞
+        a.list-group-item 知識文章
+        a.collapsed.d-flex.list-group-item.collapse-trigger(data-toggle='collapse' data-target='#navbar-collapse-2')
+          | 活動看板
+          i.fas.fa-chevron-up.ml-auto
+        #navbar-collapse-2.collapse(data-parent='#navbar-mobile-collapse')
+          a.list-group-item.bg-light-blue 國際展會
+          a.list-group-item.bg-light-blue 活動課程
+        a.list-group-item 專屬服務
+        a.list-group-item 遊戲一覽
+        a.collapsed.d-flex.list-group-item.collapse-trigger(data-toggle='collapse' data-target='#navbar-collapse-3')
+          | 相關資源
+          i.fas.fa-chevron-up.ml-auto
+        #navbar-collapse-3.collapse(data-parent='#navbar-mobile-collapse')
+          a.list-group-item.bg-light-blue 競賽獎項
+          a.list-group-item.bg-light-blue 政府計畫
+          a.list-group-item.bg-light-blue 遊戲社群
+          a.list-group-item.bg-light-blue 會計法務
+  
+  //- 電腦版
+  .tgee-navbar.d-none.d-md-flex.px-5
+    a.mr-5(href="#") TGEE
+    a.mr-4(href="/news") 最新消息
+    a.mr-4(href="/gamenews") 遊戲新聞
+    a.mr-4(href="/posts") 知識文章
+    a.mr-4(href="/campaign") 活動看板
+    a.mr-4(href="/service") 專屬服務
+    a.mr-4(href="/games") 遊戲一覽
+    a.mr-4(href="/resource") 相關資源
+
+    .d-flex.ml-auto.align-items-center.position-relative
+      a.btn.btn-sm.btn-outline-gray-4.rounded-pill.ml-3(href="/contact") 合作聯繫
+      .ml-3.text-white
+        i.fas.fa-user-circle
+      .ml-3.text-white.searchbox
+        i.fas.fa-search.js-toggle-searchbox
+        input(placeholder="搜尋")
