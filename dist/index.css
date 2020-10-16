@@ -1,5 +1,5 @@
-@import url(../../node_modules/slick-carousel/slick/slick.css);
-@import url(../../node_modules/slick-carousel/slick/slick-theme.css);
+@import url(./vendor/slick.css);
+@import url(./vendor/slick-theme.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap");
 .btn, .tgee-circle-button {
   box-sizing: border-box; }

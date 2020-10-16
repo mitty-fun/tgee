@@ -35,12 +35,16 @@ function javascript (cb) {
     cb()
 }
 
-function optimize (cb) {
+function copyAssets (cb) {
     src('./src/images/**/*.{png,gif,jpg}')
     // .pipe(image())
     .pipe(dest('./dist/images'))
+
+    src('./vendor/*')
+    .pipe(dest('./dist/vendor'))
     cb()
 }
+
 
 exports.default = function () {
     watch('src/javascript/*.js', javascript)
@@ -48,4 +52,4 @@ exports.default = function () {
     watch(['src/pug/*.pug', 'src/pug/**/*.pug'], html)
 }
 
-exports.build = parallel(html, css, javascript, optimize)
+exports.build = parallel(html, css, javascript, copyAssets)
