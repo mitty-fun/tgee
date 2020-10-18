@@ -1,50 +1,51 @@
+// .tgee-card-2:hover .tgee-circle-button,
 .tgee-card:hover .tgee-circle-button {
   background-color: $blue;
   border-color: #00000000;
   color: #fff;
 }
 
-.tgee-card {
-  @extend .shadow;
-  @extend .rounded;
-  @extend .overflow-hidden;
+// .tgee-card {
+//   @extend .shadow;
+//   @extend .rounded;
+//   @extend .overflow-hidden;
 
-  position: relative;
-  cursor: pointer;
-  transition: all 0.5s;
+//   position: relative;
+//   cursor: pointer;
+//   transition: all 0.5s;
 
-  &-img {
-    background-size: 100%;
-    background-position: center;
-    transition: all .2s;
-  }
+//   &-img {
+//     background-size: 100%;
+//     background-position: center;
+//     transition: all .2s;
+//   }
 
-  &-body {
-    @extend .p-2;
-    @extend .pb-4;
-    position: relative;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+//   &-body {
+//     @extend .p-2;
+//     @extend .pb-4;
+//     position: relative;
+//     flex-grow: 1;
+//     flex-shrink: 1;
+//   }
 
-  &-footer {
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .p-2;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+//   &-footer {
+//     @extend .d-flex;
+//     @extend .align-items-center;
+//     @extend .p-2;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//   }
 
-  &:hover {
-    @extend .shadow-lg;
-  }
+//   &:hover {
+//     @extend .shadow-lg;
+//   }
 
-  &:hover > &-img {
-    background-size: 120%;
-  }
-}
+//   &:hover > &-img {
+//     background-size: 120%;
+//   }
+// }
 
 .tgee-card-h > .tgee-card-img {
   width: 100%;
@@ -61,4 +62,68 @@
   width: 100%;
   height: 210px;
   flex-shrink: 0;
+}
+
+
+
+// .tgee-card {
+//   display: flex;
+//   @extend .flex-column;
+//   @extend .flex-md-row;
+
+//   &-img {
+//     @extend .flex-md-grow-0;
+//     background-size: cover;
+//     background-position: center;
+    
+//     width: 100%;
+//     height: 168px;
+
+//     @include media-breakpoint-up(md) {
+//       max-width: 310px;
+//     }
+//   }
+
+//   &-body {
+//     padding: $spacer;
+//     flex-grow: 1;
+//     display: flex;
+//     @extend .flex-column;
+//     @extend .justify-content-between;
+//   }
+// }
+
+.tgee-card {
+  @extend .shadow;
+  @extend .rounded;
+  @extend .overflow-hidden;
+  @extend .flex-column;
+  
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &-img {
+    background-size: 100%;
+    background-position: center;
+    transition: all .2s;
+    width: 100%;
+    height: 168px;
+  }
+
+  &-body {
+    padding: $spacer;
+    flex-grow: 1;
+    display: flex;
+    @extend .flex-column;
+    @extend .justify-content-between;
+  }
+
+  &:hover {
+    @extend .shadow-lg;
+  }
+
+  &:hover > &-img {
+    background-size: 120%;
+  }
 }

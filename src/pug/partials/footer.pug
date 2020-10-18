@@ -1,48 +1,46 @@
-footer
+footer#footer
   .bg-light-blue.text-dark
-    #footer-collapse.py-5.container.f-14
-      .row
-        .col-md-3
-          .py-2.my-pd-3
-            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-1')
-              span 關於我們
-              i.fas.fa-chevron-up.ml-auto
-            a.d-none.d-md-block 關於我們
-          #footer-collapse-1.collapse.d-md-block(data-parent='#footer-collapse')
-            a.py-1(href="#") 計畫團隊
-            a.py-1(href="#") 媒體素材
-        .col-md-3
-          .py-2.mb-py-3
-            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-2')
-              span 條款相關
-              i.fas.fa-chevron-up.ml-auto
-            a.d-none.d-md-block 條款相關
-          #footer-collapse-2.collapse.d-md-block(data-parent='#footer-collapse')
-            a.py-1(href="#") 常見問題
-            a.py-1(href="#") 版權說明
-            a.py-1(href="#") 隱私權政策
-        .col-md-3
-          .py-2.mb-py-3
-            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-2')
-              span 相關連結
-              i.fas.fa-chevron-up.ml-auto
-            a.d-none.d-md-block 相關連結
-          #footer-collapse-2.collapse.d-md-block(data-parent='#footer-collapse')
-            a.py-1(href="#") TIGEA
-            a.py-1(href="#") 創夢市集
-            a.py-1(href="#") 好奇心創意
-            a.py-1(href="#") Another indie
-        .col-md-3
-          .py-2.mb-py-3
-            a.collapse-trigger.d-md-none(data-toggle='collapse' data-target='#footer-collapse-3')
-              span 與我們聯絡
-              i.fas.fa-chevron-up.ml-auto
-            a.d-none.d-md-block 與我們聯絡
-          #footer-collapse-3.collapse.d-md-block(data-parent='#footer-collapse')
-            a.py-1(href="#") FB粉絲團
-            a.py-1(href="#") Gamesupport01@gmail.com
-  
-
+    .container.px-0.py-md-5
+      .d-flex.flex-column.flex-md-row.f-2
+        .flex-grow-1
+          .item.only-mobile
+            a.footer-collapse-trigger.collapsed(data-toggle='collapse' data-target='#footer-collapse-1') 關於我們
+          .item.only-desktop
+            span 關於我們
+          #footer-collapse-1.footer-collapse.collapse(data-parent='#footer')
+            a.item(href="#") 計畫團隊
+            a.item(href="#") 計畫團隊
+        
+        .flex-grow-1
+          .item.only-mobile
+            a.footer-collapse-trigger.collapsed(data-toggle='collapse' data-target='#footer-collapse-2') 條款相關
+          .item.only-desktop
+            span 條款相關
+          #footer-collapse-2.footer-collapse.collapse(data-parent='#footer')
+            a.item(href="#") 常見問題
+            a.item(href="#") 版權說明
+            a.item(href="#") 隱私權政策
+        
+        .flex-grow-1
+          .item.only-mobile
+            a.footer-collapse-trigger.collapsed(data-toggle='collapse' data-target='#footer-collapse-3') 相關連結
+          .item.only-desktop
+            span 相關連結
+          #footer-collapse-3.footer-collapse.collapse(data-parent='#footer')
+            a.item(href="#") TIGEA
+            a.item(href="#") 創夢市集
+            a.item(href="#") 好奇心創意
+            a.item(href="#") Another indie
+        
+        .flex-grow-1
+          .item.only-mobile
+            a.footer-collapse-trigger.collapsed(data-toggle='collapse' data-target='#footer-collapse-4') 與我們聯絡
+          .item.only-desktop
+            span 與我們聯絡
+          #footer-collapse-4.footer-collapse.collapse(data-parent='#footer')
+            a.item(href="#") FB粉絲團
+            a.item(href="#") Gamesupport01@gmail.com
+      
   .bg-dark-blue.text-white
     .container.py-2.d-md-flex.justify-content-between.align-items-center
       p.mb-0 TGEE

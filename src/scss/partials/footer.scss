@@ -1,0 +1,38 @@
+#footer {
+  
+  .footer-collapse-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      display: inline-block;
+      
+    }
+    &.collapsed::after {
+      content: '\002B';
+    }
+    &:not(.collapsed)::after {
+      content: '\2212';
+    }
+  }
+
+  .footer-collapse {
+    @extend .d-md-block;
+  }
+  .item {
+    padding-bottom: $spacer;
+  }
+
+  @include media-breakpoint-down(md) {
+    .footer-collapse {
+      background-color: #D5DFEB;
+    }
+    .item {
+      padding: $spacer;
+      border-bottom: 2px solid #05295522;
+    }
+  }
+
+  
+
+}

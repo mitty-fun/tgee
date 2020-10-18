@@ -3,16 +3,18 @@ require('bootstrap')
 require('../../node_modules/slick-carousel/slick/slick')
 
 
-$('.js-slick').slick({
-  dots: true,
-  speed: 300,
-  slidesToShow: 1,
-  nextArrow: '.next-arrow',
-  prevArrow: '.prev-arrow',
-  appendDots: '.dots',
-  fade: true
-});
-
+$('.js-slick').each(function () {
+  console.log($(this).data('slides-to-show'))
+  $(this).slick({
+    dots: true,
+    speed: 300,
+    slidesToShow: $(this).data('slides-to-show') || 1,
+    nextArrow: $(this).next().find('.next-arrow'),
+    prevArrow: $(this).next().find('.prev-arrow'),
+    appendDots: $(this).next().find('.dots'),
+    // fade: true
+  });
+})
 
 $('.js-toggle-searchbox').click(function () {
   $(this).parent().toggleClass('active');

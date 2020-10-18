@@ -1,3 +1,14 @@
+
+.only-mobile {
+  @extend .d-block;
+  @extend .d-md-none;
+}
+
+.only-desktop {
+  @extend .d-none;
+  @extend .d-md-block;
+}
+
 @import "custom";
 @import "bootstrap";
 
@@ -6,10 +17,13 @@
 @import "tabs";
 @import "form";
 @import "dropdown";
-
 @import "navbar";
 
+@import "partials/footer";
+
+@import "pages/home";
 @import "pages/terms";
+@import "pages/service";
 
 @import "./vendor/slick.css";
 @import "./vendor/slick-theme.css";
@@ -55,6 +69,22 @@ body {
   bottom: 0;
 }
 
+.f-4 {
+  font-size: 1rem * 16 / 16;
+}
+
+.f-3 {
+  font-size: 1rem * 14 / 16;
+}
+
+.f-2 {
+  font-size: 1rem * 14 / 16;
+}
+
+.f-1 {
+  font-size: 1rem * 12 / 16;
+}
+
 .f-18 {
   font-size: 1rem * 18 / 16;
 }
@@ -95,8 +125,3 @@ footer a {
   z-index: -1;
 }
 
-.fancy-bg-gradient {
-  
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.6629026610644257) 11%, rgba(0,0,0,0) 100%);
-}

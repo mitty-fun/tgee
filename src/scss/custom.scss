@@ -1,7 +1,7 @@
 $enable-shadows: true;
 
 
-$font-size-base: 1.125rem;
+// $font-size-base: 1.125rem;
 
 $spacer: 0.9375rem; //15px.
 
@@ -12,6 +12,7 @@ $spacers: (
   3: $spacer*2, //30px
   4: $spacer*3, //45px
   5: $spacer*4, //60px
+  6: $spacer*6, //90px
 ) !default;
 
 $headings-margin-bottom: $spacer;
@@ -60,14 +61,7 @@ $badge-padding-y: $spacer / 2;
 $badge-padding-x: $spacer;
 $badge-pill-padding-x: $spacer;
 
-$btn-border-width: 2px;
 
-$btn-padding-x:  $spacer*4;
-$btn-padding-y:  0;
-$btn-line-height: 2;
-$btn-border-radius: 3rem;
-
-$btn-border-width: 2px;
 
 
 $link-color: $primary !default;
@@ -96,7 +90,22 @@ $grid-gutter-width: $spacer;
 
 
 // Buttons
-// $btn-focus-box-shadow: none;
+$btn-padding-y: $spacer * 0.5;
+$btn-padding-x: $spacer * 2;
+$btn-font-size: 16px;
+$btn-border-radius: 3rem;
+
+$btn-padding-y-sm: $spacer * 0.3;
+$btn-padding-x-sm: $spacer * 2;
+$btn-font-size-sm: 16px;
+$btn-border-radius-sm: 3rem;
+
+$btn-padding-y-lg: $spacer * 0.75;
+$btn-padding-x-lg: $spacer * 2;
+$btn-font-size-lg: 16px;
+$btn-border-radius-lg: 3rem;
+
+$btn-border-width: 2px;
 $btn-active-box-shadow: none;
 $btn-transition: none;
 $btn-focus-width: 0;

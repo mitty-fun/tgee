@@ -36,7 +36,7 @@ function javascript (cb) {
 }
 
 function copyAssets (cb) {
-    src('./src/images/**/*.{png,gif,jpg}')
+    src('./src/images/**/*.{png,gif,jpg,svg}')
     // .pipe(image())
     .pipe(dest('./dist/images'))
 

@@ -1,0 +1,53 @@
+.service-page {
+
+  .steps-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @extend .flex-md-row;
+    margin: 0 -$spacer;
+
+    .step {
+      display: flex;
+      flex-direction: row;
+      @extend .flex-md-column;
+      @extend .align-items-md-center;
+      flex-grow: 1;
+      margin-bottom: $spacer * 2;
+      color: $primary;
+
+      &-circle {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 2px solid $primary;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 1;
+      }
+    }
+  }
+
+  .steps-line-desktop {
+    @extend .only-desktop;
+    height: 2px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% * 6 / 8);
+    background-color: $primary;
+  }
+
+  .steps-line-mobile {
+    @extend .only-mobile;
+    width: 2px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    height: calc(100% - 50px);
+    background-color: $primary;
+  }
+}
+
