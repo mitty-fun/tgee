@@ -24,6 +24,7 @@
 @import "pages/home";
 @import "pages/terms";
 @import "pages/service";
+@import "pages/faq";
 
 @import "./vendor/slick.css";
 @import "./vendor/slick-theme.css";
@@ -125,3 +126,38 @@ footer a {
   z-index: -1;
 }
 
+.blur-banner {
+  z-index: -1;
+  height: 340px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  &-img {
+    @extend .bg-cover;
+    filter: blur(30px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: $spacer;
+}
+
+@include media-breakpoint-up(md) {
+  .position-md-absolute {
+      position: absolute !important;
+  }
+  .position-md-relative {
+    position: relative !important;
+  }
+}

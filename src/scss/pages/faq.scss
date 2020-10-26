@@ -1,0 +1,39 @@
+#faq {
+  .faq-q {
+    @extend .p-3;
+    @extend .border;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+    &:hover {
+      color: $primary;
+      background-color: #E2E8EF;
+    }
+    &::after {
+      display: inline-block;
+      font-size: 2rem;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $primary;
+    }
+    &.collapsed::after {
+      content: '\002B';
+    }
+    &:not(.collapsed)::after {
+      content: '\2212';
+    }
+  }
+
+  .faq-a {
+    @extend .border;
+    background-color: $gray-4;
+    > p {
+      @extend .p-3;
+      @extend .py-md-4;
+      @extend .px-md-5;
+      margin-bottom: 0;
+    }
+  }
+}

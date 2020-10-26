@@ -5,12 +5,17 @@ const browserify = require('gulp-browserify')
 const image = require('gulp-image')
 
 const data = require('./src/json/games.json')
+const faq_data = require('./src/json/faq.json')
 
 
 function html (cb) {
     src('src/pug/*.pug')
     .pipe(pug({
-        data: { title: 'TGEE', games: data},
+        data: {
+            title: 'TGEE',
+            games: data,
+            faq: faq_data,
+        },
         pretty: true
         
     }).on('error', console.log))

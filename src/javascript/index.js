@@ -23,3 +23,7 @@ $('.js-toggle-searchbox').click(function () {
 $('.js-tgee-dropdown > .tgee-dropdown-trigger').click(function () {
   $(this).parent('.js-tgee-dropdown').toggleClass('active');
 })
+
+$('.js-mobile-toggle-menu > .toggle-trigger').click(function (){
+  $('.js-mobile-toggle-menu').toggleClass('active')
+})

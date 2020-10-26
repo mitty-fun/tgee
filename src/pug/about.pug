@@ -1,0 +1,22 @@
+extends ./layout/layout.pug
+
+block content
+  .position-relative
+    .container.py-6
+      .row.align-items-center
+        .col-md-6
+          h1 關於 TiGEA
+          h2 副標題可有可無，沒有的話就刪掉。
+          p 描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。
+        .col-md-6
+          img(src="images/about/main-tigea-img.svg")
+    img.position-absolute.w-100(src="images/about/wave.svg" style="bottom: 0; right: 0; z-index: -1;")
+  
+  div(style="background-color: #F0F3F6;")
+    .container.py-5
+      h1.mb-3 目前累積
+      .mb-3
+        include partials/achievement.pug
+      p.mb-3 描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。歡迎來信合作。
+      .text-center
+        button.btn.rounded-pill.btn-orange 立即申請專屬服務

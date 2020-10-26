@@ -40,38 +40,73 @@
       </div>
     </nav>
     <div style="padding-top: 62px;">
-      <div class="container py-5">
-        <div class="row py-2">
-          <div class="col-7">
-            <h1 class="mb-3">重新設定新密碼</h1>
-            <div class="form-group">
-              <label>新密碼</label>
-              <input class="form-control" placeholder="6-12字元，英數混合"/>
+      <div class="position-relative">
+        <div class="container py-6">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h1>關於 TiGEA</h1>
+              <h2>副標題可有可無，沒有的話就刪掉。</h2>
+              <p>描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。</p>
             </div>
-            <div class="form-group">
-              <label>請再輸入一次密碼</label>
-              <input class="form-control" placeholder="密碼需與上一列相同"/>
-            </div>
-            <button class="btn rounded-pill btn-orange">確認更改</button>
+            <div class="col-md-6"><img src="images/about/main-tigea-img.svg"/></div>
           </div>
-        </div><img class="fancy-banner" src="images/登入_註冊/login@2x.png"/>
+        </div><img class="position-absolute w-100" src="images/about/wave.svg" style="bottom: 0; right: 0; z-index: -1;"/>
+      </div>
+      <div style="background-color: #F0F3F6;">
+        <div class="container py-5">
+          <h1 class="mb-3">目前累積</h1>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md-4 mb-2">
+                <div class="tgee-card d-flex flex-column justify-content-center align-items-center text-white bg-cover" style="background-image: url('images/首頁/home-card-blue.png'); height: 235px;">
+                  <p>成員人數</p>
+                  <p><span class="display-4">150</span><span class="h1">+</span></p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div class="tgee-card d-flex flex-column justify-content-center align-items-center text-white bg-cover" style="background-image: url('images/首頁/home-card-blue.png'); height: 235px;">
+                  <p>遊戲團隊</p>
+                  <p><span class="display-4">150</span><span class="h1">+</span></p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div class="tgee-card d-flex flex-column justify-content-center align-items-center text-white bg-cover" style="background-image: url('images/首頁/home-card-blue.png'); height: 235px;">
+                  <p>遊戲數量</p>
+                  <p><span class="display-4">150</span><span class="h1">+</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mb-3">描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。歡迎來信合作。</p>
+          <div class="text-center">
+            <button class="btn rounded-pill btn-orange">立即申請專屬服務</button>
+          </div>
+        </div>
       </div>
     </div>
-    <footer>
+    <footer id="footer">
       <div class="bg-light-blue text-dark">
-        <div class="py-5 container f-14" id="footer-collapse">
-          <div class="row">
-            <div class="col-md-2">
-              <div class="py-2 my-pd-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-1"><span>關於我們</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">關於我們</a></div>
-              <div class="collapse d-md-block" id="footer-collapse-1" data-parent="#footer-collapse"><a class="py-1" href="#">計畫團隊</a><a class="py-1" href="#">媒體素材</a></div>
+        <div class="container px-0 py-md-5">
+          <div class="d-flex flex-column flex-md-row f-2">
+            <div class="flex-grow-1">
+              <div class="item only-mobile"><a class="footer-collapse-trigger collapsed" data-toggle="collapse" data-target="#footer-collapse-1">關於我們</a></div>
+              <div class="item only-desktop"><span>關於我們</span></div>
+              <div class="footer-collapse collapse" id="footer-collapse-1" data-parent="#footer"><a class="item" href="#">計畫團隊</a><a class="item" href="#">計畫團隊</a></div>
             </div>
-            <div class="col-md-2">
-              <div class="py-2 mb-py-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-2"><span>條款相關</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">條款相關</a></div>
-              <div class="collapse d-md-block" id="footer-collapse-2" data-parent="#footer-collapse"><a class="py-1" href="#">常見問題</a><a class="py-1" href="#">版權說明</a><a class="py-1" href="#">隱私權政策</a></div>
+            <div class="flex-grow-1">
+              <div class="item only-mobile"><a class="footer-collapse-trigger collapsed" data-toggle="collapse" data-target="#footer-collapse-2">條款相關</a></div>
+              <div class="item only-desktop"><span>條款相關</span></div>
+              <div class="footer-collapse collapse" id="footer-collapse-2" data-parent="#footer"><a class="item" href="#">常見問題</a><a class="item" href="#">版權說明</a><a class="item" href="#">隱私權政策</a></div>
             </div>
-            <div class="col-md-2">
-              <div class="py-2 mb-py-3"><a class="collapse-trigger d-md-none" data-toggle="collapse" data-target="#footer-collapse-3"><span>與我們聯絡</span><i class="fas fa-chevron-up ml-auto"></i></a><a class="d-none d-md-block">與我們聯絡</a></div>
-              <div class="collapse d-md-block" id="footer-collapse-3" data-parent="#footer-collapse"><a class="py-1" href="#">FB粉絲團</a><a class="py-1" href="#">Gamesupport01@gmail.com</a></div>
+            <div class="flex-grow-1">
+              <div class="item only-mobile"><a class="footer-collapse-trigger collapsed" data-toggle="collapse" data-target="#footer-collapse-3">相關連結</a></div>
+              <div class="item only-desktop"><span>相關連結</span></div>
+              <div class="footer-collapse collapse" id="footer-collapse-3" data-parent="#footer"><a class="item" href="#">TIGEA</a><a class="item" href="#">創夢市集</a><a class="item" href="#">好奇心創意</a><a class="item" href="#">Another indie</a></div>
+            </div>
+            <div class="flex-grow-1">
+              <div class="item only-mobile"><a class="footer-collapse-trigger collapsed" data-toggle="collapse" data-target="#footer-collapse-4">與我們聯絡</a></div>
+              <div class="item only-desktop"><span>與我們聯絡</span></div>
+              <div class="footer-collapse collapse" id="footer-collapse-4" data-parent="#footer"><a class="item" href="#">FB粉絲團</a><a class="item" href="#">Gamesupport01@gmail.com</a></div>
             </div>
           </div>
         </div>

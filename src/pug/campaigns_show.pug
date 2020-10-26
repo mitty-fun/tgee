@@ -1,0 +1,128 @@
+extends ./layout/layout.pug
+
+block content
+
+  .w-100.shadow.bg-white.position-fixed(style="bottom: 0; z-index: 10;")
+    .container.px-md-0.py-2
+      .d-flex.align-items-center
+        .mr-auto
+          strong.pr-2 Faust Game Jam 2020 台中會場
+          span 2020.08.29(六) 09:00 ~ 2020.08.30(日) 20:00
+        button.btn.btn-sm.rounded-pill.btn-orange 前往報名網站
+
+  .position-relative.py-md-6
+    .blur-banner
+      .blur-banner-img(style="background-image: url('images/campaigns_show/banner.svg');")
+    
+    .container-md.px-0
+      .shadow.bg-white
+        .d-flex.flex-column.flex-md-row.shadow-sm
+          .flex-fill.bg-cover(style="background-image: url('images/campaigns_show/banner.svg'); min-height: 300px;")
+          .p-3(style="min-width: 480px;")
+            h1.h2 Faust Game Jam 2020 台中會場
+            .d-flex
+              .pr-2
+                i.fas.fa-map-marker-alt
+              p
+                |活動時間
+                br
+                |2020.08.29(六) 09:00 ~ 2020.08.30(日) 20:00
+            .d-flex
+              .pr-2
+                i.fas.fa-map-marker-alt
+              p
+                |活動時間
+                br
+                |2020.08.29(六) 09:00 ~ 2020.08.30(日) 20:00
+            .d-flex
+              .pr-2
+                i.fas.fa-map-marker-alt
+              p
+                |活動時間
+                br
+                |2020.08.29(六) 09:00 ~ 2020.08.30(日) 20:00
+            div
+              span.mr-2.badge.badge-pill.badge-gray-4 #玩家展覽
+              span.mr-2.badge.badge-pill.badge-gray-4 #玩家展覽
+              span.mr-2.badge.badge-pill.badge-gray-4 #玩家展覽
+        
+        .py-6.px-5
+          h2 活動介紹
+          h3 其它關聯頁面聯結
+          p
+            ul
+              li
+                a(href="#") 台北會場
+              li
+                a(href="#") 台北會場
+          
+          h3 適合對象
+          p 不論是組織、個人或是學生，對遊戲開發設計有一定程度的認識或具備相關能力者都歡迎參加。
+          
+          h3 活動時程
+          p Day 1 - 8/29
+          ul
+            li 9:30~10:00 報到
+            li 10:00~11:00 開幕、分組、發表題目
+            li 14:00~15:00 各組的遊戲概念/企畫發表
+            li 20:30~21:30 第一天成果 (Alpha 版) 發表
+          p Day 1 - 8/29
+          ul
+            li 15:00~16:00 上傳遊戲
+            li 16:00~17:00 最終發表會
+            li 17:00~17:30 閉幕
+            li 17:30~18:00 整理會場
+          
+        .px-md-5
+          h3 活動嘉賓
+          .mt-2.mobile-scroll-x
+            for i in [1,2,3,4]
+              div
+                .shadow.px-2.py-4.text-center
+                  .mb-2.mx-auto.rounded-circle.bg-gray-3(style="width: 110px; height: 110px;")
+                  p.f-14 講者頭銜講者頭銜最多10
+                  p 講者姓名
+
+        .px-5.py-5
+          .mb-3
+            strong Game Jam 是什麼活動？
+            p Game Jam 是一個開發遊戲的有趣活動，參加者要在短時間內和其他陌生的遊戲開發者合作，根據特定主題製作出一款遊戲。 
+          .mb-3
+            strong Faust Game Jam 有什麼特別的涵意嗎？
+            p Faust Li（李家屹）是促成我們社群內許多台日互動的重要推手，過去多年來與日本一起舉辦的 Fukushima Game Jam 也是其中一項代表性的成果。但 Faust 很不幸於 2014 年 1 月，Global Game Jam 前夕離開了我們。所以主辦單位這邊希望能夠藉著往後的 FGJ，邀請各位在台灣的遊戲開發社群參與者，一起來紀念他。2018 年起因為日本 Fukushima Game Jam 活動性質調整及時間因素，我們沒有跟隨舉辦，但是本活動仍以「FGJ」來紀念 Faust。 
+          .mb-3
+            strong 參加這個活動需要什麼條件？
+            p 製作遊戲的熱情，以及製作遊戲的基礎知識或能力。 
+          .mb-3
+            strong 我是學生可以參加嗎？
+            p 當然可以，Game Jam 並沒有職業的限制，只要符合基本條件都可以報名。 
+          .mb-3
+            strong 可以一個人一組或找認識的人共同組隊嗎？
+            p 為了取得「有朋友在同一組會比較想參加」與「希望能促進新朋友認識合作」間的平衡，本活動目前的組隊方式是：開放參與者自行事先進行組隊，但是上限僅為 3 人，同時也提醒組隊時考慮專長上的平衡。另外 2~3 人將由主辦單位安排湊組，一隊人數原則上不超過 6 人（也提醒，事先組隊者，隊伍成員仍需各自填寫報名表單，有欄位可註明隊名供主辦單位識別）。您也可以直接個人報名，我們根據報名資料的結果再進行分組，希望促成不同性質的參與者互相討論合作，避免有落單的參與者。 
+          .mb-3
+            strong 可以現場報名嗎？
+            p 很抱歉，由於本活動必須事先進行分組，恕不開放現場報名。 
+
+          strong IGDA 是什麼組織？
+          p IGDA 全名為 International Game Developers Association，中譯為國際遊戲開發者協會，為國際著名的遊戲開發者相關非營利組織。目前世界多國均有其分部，台灣 IGDA 分會已於 2012 年底復會（http://igda.tw）。
+      
+    
+      .mt-5
+        h2.h1 其他活動
+
+      .mt-3.mobile-scroll-x
+        for i in [1,2]
+          div
+            .tgee-card.flex-md-row(style="min-width: 267px;")
+              .tgee-card-img(style="background-image: url('images/專屬服務一覽/default-bnr-310x168@2x.jpg'); max-width: 310px;")
+              .tgee-card-body.p-2
+                p 遊戲創業及啟動基金
+                p.f-3
+                  |地區：全國性
+                  br
+                  |時間：08/21/2020
+                .d-flex
+                  div
+                    span.badge.badge-pill.badge-gray-4 遊戲新聞
+                  .tgee-circle-button.f-12
+                    i.fas.fa-chevron-right
