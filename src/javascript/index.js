@@ -1,4 +1,6 @@
 const $ = require('jquery')
+const Vue = require('vue')
+
 require('bootstrap')
 require('../../node_modules/slick-carousel/slick/slick')
 
@@ -24,6 +26,45 @@ $('.js-tgee-dropdown > .tgee-dropdown-trigger').click(function () {
   $(this).parent('.js-tgee-dropdown').toggleClass('active');
 })
 
-$('.js-mobile-toggle-menu > .toggle-trigger').click(function (){
+$('.js-mobile-toggle-menu > .toggle-trigger').click(function () {
   $('.js-mobile-toggle-menu').toggleClass('active')
 })
+
+
+new Vue({
+  el: '.js-vue-imgs-uploader',
+  data: {
+    images: [
+      { id: 0, src: undefined },
+      { id: 0, src: 'images/examples/1.jpg' },
+      { id: 0, src: 'images/examples/2.jpg' },
+      { id: 0, src: 'images/examples/3.jpg' },
+      { id: 0, src: 'images/examples/4.jpg' },
+      { id: 0, src: 'images/examples/5.jpg' },
+      { id: 0, src: 'images/examples/6.jpg' },
+    ]
+  },
+  methods: {
+    update_image: function (index, e) {
+
+      var input = e.target;
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        var self = this;
+
+        reader.onload = function (e) {
+          self.images[index].src = e.target.result;
+
+          if (index == 0) self.images.unshift({id: 0, src: undefined})
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+      
+    }
+  }
+})
+
+
+

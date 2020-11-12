@@ -1,41 +1,21 @@
 extends ./layout/layout.pug
 
-
-
 block content
   .container.py-5
     h1.my-3 遊戲一覽
-    .px-2.py-3.shadow.d-flex.align-items-center
-      .px-2
-        span.h3.mb-0 分類搜尋
-      .px-2.flex-grow-1
-        select.custom-select.rounded-pill.bg-light-blue.border-0
-          option(value="") A
-          option(value="") A
-          option(value="") A
-          option(value="") A
-          option(value="") A
-      .px-2.flex-grow-1
-        select.custom-select.rounded-pill.bg-light-blue.border-0
-          option(value="") A
-          option(value="") A
-          option(value="") A
-          option(value="") A
-          option(value="") A
-      .px-2
-        button.btn.btn-orange.rounded-pill 搜尋
+    include ./partials/filter
     .row.mt-3
       for g in games
-        .col-4.pb-3
-          .tgee-card-v
-            .tgee-card-img(style=`background-image: url('images/遊戲一覽/${g.img}');`)
-            .p-2
-              h5.h2=g.title
-              p.mb-3=g.content
+        .col-md-4.mt-2
+          .tgee-card
+            .tgee-card-img(style=`background-image: url('images/遊戲一覽/${g.img}'); height: 190px;`)
+            .tgee-card-body
+              h3 #{g.title}
+              p #{g.content}
               .d-flex.align-items-center
-                span.mr-1.badge.badge-pill.bg-gray-4 #恐怖
-                span.mr-1.badge.badge-pill.bg-gray-4 #Block Making RPG
-                span.ml-auto.btn.btn-outline-dark.rounded-circle >
-    
-    .py-2.text-center
+                small.mr-1.badge.badge-pill.badge-gray-4 #玩家展覽
+                small.mr-1.badge.badge-pill.badge-gray-4 #玩家展覽
+                .tgee-circle-button
+                  i.fas.fa-chevron-right
+    .py-4.text-center
       button.px-3.btn.btn-outline-dark.rounded-pill 展開看更多

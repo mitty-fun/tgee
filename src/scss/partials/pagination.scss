@@ -1,0 +1,24 @@
+.pagination {
+
+  display: flex;
+  align-items: center;
+
+  .my-page-link {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    @extend .mx-1;
+
+    &.active {
+      color: white;
+      background-color: $primary;
+    }
+
+    &:hover {
+      background-color: $gray-3;
+    }
+  }
+}

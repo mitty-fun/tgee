@@ -46,8 +46,10 @@ block content
               .px-1.py-4
                 .tgee-card.bg-cover(style="background-image: url('images/首頁/prod_1.jpg'); height: 250px;")
                   .p-2.fancy-bg-gradient.h-100.d-flex.justify-content-between.flex-column
-                    div
-                      span.badge.badge-pill.badge-gray-1 遊戲新聞
+                    .d-flex
+                      span.badge.badge-pill.badge-gray-1.mr-auto 遊戲新聞
+                      span.badge.badge-pill.badge-gray-1(data-toggle="modal" data-target="#modal_game_edit")
+                        i.fas.fa-ellipsis-v
                     h3.mb-0.text-white 是真的！微軟閃電發表 XboxSeries S，價格一起曝光
           .d-flex.justify-content-center.align-items-center
             .next-arrow
@@ -196,3 +198,6 @@ block content
                     small.f-14 1 小時前更新 
                   .tgee-circle-button.f-12
                     i.fas.fa-chevron-right
+  
+  include partials/modal_game_show
+  include partials/modal_game_edit

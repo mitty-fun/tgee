@@ -11,34 +11,36 @@ block content
     .fade.tab-pane#nav-a
       h1 官方消息
       .row
-        for i in [1,2,3,4,5,6,7,8,9,10]
-          .col-md-6
-            .tgee-card-h.d-md-flex.mb-2
-              .tgee-card-img(style="background-image: url('images/官方消息/news-bnr-310x168@2x.jpg');")
+        for i in [1, 2, 3, 4, 1, 2, 3, 4, 1]
+          .col-md-4.mt-2
+            .tgee-card
+              .tgee-card-img(style=`background-image: url('images/首頁/news_bg_${i}.png'); height: 190px;`)
               .tgee-card-body
-                p.f-18
+                h3
                   |創作者的生存遊戲 #1
                   br
-                  |畢業後，如何集體創作並且活下去
-                .tgee-card-footer
-                  small.f-14 1 小時前更新 
-                  .tgee-circle-button.f-12
+                  |畢業後，如何集體創作並且...
+                .mt-2.d-flex.align-items-end
+                  
+                  small 1 小時前更新 
+                  .tgee-circle-button
                     i.fas.fa-chevron-right
+          
     .fade.tab-pane#nav-b.show.active
       h1 產業訊息
       .row
-        for i in [1,2,3,4,5,6,7,8,9,10]
-          .col-md-6
-            .tgee-card-h.d-md-flex.mb-2
-              .tgee-card-img(style="background-image: url('images/官方消息/news-bnr-310x168@2x.jpg');")
+        for i in [1, 2, 3, 4, 1, 2, 3, 4, 1]
+          .col-md-4.mt-2
+            .tgee-card
+              .tgee-card-img(style=`background-image: url('images/首頁/news_bg_${i}.png'); height: 190px;`)
               .tgee-card-body
-                p.f-18
+                h3
                   |創作者的生存遊戲 #1
                   br
-                  |畢業後，如何集體創作並且活下去
-                .tgee-card-footer
-                  small.f-14 1 小時前更新 
-                  .tgee-circle-button.f-12
+                  |畢業後，如何集體創作並且...
+                .mt-2.d-flex.align-items-end
+                  small 1 小時前更新
+                  .tgee-circle-button
                     i.fas.fa-chevron-right
     
     .py-2.text-center

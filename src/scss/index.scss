@@ -9,6 +9,14 @@
   @extend .d-md-block;
 }
 
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;    
+}
+
 @import "custom";
 @import "bootstrap";
 
@@ -20,6 +28,7 @@
 @import "navbar";
 
 @import "partials/footer";
+@import "partials/pagination";
 
 @import "pages/home";
 @import "pages/terms";
@@ -29,10 +38,11 @@
 @import "./vendor/slick.css";
 @import "./vendor/slick-theme.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300,500&display=swap');
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
 }
 
 

@@ -1,26 +1,3 @@
-.tgee-card:hover .tgee-circle-button {
-  background-color: $blue;
-  border-color: #00000000;
-  color: #fff;
-}
-
-.tgee-card-h > .tgee-card-img {
-  width: 100%;
-  min-height: 168px;
-  flex-shrink: 0;
-  flex-grow: 0;
-
-  @include media-breakpoint-up(md) {
-    width: 310px;
-  }
-}
-
-.tgee-card-v > .tgee-card-img {
-  width: 100%;
-  height: 210px;
-  flex-shrink: 0;
-}
-
 .tgee-card {
   @extend .shadow;
   @extend .rounded;
@@ -29,22 +6,28 @@
   
   display: flex;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 1s;
+  background-color: white;
 
   &-img {
+    width: 100%;
+    height: 180px; // same on mobile and desktop
     background-size: 100%;
     background-position: center;
     transition: all .2s;
-    width: 100%;
-    height: 168px;
   }
 
   &-body {
     padding: $spacer;
     flex-grow: 1;
     display: flex;
-    @extend .flex-column;
-    @extend .justify-content-between;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &-footer {
+    display: flex;
+    align-items: flex-end;
   }
 
   &:hover {
@@ -59,8 +42,19 @@
     .tgee-card-img {
       height: 200px;
       @include media-breakpoint-up(md) {
-        max-width: 360px;
+        max-width: 320px;
       }
     }
   }
+}
+
+.tgee-card .tgee-circle-button {
+  margin-left: auto;
+}
+
+.tgee-card:hover .tgee-circle-button {
+  background-color: $blue;
+  border-color: #00000000;
+  color: #fff;
+  margin-left: auto;
 }

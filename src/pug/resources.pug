@@ -1,0 +1,23 @@
+extends ./layout/layout.pug
+
+block content
+  .container.py-5
+    h1.my-3 相關資源
+    include ./partials/filter
+    .row.mt-3
+      for g in games
+        .col-md-6.mt-2
+          .tgee-card.flex-md-row(style="min-width: 267px;")
+            .tgee-card-img(style=`background-image: url('images/遊戲一覽/${g.img}'); max-width: 310px;`)
+            .tgee-card-body
+              h3 遊戲創業及啟動基金
+              p
+                |地區：全國性
+                br
+                |地區：全國性
+              .d-flex.align-items-center
+                small.mr-1.badge.badge-pill.badge-gray-4 #玩家展覽
+                .tgee-circle-button
+                  i.fas.fa-chevron-right
+    .py-4.text-center
+      button.px-3.btn.btn-outline-dark.rounded-pill 展開看更多

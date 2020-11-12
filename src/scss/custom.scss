@@ -78,7 +78,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1110px
+  xl: 1000px
 ) !default;
 
 $grid-gutter-width: $spacer;
@@ -128,3 +128,7 @@ $input-focus-width:                     1px;
 $input-focus-box-shadow:                #05295510 0px 0px 6px;
 
 $input-placeholder-color:               #D8D8D8;
+
+
+// shadow
+$box-shadow:                  0 .5rem 1rem rgba(#000, .12) !default;

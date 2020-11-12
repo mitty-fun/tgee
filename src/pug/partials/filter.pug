@@ -1,34 +1,33 @@
-.py-3.px-4.d-flex.align-items-center.shadow.rounded-md
-  .px-1
-    span.h2.mb-0 分類搜尋
-  
-  .px-1.flex-grow-1
+.p-2.rounded.w-100.shadow.d-md-flex.align-items-center
+  .m-2
+    span.h3.mb-0 分類搜尋
+  .m-2.flex-grow-1
     .tgee-dropdown.js-tgee-dropdown
       .tgee-dropdown-trigger
-        span.mr-auto 種類
+        span.mr-auto 遊戲類型
         i.fas.fa-chevron-down
-      .tgee-dropdown-menu
-        .tgee-dropdown-menu-body
-          for i in Array(10)
-            .py-1.w-50.item
-              .tgee-checkbox.mr-1
-                input(type="checkbox")
-                .checkmark
-              |互動戲劇
-            
-  .px-1.flex-grow-1
-    .tgee-dropdown.js-tgee-dropdown
-      .tgee-dropdown-trigger.d-flex
-        span.mr-auto 種類
-        i.fas.fa-chevron-down
-      .tgee-dropdown-menu
-        .tgee-dropdown-menu-body(style="width: calc(100% + 200px);")
-          for i in Array(30)
-            .py-1.w-25.item
-              .tgee-checkbox.mr-1
-                input(type="checkbox")
-                .checkmark
-              |互動戲劇
+        i.fas.fa-chevron-up
+      .tgee-dropdown-menu.pb-0
+        .tgee-dropdown-menu-extend
+          .d-flex.justify-content-between.flex-wrap
+            for i in ['互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇', '互動戲劇']
+              .p-1.w-25
+                .tgee-checkbox.mr-1
+                  input.mr-1(type="checkbox")
+                  .checkmark
+                |#{i}
 
-  .px-1
-    button.px-3.btn.btn-orange.rounded-pill 搜尋
+  .m-2.flex-grow-1
+    .tgee-dropdown.js-tgee-dropdown
+      .tgee-dropdown-trigger
+        span.mr-auto 平台
+        i.fas.fa-chevron-down
+        i.fas.fa-chevron-up
+      .tgee-dropdown-menu  
+        p.tgee-dropdown-item AAAAA
+        p.tgee-dropdown-item AAAAA
+        p.tgee-dropdown-item AAAAA
+        p.tgee-dropdown-item AAAAA
+        p.tgee-dropdown-item AAAAA
+  .m-2
+    button.btn.btn-orange.rounded-pill 搜尋

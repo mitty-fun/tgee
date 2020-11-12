@@ -1,78 +1,83 @@
-$radius: 30px;
+$height: 40px;
 
 .tgee-dropdown {
-  
   position: relative;
   z-index: 10;
+  padding: $spacer/2 $spacer;
+  background-color: $gray-4;
+  height: 40px;
+  min-width: 200px;
+  border-radius: 20px;
+  
+  &-trigger {
+    display: flex;
+    align-items: center;
+    @extend .noselect;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &-menu {
+    @extend .shadow;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: $gray-4;
+  }
+
+  &-item {
+    padding: 7.5px 15px;
+    color: $gray-2;
+    cursor: pointer;
+    margin-bottom: 0;
+    &:hover {
+      color: white;
+      background-color: $orange;
+    }
+  }
 
   &:not(.active) &-menu {
     display: none;
   }
 
-  &.active &-trigger i {
-    transform: rotate(180deg);
+  &:not(.active) &-trigger i.fas.fa-chevron-up {
+    display: none;
   }
 
-  &-trigger {
-    @extend .px-2;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 40px;
-    border-radius: $radius;
-    background-color: $gray-4;
-
-    i {
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-      text-align: center;
-      display: block;
-      transition: all 0.1s;
-      transform: rotate(0deg);
-    }
+  &.active &-trigger i.fas.fa-chevron-down {
+    display: none;
   }
 
-  &-menu {
+  &:not(.active)::after {
+    display: none;
+  }
+
+  &::after {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  
-    border-radius: $radius;
+    width: 30px;
+    height: 20px;
     background-color: $gray-4;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+  }
 
-    @extend .shadow-lg;
-    @extend .border-0;
-    @extend .pb-0;
-    @extend .w-100;
-    @extend .mt-0;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: $radius * 1.5;
-      display: block;
-      
-      background-color: $gray-4;
-      transform: translateY($radius);
-    }
-
-    &-body {
-      @extend .d-flex;
-      @extend .justify-content-between;
-      @extend .flex-wrap;
-      @extend .shadow-lg;
-
-      padding: $radius;
-      border-radius: $radius;
-      background-color: $gray-4;
-    } 
+  .tgee-dropdown-menu-extend {
+    min-width: 500px;
+    background-color: $gray-4;
+    @extend .shadow;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding: 15px;
   }
 }
+
 
 @include media-breakpoint-down(md) {
   .tgee-dropdown.active {
@@ -81,19 +86,21 @@ $radius: 30px;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3000;
-    background-color: $gray-4;
-    .tgee-dropdown-menu { 
-      box-shadow: none !important;
-      &-body {
-        padding-left: 0;
-        padding-right: 0;
-        box-shadow: none !important;
-        .item {
-          border: 1px solid #ccc;
-        }
-      }
+    z-index: 1081;
+    border-radius: 0;
+
+    .tgee-dropdown-trigger {
+      background-color: #eeeeee;
+      border-bottom: 1px solid #cccccc;
     }
-    
+
+    .tgee-dropdown-menu {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .tgee-dropdown-item {
+      border: 1px solid #cccccc;
+    }
   }
 }

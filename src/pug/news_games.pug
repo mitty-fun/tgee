@@ -1,0 +1,21 @@
+extends ./layout/layout.pug
+
+block content
+  .container.py-5
+    h1.mb-3 遊戲新聞
+    .row
+      for i in [1, 2, 3, 1, 2, 3, 1, 2, 3]
+        .col-sm-6.col-md-4.mt-2
+          .tgee-card
+            .tgee-card-img(style=`background-image: url('images/首頁/news_bg_${i}.png');`)
+            .tgee-card-body
+              h3.mb-3(style="line-height: 1.5;")
+                |創作者的生存遊戲 #1
+                br
+                |畢業後，如何集體創作並且...
+              .tgee-card-footer
+                small 1 小時前更新 
+                .tgee-circle-button
+                  i.fas.fa-chevron-right
+    .py-4.text-center
+      button.px-3.btn.btn-outline-dark.rounded-pill 展開看更多

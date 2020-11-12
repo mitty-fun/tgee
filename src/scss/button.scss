@@ -16,13 +16,9 @@
   @extend .btn-outline-gray-2;
   &:hover {
     color: $primary;
-    border-color: $primary;
     background-color: #fff;
   }
 }
-
-
-
 
 .btn-orange {
   color: #fff;
@@ -37,15 +33,14 @@
 
 .tgee-circle-button {
   @extend .rounded;
-  @extend .ml-auto;
   @extend .btn;
   @extend .btn-outline-dark;
   @extend .rounded-circle;
 
   position: relative;
-
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
+  transition: background-color 0.2s;
 
   > i {
     display: inline-block;
@@ -53,6 +48,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-color: #00000000;
   }
 }
 
@@ -60,11 +56,12 @@
   @extend .rounded-circle;
 
   position: relative;
-  width: 36px;
-  height: 36px;
+  width: 18px;
+  height: 18px;
   font-size: 18px;
   background-color: $gray-3;
   border-width: 0;
+  outline: none;
   
   .focus, &:hover {
     background-color: $blue;
@@ -79,17 +76,6 @@
   }
 }
 
-.btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
-}
-
-.btn-circle.btn-sm {
-  width: 18px;
-  height: 18px;
-  font-size: 9px;
-}
 
 .close-btn {
   position: absolute;
