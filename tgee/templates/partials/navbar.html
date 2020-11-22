@@ -1,0 +1,71 @@
+<nav class="fixed-top f-16">
+  <div class="bg-blue d-md-none">
+    <div class="p-2">
+      <div class="position-relative d-flex justify-content-between align-items-center">
+        <div class="text-white" data-toggle="collapse" data-target="#navbar-mobile-collapse"><i class="fas fa-bars"></i>
+        </div>
+        <h3 class="mb-0 text-white"><img src="{{static('logo.svg')}}" alt=""></h3>
+        <span class="ml-3 text-white searchbox">
+          <i class="fas fa-search js-toggle-searchbox"></i>
+          <input placeholder="搜尋" />
+        </span>
+      </div>
+    </div>
+    <div class="collapse" id="navbar-mobile-collapse">
+      <div class="d-flex text-white bg-blue">
+        <div class="p-2 flex-fill text-center border border-light-blue border-left-0 border-right-0"
+          data-toggle="collapse" data-target="#navbar-collapse-my">登入註冊</div>
+        <div class="p-2 flex-fill text-center border border-light-blue border-right-0">合作聯繫</div>
+      </div>
+      <div class="list-group list-group-flush collapse" id="navbar-collapse-my" data-parent="#navbar-mobile-collapse">
+        <a class="list-group-item" href="{{url('home')}}">個人資料</a>
+        <a class="list-group-item" href="{{url('home')}}">文章管理</a>
+        <a class="list-group-item" href="{{url('home')}}">專屬服務</a>
+        <a class="list-group-item" href="{{url('home')}}">登出</a>
+      </div>
+      <div class="list-group list-group-flush" data-parent="#navbar-mobile-collapse">
+        <a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse"
+          data-target="#navbar-collapse-1">最新消息<i class="fas fa-chevron-up ml-auto"></i></a>
+        <div class="collapse" id="navbar-collapse-1" data-parent="#navbar-mobile-collapse">
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">官方消息</a>
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">產業訊息</a>
+        </div>
+        <a class="list-group-item" href="{{url('home')}}">遊戲新聞</a>
+        <a class="list-group-item" href="{{url('home')}}">知識文章</a>
+        <a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse"
+          data-target="#navbar-collapse-2">活動看板<i class="fas fa-chevron-up ml-auto"></i></a>
+        <div class="collapse" id="navbar-collapse-2" data-parent="#navbar-mobile-collapse">
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">國際展會</a>
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">活動課程</a>
+        </div>
+        <a class="list-group-item" href="{{url('home')}}">專屬服務</a>
+        <a class="list-group-item" href="{{url('home')}}">遊戲一覽</a>
+        <a class="collapsed d-flex list-group-item collapse-trigger" data-toggle="collapse"
+          data-target="#navbar-collapse-3">相關資源<i class="fas fa-chevron-up ml-auto"></i></a>
+        <div class="collapse" id="navbar-collapse-3" data-parent="#navbar-mobile-collapse">
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">競賽獎項</a>
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">政府計畫</a>
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">遊戲社群</a>
+          <a class="list-group-item bg-light-blue" href="{{url('home')}}">會計法務</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tgee-navbar d-none d-md-flex px-5">
+    <a class="mr-5" href="{{url('home')}}"><img src="{{static('logo.svg')}}" width="80" alt=""></a>
+    <a class="mr-4" href="{{url('news')}}">最新消息</a>
+    <a class="mr-4" href="{{url('news_game')}}">遊戲新聞</a>
+    <a class="mr-4" href="{{url('articles')}}">知識文章</a>
+    <a class="mr-4" href="{{url('campaigns')}}">活動看板</a>
+    <a class="mr-4" href="{{url('service')}}">專屬服務</a>
+    <a class="mr-4" href="{{url('games')}}">遊戲一覽</a>
+    <a class="mr-4" href="{{url('resources')}}">相關資源</a>
+
+    <div class="d-flex ml-auto align-items-center position-relative"><a
+        class="btn btn-sm btn-outline-gray-4 rounded-pill ml-3" href="/contact">合作聯繫</a>
+      <div class="ml-3 text-white"><i class="fas fa-user-circle"></i></div>
+      <div class="ml-3 text-white searchbox"><i class="fas fa-search js-toggle-searchbox"></i><input placeholder="搜尋" />
+      </div>
+    </div>
+  </div>
+</nav>

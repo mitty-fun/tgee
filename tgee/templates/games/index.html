@@ -1,0 +1,30 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="my-3">遊戲一覽</h1>
+  {% include './partials/filter.html' %}
+  <div class="row mt-3">
+    {% for img, title, content, tags in games %}
+    <div class="col-md-4 mt-2">
+      <div class="tgee-card">
+        <div class="tgee-card-img" style="background-image: url({{ static(img) }}); height: 190px;"></div>
+        <div class="tgee-card-body">
+          <h3>{{title}}</h3>
+          <p>{{content}}</p>
+          <div class="d-flex align-items-center">
+            {% for t in tags %}
+            <small class="mr-1 badge badge-pill badge-gray-4">#{{t}}</small>
+            {% endfor %}
+            <div class="tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="py-4 text-center">
+    <button class="px-3 btn btn-outline-dark rounded-pill">展開看更多</button>
+  </div>
+</div>
+{% endblock %}

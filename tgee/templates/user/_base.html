@@ -1,0 +1,13 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row py-2">
+    <div class="col-7">
+    {% block form_content %}
+    {% endblock %}
+    </div>
+  </div>
+  <img class="fancy-banner" src="{{ static('user/login@2x.png') }}" />
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+<div class="nav tgee-tabs justify-content-center shadow f-16">
+  <div class="item mx-2 p-1 position-absolute" style="left: 0;">最新消息</div>
+  <a href="{{url('news_official')}}" class="item mx-2 p-1 {{'active' if request.path == url('news_official') else '' }}">官方消息</a>
+  <a href="{{url('news_market')}}" class="item mx-2 p-1 {{'active' if request.path == url('news_market') else '' }}">產業訊息</a>
+  <a href="{{url('news_game')}}" class="item mx-2 p-1 {{'active' if request.path == url('news_game') else '' }}">遊戲新聞</a>
+</div>

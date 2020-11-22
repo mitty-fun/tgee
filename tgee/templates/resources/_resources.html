@@ -1,0 +1,20 @@
+{% include './partials/filter.html' %}
+<div class="row mt-3">
+  {% for img, title, position, date, tags in resources %}
+  <div class="col-md-6 mt-2">
+    <div class="tgee-card flex-md-row" style="min-width: 267px;">
+      <div class="tgee-card-img" style="background-image: url({{ static(img) }}); max-width: 310px;"></div>
+      <div class="tgee-card-body">
+        <h3>{{title}}</h3>
+        <p>地區：{{position}}<br />地區：{{date}}</p>
+        {% for t in tags %}
+        <div class="d-flex align-items-center"><small class="mr-1 badge badge-pill badge-gray-4">#{{t}}</small>
+          <div class="tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="py-4 text-center"><button class="px-3 btn btn-outline-dark rounded-pill">展開看更多</button></div>

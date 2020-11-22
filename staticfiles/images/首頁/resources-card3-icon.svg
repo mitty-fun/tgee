@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="27.414" viewBox="0 0 33 27.414">
+  <g id="resources-card3-icon" transform="translate(-1492.809 -1210.561)">
+    <g id="Group_1269" data-name="Group 1269" transform="translate(1493.809 1211.561)">
+      <line id="Line_161" data-name="Line 161" y1="16.208" transform="translate(15.474 2.998)" fill="none" stroke="#ff8a2e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_5355" data-name="Path 5355" d="M1509.283,1236.561c-1.368-1.343-4.313-2.274-7.737-2.274a14.174,14.174,0,0,0-6.479,1.377.854.854,0,0,1-1.259-.753V1215.2a1.7,1.7,0,0,1,.516-1.229,10.653,10.653,0,0,1,7.221-2.413,13.157,13.157,0,0,1,3.912.575" transform="translate(-1493.809 -1211.561)" fill="none" stroke="#136ad5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_1270" data-name="Group 1270" transform="translate(1509.335 1211.561)">
+      <path id="Path_5356" data-name="Path 5356" d="M1511.809,1236.561c1.369-1.343,4.314-2.274,7.737-2.274a14.171,14.171,0,0,1,6.479,1.377.854.854,0,0,0,1.259-.753V1215.2a1.7,1.7,0,0,0-.516-1.229,10.653,10.653,0,0,0-7.221-2.413c-3.423,0-6.369,1.221-7.737,2.982" transform="translate(-1511.809 -1211.561)" fill="none" stroke="#136ad5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

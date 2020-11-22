@@ -1,0 +1,15 @@
+<div class="row">
+  {% for img, title in news %}
+  <div class="col-sm-6 col-md-4 mt-2">
+    <div class="tgee-card">
+      <div class="tgee-card-img" style="background-image: url({{ static(img) }});"></div>
+      <div class="tgee-card-body">
+        <h3 class="mb-3" style="line-height: 1.5;">{{title}}</h3>
+        <div class="tgee-card-footer"><small>1 小時前更新 </small>
+          <div class="tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

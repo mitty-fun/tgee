@@ -1,0 +1,50 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+
+{% if search %}
+<div class="bg-cover" style="background-image: url(images/搜尋結果頁/main-short-gray-bg.jpg)">
+  <div class="container py-5">
+    <h2>關於「電競活動文字最多15個字...」，我們幫你找到了：</h2><small class="text-gray-2">共有 74 項搜尋結果</small>
+  </div>
+</div>
+<div class="container pb-5" style="margin-top: -30px;">
+  {% for tag, title, content in search %}
+  <div class="mb-2">
+    <div class="tgee-card article-card">
+      <div class="tgee-card-body"><small class="mb-1 text-gray-2">{{tag}}</small>
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <div class="d-flex"><small class="mr-auto">1 小時前更新</small></div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="py-3">
+    {% include './partials/pagination.html' %}
+  </div>
+</div>
+{% else %}
+
+<div class="bg-cover" style="background-image: url(images/搜尋結果頁/main-short-gray-bg.jpg)">
+  <div class="container py-5">
+    <h2>關於「電競活動文字最多15個字...」，我們幫你找到了：</h2><small class="text-gray-2">共有 74 項搜尋結果</small>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex py-5">
+    <div class="mr-auto">
+      <p>建議</p>
+      <ul class="small">
+        <li>請檢查有無錯別字</li>
+        <li>請試著換用不同的查詢字詞搜尋</li>
+        <li>請改試較常用的字詞搜尋</li>
+        <li>請試著減少查詢字詞</li>
+      </ul>
+    </div><img width="333px" src="images/找不到搜尋結果/search-none-img@2x.png" />
+  </div>
+</div>
+{% endif %}
+
+
+{% endblock %}

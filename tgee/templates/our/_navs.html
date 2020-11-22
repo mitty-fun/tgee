@@ -1,0 +1,6 @@
+<div class="nav tgee-tabs justify-content-center shadow f-16">
+  <div class="item mx-2 p-1 position-absolute" style="left: 0;">條款相關</div>
+  <a href="{{url('faq')}}" class="item mx-2 p-1 {{'active' if request.path == url('faq') else '' }}">常見說明</a>
+  <a href="{{url('privacy')}}" class="item mx-2 p-1 {{'active' if request.path == url('privacy') else '' }}">版權說明</a>
+  <a href="{{url('terms')}}" class="item mx-2 p-1 {{'active' if request.path == url('terms') else '' }}">隱私權政策</a>
+</div>

@@ -1,0 +1,267 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+<div class="home-banner">
+  <div class="tab-content">
+    <div class="fade tab-pane w-100 show active" id="pill-a"
+      style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); height: 475px;"></div>
+    <div class="fade tab-pane w-100 show" id="pill-b"
+      style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); height: 475px;"></div>
+    <div class="fade tab-pane w-100 show" id="pill-c"
+      style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); height: 475px;"></div>
+    <div class="fade tab-pane w-100 show" id="pill-d"
+      style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); height: 475px;"></div>
+    <div class="fade tab-pane w-100 show" id="pill-e"
+      style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); height: 475px;"></div>
+  </div>
+  <div class="nav nav-tabs shadow d-flex justify-content-center flex-nowrap" role="tablist">
+    <div class="nav-item shadow-sm d-flex align-items-center justify-content-center p-md-2 p-1 flex-grow-1 active"
+      data-toggle="tab" href="#pill-a" role="tab" aria-controls="a">
+      <div class="img" style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); "></div>
+      <div class="description f-14 ml-2">標題文字標題文字，標題文字最多 18 字</div>
+    </div>
+    <div class="nav-item shadow-sm d-flex align-items-center justify-content-center p-md-2 p-1 flex-grow-1"
+      data-toggle="tab" href="#pill-b" role="tab" aria-controls="b">
+      <div class="img" style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); "></div>
+      <div class="description f-14 ml-2">標題文字標題文字，標題文字最多 18 字</div>
+    </div>
+    <div class="nav-item shadow-sm d-flex align-items-center justify-content-center p-md-2 p-1 flex-grow-1"
+      data-toggle="tab" href="#pill-c" role="tab" aria-controls="c">
+      <div class="img" style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); "></div>
+      <div class="description f-14 ml-2">標題文字標題文字，標題文字最多 18 字</div>
+    </div>
+    <div class="nav-item shadow-sm d-flex align-items-center justify-content-center p-md-2 p-1 flex-grow-1"
+      data-toggle="tab" href="#pill-d" role="tab" aria-controls="d">
+      <div class="img" style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); "></div>
+      <div class="description f-14 ml-2">標題文字標題文字，標題文字最多 18 字</div>
+    </div>
+    <div class="nav-item shadow-sm d-flex align-items-center justify-content-center p-md-2 p-1 flex-grow-1"
+      data-toggle="tab" href="#pill-e" role="tab" aria-controls="e">
+      <div class="img" style="background-image: url({{ static('home/home-slide-1440x475.jpg') }}); "></div>
+      <div class="description f-14 ml-2">標題文字標題文字，標題文字最多 18 字</div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="py-5">
+    <h2 class="h1">精選項目</h2>
+    <h3 class="mb-3">獨立遊戲開發第一站 —— 0到100的完整資源</h3>
+    <div class="row">
+      <div class="col-md-4 mb-2">
+        <div class="tgee-card bg-cover" style="background-image: url({{ static('home/prod_1.jpg') }}); height: 250px;">
+          <div class="p-2 fancy-bg-gradient h-100 d-flex justify-content-between flex-column">
+            <div><span class="badge badge-pill badge-gray-1">遊戲新聞</span></div>
+            <h3 class="mb-0 text-white">是真的！微軟閃電發表 XboxSeries S，價格一起曝光</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="tgee-card bg-cover" style="background-image: url({{ static('home/prod_2.jpg') }}); height: 250px;">
+          <div class="p-2 fancy-bg-gradient h-100 d-flex justify-content-between flex-column">
+            <div><span class="badge badge-pill badge-gray-1">知識文章</span></div>
+            <h3 class="mb-0 text-white">第11代Intel Core處理器正式登場，Iris Xe內顯順暢運行AAA遊戲</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="tgee-card bg-cover" style="background-image: url({{ static('home/prod_3.jpg') }}); height: 250px;">
+          <div class="p-2 fancy-bg-gradient h-100 d-flex justify-content-between flex-column">
+            <div><span class="badge badge-pill badge-gray-1">活動看板</span></div>
+            <h3 class="mb-0 text-white">Faust Game Jam 2020 台中會場</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-6 mb-2">
+        <div class="tgee-card d-flex justify-content-center align-items-center bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 100px; background-position: bottom;">
+          <span class="h3 mb-0">競賽獎項</span></div>
+      </div>
+      <div class="col-md-3 col-6 mb-2">
+        <div class="tgee-card d-flex justify-content-center align-items-center bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 100px; background-position: bottom;">
+          <span class="h3 mb-0">政府計劃</span></div>
+      </div>
+      <div class="col-md-3 col-6 mb-2">
+        <div class="tgee-card d-flex justify-content-center align-items-center bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 100px; background-position: bottom;">
+          <span class="h3 mb-0">遊戲社群</span></div>
+      </div>
+      <div class="col-md-3 col-6 mb-2">
+        <div class="tgee-card d-flex justify-content-center align-items-center bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 100px; background-position: bottom;">
+          <span class="h3 mb-0">會計法務</span></div>
+      </div>
+    </div>
+    <div class="mt-3 d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center">
+      <p class="mb-2 mr-md-3">瀏覽眾多資源、重點文章</p><button class="mb-2 tgee-btn">加入會員</button>
+    </div>
+  </div>
+</div>
+<div class="container mobile-scroll-x-container">
+  <div class="py-5">
+    <h2 class="h1">台灣原創獨立遊戲團隊專屬服務</h2>
+    <p class="mb-3">說明文字說明文字說明文字，字說明文字。</p>
+    <div class="mobile-scroll-x d-md-flex" style="margin: 0 -7.5px;">
+      <div class="d-inline-block flex-fill mx-1">
+        <div class="tgee-card d-flex flex-column justify-content-between bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 218px;">
+          <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+            <p class="h2 mt-2">競賽獎項</p>
+          </div>
+          <div class="p-2 d-flex">
+            <div class="ml-auto tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block flex-fill mx-1">
+        <div class="tgee-card d-flex flex-column justify-content-between bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 218px;">
+          <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+            <p class="h2 mt-2">發行代理</p>
+          </div>
+          <div class="p-2 d-flex">
+            <div class="ml-auto tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block flex-fill mx-1">
+        <div class="tgee-card d-flex flex-column justify-content-between bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 218px;">
+          <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+            <p class="h2 mt-2">秘技精華</p>
+          </div>
+          <div class="p-2 d-flex">
+            <div class="ml-auto tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block flex-fill mx-1">
+        <div class="tgee-card d-flex flex-column justify-content-between bg-cover"
+          style="background-image: url({{ static('home/resources-card.png') }}); height: 218px;">
+          <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+            <p class="h2 mt-2"> 綜合補給</p>
+          </div>
+          <div class="p-2 d-flex">
+            <div class="ml-auto tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 d-flex justify-content-center justify-content-md-end">
+      <button class="btn rounded-pill btn-orange">立即申請專屬服務</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="py-5">
+    <div class="py-2 d-flex flex-column flex-md-row align-items-center">
+      <h1 class="mb-0">最新消息</h1>
+      <div class="ml-auto">
+        <div class="mobile-scroll-x">
+          <a href="#" class="mr-2 px-3 btn btn-outline-dark rounded-pill">官方訊息</a>
+          <a href="#" class="mr-2 px-3 btn btn-outline-dark rounded-pill">產業訊息</a>
+          <a href="#" class="mr-2 px-3 btn btn-outline-dark rounded-pill">遊戲新聞</a>
+          <a href="#" class="mr-2 px-3 btn btn-outline-dark rounded-pill">活動看板</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-scroll-x d-flex" style="margin: 0 -7.5px;">
+      <div class="m-1 flex-grow-1 align-self-stretch" style="max-width: 50%; min-width: 267px;">
+        <div class="tgee-card primary-card">
+          <div class="tgee-card-img" style="background-image: url({{ static(news[0][0]) }});"></div>
+          <div class="tgee-card-body">
+            <p class="h2">{{news[0][1]}}</p>
+            <div class="d-flex">
+              <div><small class="f-14">1 小時前更新 </small></div>
+              <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grow-1 d-flex flex-row flex-md-column">
+        <div class="m-1 tgee-card flex-md-row" style="min-width: 267px;">
+          <div class="tgee-card-img" style="background-image: url({{ static(news[1][0]) }}); max-width: 310px;"></div>
+          <div class="tgee-card-body p-2">
+            <p>{{news[1][1]}}</p>
+            <div class="d-flex">
+              <div><small class="f-14">1 小時前更新 </small></div>
+              <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="m-1 tgee-card flex-md-row" style="min-width: 267px;">
+          <div class="tgee-card-img" style="background-image: url({{ static(news[2][0]) }}); max-width: 310px;"></div>
+          <div class="tgee-card-body p-2">
+            <p>{{news[2][1]}}</p>
+            <div class="d-flex">
+              <div><small class="f-14">1 小時前更新 </small></div>
+              <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  style="background-image: url({{ static('home/trapezoid.svg') }}); background-position: top right; background-repeat: no-repeat;">
+  <div class="container py-6">
+    <h2 class="h1 mb-3">各界推薦</h2>
+    <div class="shadow rounded js-slick bg-white">
+      <div>
+        <div class="tgee-card flex-md-row">
+          <div class="tgee-card-img"
+            style="background-image: url({{ static('home/recommend.png') }}); height: 200px; width: 500px;"></div>
+          <div class="tgee-card-body">
+            <h2>鄭祤呈</h2>
+            <p>好奇心創意 營運長</p>
+            <p class="mb-0">這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+              一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+              作旅程從這開始吧。</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tgee-card flex-md-row">
+          <div class="tgee-card-img"
+            style="background-image: url({{ static('home/recommend.png') }}); height: 200px; width: 500px;"></div>
+          <div class="tgee-card-body">
+            <h2>鄭祤呈</h2>
+            <p>好奇心創意 營運長</p>
+            <p class="mb-0">這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+              一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+              作旅程從這開始吧。</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tgee-card flex-md-row">
+          <div class="tgee-card-img"
+            style="background-image: url({{ static('home/recommend.png') }}); height: 200px; width: 500px;"></div>
+          <div class="tgee-card-body">
+            <h2>鄭祤呈</h2>
+            <p>好奇心創意 營運長</p>
+            <p class="mb-0">這裡真的很棒！你真的要加入看看！真心推薦想要創作遊戲的朋友
+              一定要加入這個平台，在這裡你可以完成你的夢想。讓你的遊戲創
+              作旅程從這開始吧。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="d-inline-block next-arrow">
+        <div class="tgee-circle-button border-0 shadow"><i class="fas fa-chevron-left"></i></div>
+      </div>
+      <div class="dots d-inline-block position-relative"></div>
+      <div class="d-inline-block prev-arrow">
+        <div class="tgee-circle-button border-0 shadow"><i class="fas fa-chevron-right"></i></div>
+      </div>
+    </div>
+    <div class="mt-6">
+      {% include 'partials/achievement.html' %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+{% include './our/_navs.html' %}
+<div class="container py-5 px-0 px-md-2">
+  <div class="d-flex align-items-center flex-column flex-md-row">
+    <h1 class="p-3 p-md-0 mr-auto">隱私權政策</h1>
+    <img src="{{ static('faq/question-img.svg') }}" style="max-width: 100%;" />
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="rounded shadow pt-md-3 p-3 pt-6 mobile-toggle-menu js-mobile-toggle-menu">
+        <h2>目錄</h2><a href="#">平台公告事項</a>
+        <hr /><a href="#">特定產品公告事項</a>
+        <hr /><a href="#">我們如何使用您的資訊</a>
+        <hr /><a href="#">癲癇與虛擬實境健康警告 </a>
+        <div class="shadow only-mobile toggle-trigger position-absolute bg-white rounded-right p-2">*<br />目<br />錄</div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="rounded shadow py-3 px-4">
+        <div class="mb-5">
+          <h2>平台公告事項</h2>
+          <p>必須要有網際網路連線、EA帳號；接受EA使用者協議(terms.ea.com/tc)、隱私與COOKIE政策以及ORIGIN使用者授權協議(www.ea.com/zh-tw/legal)；安裝ORIGIN用戶端程式軟體(www.origin.com/download)以及使用單次使用產品代碼註冊才能開始遊戲，與取得額外內容和線上功能。 產品代碼註冊限制每組代碼對應一組EA帳號。 產品代碼一經使用即不得轉讓，此外，至少在能使用線上功能期間，產品代碼不可失效。 您必須年滿13歲才能使用某些功能。 EA 可能會提供特定的免費額外內容及/或更新。您可以購買額外的遊戲內容。 系統可能會自動下載必要內容更新，需要額外的儲存空間，須支付頻寬使用費，而且必須另外購買才能使用。 軟體可能收集資料，以提供遊戲內的廣告。 EA在下列網址發佈通知30天後，可能將其線上功能收回：www.ea.com/zh-tw/service-updates。</p>
+        </div>
+        <div class="mb-5">
+          <h2>特定產品公告事項</h2>
+          <p>未列出的遊戲表示並沒有與平台公告事項不同的特定使用者授權協議或公告事項。依英文字母順序列出的遊戲。</p><a class="d-block mb-2" href="#">單一遊戲公告連結</a><a class="d-block mb-2" href="#">單一遊戲公告連結</a><a class="d-block mb-2" href="#">單一遊戲公告連結</a>
+        </div>
+        <div class="mb-5">
+          <h2>特定產品公告事項</h2>
+          <p>某些人在日常生活中接觸到特定閃爍的光線或發光圖案時，容易引發癲癇發作或喪失意識。 這些人在觀看電視影像或遊玩特定電子遊戲時，可能會發生癲癇。 即使這些人之前沒有任何癲癇醫療病史或從未癲癇發作，也有可能發生此類情事。 如果您或您的任何家人，在接觸到閃爍的光線時，曾有與癲癇相關的任何症狀（癲癇發作或喪失意識），請在遊玩前先諮詢您的醫師。我們建議家長應監控其子女對電子遊戲的使用狀況。 如果您或您的子女在遊玩電子遊戲時遭遇到下列任何症狀：暈眩、視力模糊、眼睛或肌肉抽搐、喪失意識、定向障礙，任何不自主運動或痙攣，請立即停止使用並諮詢您的醫師。</p>
+        </div>
+        <div class="mb-5">
+          <h2>資料使用</h2>
+          <p>在您使用EA 服務</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

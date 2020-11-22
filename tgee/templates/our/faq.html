@@ -1,0 +1,21 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+{% include './our/_navs.html' %}
+<div class="container px-0 py-md-5" id="faq">
+  <div class="d-flex align-items-center flex-column flex-md-row">
+    <h1 class="p-3 p-md-0 mr-auto">常見問題</h1><img src="{{ static('faq/question-img.svg') }}" style="max-width: 100%;" />
+  </div>
+  <div class="rounded shadow bg-white">
+    {% for q, a in faq_data %}
+    <h3 class="faq-q collapsed" data-toggle="collapse" data-target="#qa_{{loop.index}}">{{q}}</h3>
+    <div class="faq-a collapse" id="qa_{{loop.index}}">
+      <p>{{a}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="py-5 text-center">
+    <p>還有其他問題嗎？ 請來信詢問</p><a href="#"><i class="far fa-envelope"></i>&nbsp;Gamesupport01@gmail.com</a>
+  </div>
+</div>
+{% endblock %}
