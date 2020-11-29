@@ -1,12 +1,14 @@
-<div class="bg-white shadow">
-  <div class="p-2 position-absolute" style="left: 0;">最新消息</div>
-  <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
-    最新消息&nbsp;<i class="fas fa-chevron-up ml-auto"></i>
-  </span>
-  <div class="collapse d-md-block" id="navbar-collapse-tabs">
-    <div class="d-flex flex-column flex-md-row justify-content-center">
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('news_official') else '' }}" href="{{url('news_official')}}" >官方消息</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('news_market') else '' }}" href="{{url('news_market')}}" >產業訊息</a>
+<div class="px-4 bg-white shadow">
+  <div class="position-relative">
+    <div class="py-2 position-absolute" style="left: 0;">最新消息</div>
+    <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
+      最新消息&nbsp;<i class="fas fa-chevron-up ml-auto"></i>
+    </span>
+    <div class="collapse d-md-block" id="navbar-collapse-tabs">
+      <div class="d-flex flex-column flex-md-row justify-content-center">
+        <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('news_official') else '' }}" href="{{url('news_official')}}" >官方消息</a>
+        <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('news_market') else '' }}" href="{{url('news_market')}}" >產業訊息</a>
+      </div>
     </div>
   </div>
 </div>
