@@ -3,6 +3,11 @@ $('.js-searchbox').on('click', '.icon-search, .icon-close', function (event) {
   $('.js-searchbox').toggleClass('active')
 })
 
+$('.js-searchbox input').keydown(function (event) {
+  // press enter
+  if (event.keyCode === 13) location.href = '/search/?q=' + $(this).val()
+});
+
 
 
 $('.js-slick').each(function () {
