@@ -1,0 +1,58 @@
+{% extends "./layout/base.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="d-flex align-items-center">
+    <h1 class="mr-auto">文章管理</h1>
+    <div><button class="btn btn-orange">新增文章</button></div>
+  </div>
+  <div class="my-3">
+    <div class="nav tgee-block-tabs justify-content-center shadow f-16">
+      <div class="shadow text-center flex-fill item p-2" data-toggle="tab" href="#nav-a">官方消息</div>
+      <div class="shadow text-center flex-fill item p-2" data-toggle="tab" href="#nav-b">官方消息</div>
+      <div class="shadow text-center flex-fill item p-2" data-toggle="tab" href="#nav-c">產業訊息</div>
+    </div>
+  </div>
+  <div class="my-3 d-flex align-items-center">
+    <div class="mr-2">
+      <div class="tgee-dropdown js-tgee-dropdown">
+        <div class="tgee-dropdown-trigger">
+          <span class="mr-auto">已發布</span>
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="tgee-dropdown-menu">
+          <p class="tgee-dropdown-item">AAAAA</p>
+          <p class="tgee-dropdown-item">AAAAA</p>
+          <p class="tgee-dropdown-item">AAAAA</p>
+          <p class="tgee-dropdown-item">AAAAA</p>
+          <p class="tgee-dropdown-item">AAAAA</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <input class="form-control bg-gray-4 rounded-pill border-0" placeholder="搜尋關鍵字..." style="width: 200px;"/>
+    </div>
+  </div>
+  {% for tag, title, content in articles %}
+  <div class="mb-2">
+    <a href="/articles/1/show/">
+      <div class="tgee-card flex-md-row article-card">
+        <div class="tgee-card-img bg-gray-4"></div>
+        <div class="tgee-card-body"><small class="text-gray-2">{{tag}}</small>
+          <h2>{{title}}</h2>
+          <p class="pr-3">{{content}}</p>
+          <div class="d-flex small"><span class="mr-auto">1 小時前更新</span><span><i class="fas fa-pen text-gray-2 mr-1"></i>編輯文章</span>
+            <div class="mx-2 border"></div><small><i class="fas fa-trash-alt text-gray-2 mr-1"></i>刪除文章</small>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+  <div class="py-3">
+    {% include './partials/pagination.html' %}
+  </div>
+</div>
+  
+{% endblock %}

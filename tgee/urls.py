@@ -7,7 +7,7 @@ urlpatterns = [
 
     path('', views.index, name='home'),
 
-    path('news/', views.news_game, name='news'),
+    path('news/', views.news, name='news'),
     path('news/game/', views.news_game, name='news_game'),
     path('news/official/', views.news_official, name='news_official'),
     path('news/market/', views.news_market, name='news_market'),

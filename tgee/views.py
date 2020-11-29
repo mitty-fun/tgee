@@ -200,17 +200,21 @@ def teams_show(request, name):
     }
     return render(request, 'teams/show.html', data)
 
+# 新聞
+def news(request):
+    return redirect('news_official')
+
 # 產業新聞
 def news_market(request):
-    return render(request, 'news/market.html', { 'news': news_data })
+    return render(request, 'news/market.html', { 'posts': news_data })
 
 # 官方新聞
 def news_official(request):
-    return render(request, 'news/official.html', { 'news': news_data })
+    return render(request, 'news/official.html', { 'posts': news_data })
 
 # 遊戲新聞
 def news_game(request):
-    return render(request, 'news/game.html', { 'news': news_data })
+    return render(request, 'news/game.html', { 'posts': news_data })
 
 # 遊戲列表
 def games(request):
@@ -220,9 +224,9 @@ def games(request):
 def games_edit(request, hash_id):
     return render(request, 'games/edit.html')
 
-# 文章管理
+# 知識文章
 def articles(request):
-    return render(request, 'articles/index.html', {'articles': articles_data})
+    return render(request, 'articles/index.html', { 'posts': news_data })
 
 # 文章檢視
 def articles_show(request, hash_id):
