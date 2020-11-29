@@ -5,10 +5,10 @@
   </span>
   <div class="collapse d-md-block" id="navbar-collapse-tabs">
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >競賽獎項</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >政府計劃</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >遊戲社群</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >會計法務</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('resources_competition') else '' }}" href="{{url('resources_competition')}}" >競賽獎項</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('resources_government') else '' }}" href="{{url('resources_government')}}" >政府計劃</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('resources_community') else '' }}" href="{{url('resources_community')}}" >遊戲社群</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('resources_accounting') else '' }}" href="{{url('resources_accounting')}}" >會計法務</a>
     </div>
   </div>
 </div>

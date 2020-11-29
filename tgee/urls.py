@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import RedirectView
 
 from . import views
 
@@ -27,6 +28,11 @@ urlpatterns = [
     path('games/<str:hash_id>/edit/', views.games_edit, name='games_edit'),
 
     path('resources/', views.resources, name='resources'),
+    path('resources/accounting', views.resources_accounting, name='resources_accounting'),
+    path('resources/community', views.resources_community, name='resources_community'),
+    path('resources/competition', views.resources_competition, name='resources_competition'),
+    path('resources/government', views.resources_government, name='resources_government'),
+
     path('search/', views.search, name='search'),
     path('about/', views.about, name='about'),
 

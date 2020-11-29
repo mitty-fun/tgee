@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # 遊戲
 # 圖片路徑, 標題, 內文, 標籤
@@ -122,9 +122,27 @@ filter_options = [
     '益智', '動作', '其他',
 ]
 
-# 競賽資源
+# 相關資源
 def resources(request):
-    return render(request, 'resources/index.html', { 'resources': resources_data })
+    return redirect('resources_competition')
+
+# 會計法務
+def resources_accounting(request):
+    return render(request, 'resources/accounting.html', { 'resources': resources_data })
+
+# 遊戲社群
+def resources_community(request):
+    return render(request, 'resources/community.html', { 'resources': resources_data })
+
+# 競賽獎項
+def resources_competition(request):
+    return render(request, 'resources/competition.html', { 'resources': resources_data })
+
+# 政府計畫
+def resources_government(request):
+    return render(request, 'resources/government.html', { 'resources': resources_data })
+
+
 
 # 首頁
 def index(request):
