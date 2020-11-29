@@ -13,6 +13,7 @@ urlpatterns = [
     path('news/market/', views.news_market, name='news_market'),
 
     path('articles/', views.articles, name='articles'),
+    path('articles/manage', views.articles_manage, name='articles_manage'),
     path('articles/<str:hash_id>/show/', views.articles_show, name='articles_show'),
 
     path('campaigns/', views.campaigns, name='campaigns'),

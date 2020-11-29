@@ -1,7 +1,7 @@
 <div class="row">
-  {% for img, title in posts %}
+  {% for id, img, title, content, tags in posts %}
   <div class="col-sm-6 col-md-4 mt-2">
-    <a href="/articles/1/show">
+    <a href="/articles/{{id}}/show">
       <div class="tgee-card">
         <div class="tgee-card-img" style="background-image: url({{ static(img) }});"></div>
         <div class="tgee-card-body">

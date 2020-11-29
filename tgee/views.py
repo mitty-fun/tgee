@@ -61,16 +61,16 @@ resources_data = [
 
 # 新聞
 # 圖片路徑, 標題
-news_data = [
-    ('news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+posts = [
+    (1, 'news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (2, 'news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (3, 'news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (2, 'news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (3, 'news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (1, 'news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (3, 'news/3.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (1, 'news/1.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
+    (2, 'news/2.svg', '創作者的生存遊戲 #1畢業後，如何集體創作並...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...', ['遊戲新聞']),
 ]
 
 # 活動
@@ -147,7 +147,7 @@ def resources_government(request):
 # 首頁
 def index(request):
     data = {
-        'news': news_data[0:3],
+        'news': posts[0:3],
     }
     return render(request, 'index.html', data)
 
@@ -195,7 +195,7 @@ def service_logged_in(request):
 def teams_show(request, name):
     data = {
         'team': team,
-        'news': news_data[0:3],
+        'posts': posts[0:3],
         'game': game_data,
     }
     return render(request, 'teams/show.html', data)
@@ -206,15 +206,15 @@ def news(request):
 
 # 產業新聞
 def news_market(request):
-    return render(request, 'news/market.html', { 'posts': news_data })
+    return render(request, 'news/market.html', { 'posts': posts })
 
 # 官方新聞
 def news_official(request):
-    return render(request, 'news/official.html', { 'posts': news_data })
+    return render(request, 'news/official.html', { 'posts': posts })
 
 # 遊戲新聞
 def news_game(request):
-    return render(request, 'news/game.html', { 'posts': news_data })
+    return render(request, 'news/game.html', { 'posts': posts })
 
 # 遊戲列表
 def games(request):
@@ -226,15 +226,23 @@ def games_edit(request, hash_id):
 
 # 知識文章
 def articles(request):
-    return render(request, 'articles/index.html', { 'posts': news_data })
+    return render(request, 'articles/index.html', { 'posts': posts })
 
 # 文章檢視
 def articles_show(request, hash_id):
-    return render(request, 'articles/show.html', { 'news': news_data[0:3], 'aritcle': news_data[0] })
+    data = {
+        'news': posts[0:3],
+        'article': posts[int(hash_id) - 1],
+    }
+    return render(request, f'articles/show.html', data)
+
+# 文章管理
+def articles_manage(request):
+    return render(request, f'articles/manage.html', { 'posts': articles_data })
 
 # 文章慣例
 def search(request):
-    return render(request, 'search.html', {'search': search_data})
+    return render(request, 'search.html', {'search': posts})
 
 # 404
 def not_found(request):

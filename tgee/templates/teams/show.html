@@ -134,9 +134,9 @@
     <div class="py-5">
       <h2 class="h1">團隊文章</h2>
       <div class="mobile-scroll-x">
-        {% for img, title in news %}
+        {% for id, img, title, content, tags in posts %}
         <div>
-          <a href="/articles/1/show">
+          <a href="/articles/{{id}}/show">
             <div class="tgee-card">
               <div class="tgee-card-img" style="background-image: url({{static(img) }});"></div>
               <div class="tgee-card-body">
@@ -155,9 +155,9 @@
     <div class="py-5">
       <h2 class="h1">其他文章</h2>
       <div class="mobile-scroll-x">
-        {% for img, title in news %}
+        {% for id, img, title, content, tags in posts %}
         <div>
-          <a href="/articles/1/show">
+          <a href="/articles/{{id}}/show">
             <div class="tgee-card">
               <div class="tgee-card-img" style="background-image: url({{static(img)}});"></div>
               <div class="tgee-card-body">
