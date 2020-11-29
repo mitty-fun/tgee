@@ -122,17 +122,19 @@
     <div class="mt-3 mobile-scroll-x">
       {% for img, title in campaigns %}
       <div>
-        <div class="tgee-card flex-md-row" style="min-width: 267px;">
-          <div class="tgee-card-img" style="background-image: url({{static(img)}}); max-width: 310px;"></div>
-          <div class="tgee-card-body p-2">
-            <p>{{title}}</p>
-            <p class="f-3">地區：全國性<br/>時間：08/21/2020</p>
-            <div class="d-flex">
-              <div><span class="badge badge-pill badge-gray-4">遊戲新聞</span></div>
-              <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+        <a href="/campaigns/1/show">
+          <div class="tgee-card flex-md-row" style="min-width: 267px;">
+            <div class="tgee-card-img" style="background-image: url({{static(img)}}); max-width: 310px;"></div>
+            <div class="tgee-card-body p-2">
+              <p>{{title}}</p>
+              <p class="f-3">地區：全國性<br/>時間：08/21/2020</p>
+              <div class="d-flex">
+                <div><span class="badge badge-pill badge-gray-4">遊戲新聞</span></div>
+                <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       {% endfor %}
     </div>

@@ -50,16 +50,18 @@
       <div class="row">
         {% for img, title in news %}
         <div class="col-4 my-1">
-          <div class="tgee-card">
-            <div class="tgee-card-img" style="background-image: url({{static(img)}});"></div>
-            <div class="tgee-card-body">
-              <h2>{{title}}</h2>
-              <div class="d-flex">
-                <div><small class="f-14">1 小時前更新 </small></div>
-                <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+          <a href="/articles/1/show">
+            <div class="tgee-card">
+              <div class="tgee-card-img" style="background-image: url({{static(img)}});"></div>
+              <div class="tgee-card-body">
+                <h2>{{title}}</h2>
+                <div class="d-flex">
+                  <div><small class="f-14">1 小時前更新 </small></div>
+                  <div class="tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         {% endfor %}
       </div>

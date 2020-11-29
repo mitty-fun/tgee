@@ -1,0 +1,73 @@
+<div class="my-4 p-5 shadow" id="vue-team-reward">
+  <div class="d-flex align-items-center">
+    <h2 class="mr-auto">團隊介紹</h2>
+    <div v-if="description_editing">
+      <span @click="cancel">取消</span>
+      <span @click="save_description">儲存變更</span>
+    </div>
+    <div v-if="!description_editing">
+      <span @click="description_editing = true">編輯</span>
+    </div>
+  </div>
+  <p v-if="!description_editing">[[team_data.description]]</p>
+  <textarea v-if="description_editing" name="" id="" cols="30" rows="10" v-model="form_data.description"></textarea>
+  <div>
+    <div class="d-flex align-items-center">
+      <h2 class="mr-auto">獲獎紀錄</h2>
+      <div v-if="rewards_editing">
+        <span @click="cancel">取消</span>
+        <span @click="save_rewards">儲存變更</span>
+      </div>
+      <div v-if="!rewards_editing">
+        <span @click="rewards_editing = true">編輯</span>
+      </div>
+    </div>
+    <ul v-if="!rewards_editing">
+      <li v-for="r in team_data.rewards">[[r]]</li>
+    </ul>
+    <div v-if="rewards_editing">
+      <div class="mt-3 position-relative" v-for="r, idx in form_data.rewards">
+        <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 20px; height: 20px;" @click="form_data.rewards.splice(idx, 1)">
+          <span>&times;</span>
+        </button>
+        <input class="form-control rounded-0" type="text" v-model="form_data.rewards[idx]">
+      </div>
+      <div class="text-center">
+        <div class="mx-auto d-inline-block text-center bg-primary text-white rounded-circle" style="width: 25px; height: 25px;" @click="form_data.rewards.push('')">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="d-flex align-items-center">
+      <h2 class="mr-auto">相關報導</h2>
+      <div v-if="links_editing">
+        <span @click="cancel">取消</span>
+        <span @click="save_links">儲存變更</span>
+      </div>
+      <div v-if="!links_editing">
+        <span @click="links_editing = true">編輯</span>
+      </div>
+    </div>
+    <ul v-if="!links_editing">
+      <li v-for="link in team_data.links" class="py-1">
+        <a :href="link.href">[[link.text]]</a>
+      </li>
+    </ul>
+    <div v-if="links_editing">
+      <div class="mb-2 position-relative" v-for="link, idx in form_data.links">
+        <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 20px; height: 20px;" @click="form_data.links.splice(idx, 1)">
+          <span>&times;</span>
+        </button>
+        <input class="form-control rounded-0" type="text" v-model="link.text">
+        <input class="form-control rounded-0" type="text" v-model="link.href">
+      </div>
+      <div class="text-center">
+        <div class="mx-auto d-inline-block text-center bg-primary text-white rounded-circle" style="width: 25px; height: 25px;" @click="form_data.links.push({text: '', href: ''})">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

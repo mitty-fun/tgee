@@ -14,46 +14,93 @@
   }
 }
 
-.searchbox:not(.active) {
-  input {
+.navbar-collapse-main-trigger {
+  i {
+    cursor: pointer;
+    width: 16px;
+  }
+  &.collapsed i.fas.fa-times {
+    display: none;
+  }
+  &:not(.collapsed) i.fas.fa-bars {
     display: none;
   }
 }
 
-.searchbox.active {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: right;
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
+// #navbar-collapse-my.show, #navbar-collapse-my.collapsing {
+//   & ~ #navbar-collapse-links {
+//     display: none;
+//   }
+// }
+
+.searchbox {
+  position: relative;
+  color: white;
   
-  i {
-    z-index: 1;
-    position: relative;
+  .icon-search, .icon-close {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &:not(.active) {
+    .icon-close, input {
+      display: none;
+    }
   }
 
   input {
-    width: 100%;
+    color: #fff;
+    &::placeholder {
+      color: #cccccc;
+    }
+  }
+
+  &.active {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-width: 0;
-    border-bottom: 1px solid #fff;
-    background-color: $primary;
-    outline: none;
-    color: #fff;
+    text-align: right;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+    .icon-search {
+      display: none;
+    }
+
+    .icon-close {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+
+    input {
+      width: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-width: 0;
+      border-bottom: 1px solid #fff;
+      background-color: $primary;
+      outline: none;
+      color: #fff;
+    }
   }
-  
-  i.fas.fa-times {
-    position: absolute;
-    right: 0;
+}
+
+.contact-btn {
+  @extend .rounded-pill;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  &:hover {
+    color: #cccccc;
+    border-color: #ffffff55;
   }
 }

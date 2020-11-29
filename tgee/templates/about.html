@@ -22,7 +22,9 @@
       {% include './partials/achievement.html' %}
     </div>
     <p class="mb-3">描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。歡迎來信合作。</p>
-    <div class="text-center"><button class="btn rounded-pill btn-orange">立即申請專屬服務</button></div>
+    <div class="text-center">
+      <a href="{{url('signup_premium')}}" class="btn rounded-pill btn-orange">立即申請專屬服務</a>
+    </div>
   </div>
 </div>
 {% endblock %}

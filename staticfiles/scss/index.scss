@@ -38,11 +38,11 @@
 @import "../vendor/slick.css";
 @import "../vendor/slick-theme.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300,400,500&display=swap');
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
@@ -123,7 +123,7 @@ footer a {
 }
 
 #navbar-mobile-collapse .collapse-trigger:not(.collapsed) {
-  background-color: $blue;
+  background-color: $primary;
   color: #fff;
 }
 

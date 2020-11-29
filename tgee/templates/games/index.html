@@ -7,19 +7,21 @@
   <div class="row mt-3">
     {% for img, title, content, tags in games %}
     <div class="col-md-4 mt-2">
-      <div class="tgee-card">
-        <div class="tgee-card-img" style="background-image: url({{ static(img) }}); height: 190px;"></div>
-        <div class="tgee-card-body">
-          <h3>{{title}}</h3>
-          <p>{{content}}</p>
-          <div class="d-flex align-items-center">
-            {% for t in tags %}
-            <small class="mr-1 badge badge-pill badge-gray-4">#{{t}}</small>
-            {% endfor %}
-            <div class="tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+      <a href="/teams/1/show">
+        <div class="tgee-card">
+          <div class="tgee-card-img" style="background-image: url({{ static(img) }}); height: 190px;"></div>
+          <div class="tgee-card-body">
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+            <div class="d-flex align-items-center">
+              {% for t in tags %}
+              <small class="mr-1 badge badge-pill badge-gray-4">#{{t}}</small>
+              {% endfor %}
+              <div class="tgee-circle-button"><i class="fas fa-chevron-right"></i></div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
     {% endfor %}
   </div>

@@ -23,7 +23,7 @@
     padding-bottom: $spacer;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     .footer-collapse {
       background-color: #D5DFEB;
     }
@@ -32,7 +32,4 @@
       border-bottom: 2px solid #05295522;
     }
   }
-
-  
-
 }

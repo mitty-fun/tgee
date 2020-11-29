@@ -1,12 +1,9 @@
-.tgee-tabs .item {
+// 分頁使用
+.tgee-underline {
   cursor: pointer;
   position: relative;
-
-  &.active {
-    color: $blue;
-  }
-
-  &.active::after {
+  color: $blue !important;
+  &::after {
     content: '';
     width: 100%;
     height: 2px;

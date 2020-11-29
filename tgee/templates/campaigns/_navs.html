@@ -1,5 +1,12 @@
-<div class="nav tgee-tabs justify-content-center shadow f-16">
-  <div class="item mx-2 p-1 position-absolute" style="left: 0;">活動看板</div>
-  <a href="{{url('campaigns')}}" class="item mx-2 p-1 {{'active' if request.path == url('campaigns') else '' }}">國際會展</a>
-  <a href="{{url('campaigns_courses')}}" class="item mx-2 p-1 {{'active' if request.path == url('campaigns_courses') else '' }}">活動課程</a>
+<div class="bg-white shadow">
+  <div class="p-2 position-absolute" style="left: 0;">活動看板</div>
+  <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
+    活動課程&nbsp;<i class="fas fa-chevron-up ml-auto"></i>
+  </span>
+  <div class="collapse d-md-block" id="navbar-collapse-tabs">
+    <div class="d-flex flex-column flex-md-row justify-content-center">
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('campaigns') else '' }}" href="{{url('campaigns')}}" >國際會展</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('campaigns_courses') else '' }}" href="{{url('campaigns_courses')}}" >活動課程</a>
+    </div>
+  </div>
 </div>

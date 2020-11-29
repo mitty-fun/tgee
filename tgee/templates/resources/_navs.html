@@ -1,7 +1,14 @@
-<div class="nav tgee-tabs justify-content-center shadow f-16">
-  <div class="item mx-2 p-1 position-absolute" style="left: 0;">相關資源</div>
-  <div class="item mx-2 p-1 active">競賽獎項</div>
-  <div class="item mx-2 p-1">政府計劃</div>
-  <div class="item mx-2 p-1">遊戲社群</div>
-  <div class="item mx-2 p-1">會計法務</div>
+<div class="bg-white shadow">
+  <div class="p-2 position-absolute" style="left: 0;">相關資源</div>
+  <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
+    相關資源&nbsp;<i class="fas fa-chevron-up ml-auto"></i>
+  </span>
+  <div class="collapse d-md-block" id="navbar-collapse-tabs">
+    <div class="d-flex flex-column flex-md-row justify-content-center">
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >競賽獎項</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >政府計劃</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >遊戲社群</a>
+      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == '' else '' }}" href="{{''}}" >會計法務</a>
+    </div>
+  </div>
 </div>
