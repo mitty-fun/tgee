@@ -251,6 +251,10 @@ def not_found(request):
 def login(request):
     return render(request, 'user/login.html')
 
+# 登入
+def email_valid(request):
+    return render(request, 'user/email_valid.html')
+
 # 重設密碼
 def reset_password(request):
     return render(request, 'user/reset_password.html')

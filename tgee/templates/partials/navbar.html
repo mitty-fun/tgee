@@ -24,9 +24,9 @@
         <div class="p-2 flex-fill text-center border border-light-blue border-right-0">合作聯繫</div>
       </div>
       <div class="list-group list-group-flush collapse" id="navbar-collapse-my" data-parent="#navbar-mobile-collapse">
-        <a class="list-group-item" href="{{url('home')}}">個人資料</a>
-        <a class="list-group-item" href="{{url('home')}}">文章管理</a>
-        <a class="list-group-item" href="{{url('home')}}">專屬服務</a>
+        <a class="list-group-item" href="/teams/1/show">個人資料</a>
+        <a class="list-group-item" href="{{url('articles_manage')}}">文章管理</a>
+        <a class="list-group-item" href="{{url('service_logged_in')}}">專屬服務</a>
         <a class="list-group-item" href="{{url('home')}}"><i class="fas fa-sign-out-alt"></i>登出</a>
       </div>
       <div class="list-group list-group-flush" data-parent="#navbar-mobile-collapse" id="navbar-collapse-links">
@@ -79,9 +79,9 @@
           <img src="{{static('icons/icon-user.svg')}}" style="width: 16px; height: 16px;">
         </div>
         <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">個人資料</button>
-          <button class="dropdown-item" type="button">文章管理</button>
-          <button class="dropdown-item" type="button">專屬服務</button>
+          <a href="/teams/1/show" class="dropdown-item text-gray-1">個人資料</a>
+          <a href="{{url('articles_manage')}}" class="dropdown-item text-gray-1">文章管理</a>
+          <a href="{{url('service_logged_in')}}" class="dropdown-item text-gray-1">專屬服務</a>
         </div>
       </div>
       <div class="mx-2 border border-white" style="height: 20px;"></div>
