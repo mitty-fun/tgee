@@ -76,15 +76,14 @@ posts = [
 # 活動
 # 圖片路徑, 標題
 campaigns_data = [
-    ('campaigns/1.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/2.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/3.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/4.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/1.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/2.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/3.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/4.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
-    ('campaigns/1.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (1, 'campaigns/1.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (2, 'campaigns/2.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (3, 'campaigns/3.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (4, 'campaigns/4.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (1, 'campaigns/1.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (2, 'campaigns/2.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (3, 'campaigns/3.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
+    (4, 'campaigns/4.jpg', '創作者的生存遊戲 #1畢業後，如何集體創作並...'),
 ]
 
 #常見問題
@@ -205,7 +204,11 @@ def campaigns_courses(request):
 
 # 活動檢視
 def campaigns_show(request, hash_id):
-    return render(request, 'campaigns/show.html', {'campaigns': campaigns_data[0:2]})
+    data = {
+        'campaigns': campaigns_data[0:2],
+        'main_campaigns': campaigns_data[int(hash_id) - 1]
+    }
+    return render(request, 'campaigns/show.html', data)
 
 # 專屬服務(未登入)
 def service(request):
@@ -214,8 +217,11 @@ def service(request):
 # 專屬服務(登入)
 def service_logged_in(request):
     data = {
-        'campaigns': campaigns_data,
         'resources': resources_data,
+        'filters': [
+            { 'multi': False, 'options': ['技術', '交流'], },
+            { 'multi': False, 'options': cities }
+        ]
     }
     return render(request, 'service_logged_in.html', data)
 

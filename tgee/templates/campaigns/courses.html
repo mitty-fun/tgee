@@ -6,9 +6,9 @@
   <h1 class="my-3">活動課程</h1>
   {% include './partials/filter.html' %}
   <div class="row">
-    {% for img, title in campaigns %}
+    {% for id, img, title in campaigns %}
     <div class="col-md-6 mt-2">
-      <a href="/campaigns/1/show">
+      <a href="/campaigns/{{id}}/show">
         <div class="tgee-card flex-md-row">
           <div class="tgee-card-img" style="background-image: url({{ static(img) }});"></div>
           <div class="tgee-card-body" style="min-width: 200px;"><strong>台北國際電玩展</strong>

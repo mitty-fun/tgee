@@ -1,10 +1,10 @@
 {% extends "./layout/base.html" %}
 
 {% block content %}
-<div class="service-page">
+<div class="service-page bg-white">
   <div class="container">
     <div class="py-5 row">
-      <div class="col-md-7 d-flex flex-column justify-content-center">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
         <h1 class="mb-2">專屬服務</h1>
         <h2 class="mb-2">創夢獨家為遊戲量身打造升級服務</h2>
         <p>現在就申請加入專屬服務，即可享有獨家企劃協助，包含行銷方針指導、企業合作案規劃輔導。更有資金找尋、曝光等等優惠等你。</p>
@@ -12,79 +12,81 @@
           <a href="{{url('signup_premium')}}" class="btn rounded-pill btn-orange">立即申請專屬服務</a>
         </div>
       </div>
-      <div class="col-md-5"><img class="w-100" src="{{ static('service/service-main-img.png') }}" /></div>
+      <div class="col-md-6"><img class="w-100" src="{{ static('service/service-main-img.png') }}" /></div>
     </div>
   </div>
-  <div class="py-5" style="background-image: url({{ static('service/bg_1.svg') }}); background-repeat: no-repeat; background-position: right;">
-    <div class="container">
-      <h1 class="mt-3">服務項目</h1>
-      <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。</p>
-      <div class="row mt-3">
-        <div class="col-md-3">
-          <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-            <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
-              <p class="h2 mt-2">競賽獎項</p>
+  <div style="background-color: #FAFAFA;">
+    <div class="py-5" style="background-image: url({{ static('service/bg_1.svg') }}); background-repeat: no-repeat; background-position: right;">
+      <div class="container">
+        <h1 class="mt-3">服務項目</h1>
+        <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。</p>
+        <div class="row mt-3">
+          <div class="col-md-3">
+            <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
+              <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+                <p class="h2 mt-2">競賽獎項</p>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+              </div>
             </div>
-            <div class="p-2 d-flex">
-              <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+          </div>
+          <div class="col-md-3">
+            <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
+              <div class="p-2"><img src="{{ static('icons/icon_2.svg') }}" style="width: 30px;" />
+                <p class="h2 mt-2">競賽獎項</p>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
+              <div class="p-2"><img src="{{ static('icons/icon_3.svg') }}" style="width: 30px;" />
+                <p class="h2 mt-2">競賽獎項</p>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
+              <div class="p-2"><img src="{{ static('icons/icon_4.svg') }}" style="width: 30px;" />
+                <p class="h2 mt-2">競賽獎項</p>
+              </div>
+              <div class="p-2 d-flex">
+                <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-            <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
-              <p class="h2 mt-2">競賽獎項</p>
-            </div>
-            <div class="p-2 d-flex">
-              <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-            <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
-              <p class="h2 mt-2">競賽獎項</p>
-            </div>
-            <div class="p-2 d-flex">
-              <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="tgee-card d-flex flex-column justify-content-between bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-            <div class="p-2"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
-              <p class="h2 mt-2">競賽獎項</p>
-            </div>
-            <div class="p-2 d-flex">
-              <div class="ml-auto tgee-circle-button f-12"><i class="fas fa-chevron-right"></i></div>
-            </div>
-          </div>
-        </div>
+        <h3 class="mt-5">驗證會員福利</h3>
+        <ul>
+          <li class="mt-2">指定課程活動免費參與或報名優惠</li>
+          <li class="mt-2">限定會員專屬活動</li>
+          <li class="mt-2">不定期聚會</li>
+        </ul>
       </div>
-      <h3 class="mt-5">驗證會員福利</h3>
-      <ul>
-        <li class="mt-2">指定課程活動免費參與或報名優惠</li>
-        <li class="mt-2">限定會員專屬活動</li>
-        <li class="mt-2">不定期聚會</li>
-      </ul>
     </div>
   </div>
   <div class="container">
     <div class="py-5">
       <h1 class="mb-2">申請資格</h1>
       <p>描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。</p>
-      <div class="row mt-5">
-        <div class="col-md-4 text-center">
+      <div class="row mt-5 justify-content-around">
+        <div class="col-md-3 text-center">
           <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-3 text-center">
           <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-3 text-center">
           <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
@@ -120,10 +122,10 @@
         <div class="col-md-2 text-center"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
-        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_5.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
-        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_6.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
         <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
@@ -159,7 +161,7 @@
           {% for i in range(10) %}
           <div class="py-4 px-2">
             <div class="tgee-card d-flex flex-column align-items-center justify-content-center bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-              <div><img src="{{ static('service/company_logo.png') }}" style="height: 50px;" /></div>
+              <div><img src="{{ static('service/company_logo_1.png') }}" style="height: 50px;" /></div>
               <p class="mt-2">競賽獎項</p>
             </div>
           </div>
