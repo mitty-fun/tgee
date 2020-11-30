@@ -1,36 +1,39 @@
 <div class="p-2 rounded w-100 shadow d-md-flex align-items-center">
   <div class="m-2"><span class="h3 mb-0">分類搜尋</span></div>
+  {% for my_filter in filters %}
+  {% if my_filter.multi %}
   <div class="m-2 flex-grow-1">
     <div class="tgee-dropdown js-tgee-dropdown">
       <div class="tgee-dropdown-trigger"><span class="mr-auto">遊戲類型</span><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></div>
       <div class="tgee-dropdown-menu pb-0">
         <div class="tgee-dropdown-menu-extend">
           <div class="d-flex justify-content-between flex-wrap">
-            {% for option in filter_options %}
-              <div class="p-1 w-25">
-                <div class="tgee-checkbox mr-1"> 
-                  <input class="mr-1" type="checkbox"/>
-                  <div class="checkmark"></div>
-                </div>
-                {{option}}
+            {% for option in my_filter.options %}
+            <div class="p-1 w-25">
+              <div class="tgee-checkbox mr-1"> 
+                <input class="mr-1" type="checkbox"/>
+                <div class="checkmark"></div>
               </div>
+              {{option}}
+            </div>
             {% endfor %}
           </div>
         </div>
       </div>
     </div>
   </div>
+  {% else %}
   <div class="m-2 flex-grow-1">
     <div class="tgee-dropdown js-tgee-dropdown">
       <div class="tgee-dropdown-trigger"><span class="mr-auto">平台</span><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></div>
       <div class="tgee-dropdown-menu">
-        <p class="tgee-dropdown-item">AAAAA</p>
-        <p class="tgee-dropdown-item">AAAAA</p>
-        <p class="tgee-dropdown-item">AAAAA</p>
-        <p class="tgee-dropdown-item">AAAAA</p>
-        <p class="tgee-dropdown-item">AAAAA</p>
+        {% for option in my_filter.options %}
+        <p class="tgee-dropdown-item">{{option}}</p>
+        {% endfor %}
       </div>
     </div>
   </div>
+  {% endif %}
+  {% endfor %}
   <div class="m-2"><button class="btn btn-orange rounded-pill">搜尋</button></div>
 </div>

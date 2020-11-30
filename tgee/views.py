@@ -105,22 +105,10 @@ articles_data = [
     ('遊戲新聞', '文章標題文章標題文章標題文，章標題文標題文...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
 ]
 
-search_data = [
-    ('遊戲新聞', '文章標題文章標題文章標題文文章標題文章標題文章標題文', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
-    ('遊戲新聞', '文章標題文章標題文章標題文文章標題文章標題文章標題文', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
-    ('遊戲新聞', '文章標題文章標題文章標題文文章標題文章標題文章標題文', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
-    ('遊戲新聞', '文章標題文章標題文章標題文文章標題文章標題文章標題文', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
-    ('遊戲新聞', '文章標題文章標題文章標題文文章標題文章標題文章標題文', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
-]
+filter_options = ['Block Making RPG', 'Casual', 'Sports Simulation', '互動戲劇', '其他', '冒險', '動作', '動作冒險', '動作角色扮演', '家庭', '射擊', '恐怖', '戰略', '格鬥', '桌上遊戲', '模擬', '模擬角色扮演', '獨特遊戲', '益智', '第一人稱射擊', '策略角色扮演', '街機', '角色扮演', '賽車', '運動', '音樂', '音樂節奏']
 
-filter_options = [
-    '互動戲劇', '動作冒險', '休閒', '動作角色扮演', 
-    '角色扮演', '第一人稱射擊', '音樂', '音樂節奏',
-    '運動', '策略角色扮演', '桌上遊戲', '模擬',
-    '家庭', '模擬角色扮演', '射擊', '戰略',
-    '恐怖', '獨特遊戲', '格鬥', '賽車',
-    '益智', '動作', '其他',
-]
+cities = ['台北市', '新北市', '台南市', '基隆市','嘉義市','台北市','嘉義縣', '新北市', '台南市', '桃園縣', '高雄市', '新竹市', '屏東縣', '新竹縣', '台東縣', '苗栗縣','花蓮縣','台中市','宜蘭縣','彰化縣','澎湖縣','南投縣','金門縣','雲林縣','連江縣']
+
 
 # 相關資源
 def resources(request):
@@ -128,21 +116,47 @@ def resources(request):
 
 # 會計法務
 def resources_accounting(request):
-    return render(request, 'resources/accounting.html', { 'resources': resources_data })
+    data = {
+        'resources': resources_data,
+        'filters': [
+            { 'multi': False, 'options': ['會計', '法務', '公司登記'], },
+            { 'multi': False, 'options': cities }
+        ]
+    }
+    return render(request, 'resources/accounting.html', data)
 
 # 遊戲社群
 def resources_community(request):
-    return render(request, 'resources/community.html', { 'resources': resources_data })
+    data = {
+        'resources': resources_data,
+        'filters': [
+            { 'multi': False, 'options': ['技術', '交流'], },
+            { 'multi': False, 'options': cities }
+        ]
+    }
+    return render(request, 'resources/community.html', data)
 
 # 競賽獎項
 def resources_competition(request):
-    return render(request, 'resources/competition.html', { 'resources': resources_data })
+    data = {
+        'resources': resources_data,
+        'filters': [
+            { 'multi': False, 'options': ['學生', '公司行號', '不限定', '商務媒合'], },
+            { 'multi': False, 'options': cities }
+        ]
+    }
+    return render(request, 'resources/competition.html', data)
 
 # 政府計畫
 def resources_government(request):
-    return render(request, 'resources/government.html', { 'resources': resources_data })
-
-
+    data = {
+        'resources': resources_data,
+        'filters': [
+            { 'multi': False, 'options': ['借貸', '補助', '培訓', '媒合'], },
+            { 'multi': False, 'options': cities }
+        ]
+    }
+    return render(request, 'resources/government.html', data)
 
 # 首頁
 def index(request):
@@ -167,13 +181,27 @@ def terms(request):
 def faq(request):
     return render(request, 'our/faq.html', {'faq_data': faq_data, 'filter_options': filter_options})
 
-# 活動列表
+# 國際會展
 def campaigns(request):
-    return render(request, 'campaigns/index.html', {'campaigns': campaigns_data})
+    data = {
+        'campaigns': campaigns_data,
+        'filters': [
+            { 'multi': False, 'options': ['玩家展覽', '商務媒合'], },
+            { 'multi': False, 'options': ['台灣','亞洲','歐洲','美洲','非洲', '大洋洲'] }
+        ]
+    }
+    return render(request, 'campaigns/index.html', data)
 
 # 課程活動
 def campaigns_courses(request):
-    return render(request, 'campaigns/courses.html', {'campaigns': campaigns_data})
+    data = {
+        'campaigns': campaigns_data,
+        'filters': [
+            { 'multi': False, 'options': ['學習','藝文','商業','娛樂', '科技'], },
+            { 'multi': False, 'options': cities, }
+        ]
+    }
+    return render(request, 'campaigns/courses.html', data)
 
 # 活動檢視
 def campaigns_show(request, hash_id):
@@ -218,7 +246,14 @@ def news_game(request):
 
 # 遊戲列表
 def games(request):
-    return render(request, 'games/index.html', {'games': games_data, 'filter_options': filter_options})
+    data = {
+        'games': games_data,
+        'filters': [
+            { 'multi': True, 'options': filter_options, },
+            { 'multi': False, 'options': filter_options, }
+        ]
+    }
+    return render(request, 'games/index.html', data)
 
 # 遊戲編輯
 def games_edit(request, hash_id):
