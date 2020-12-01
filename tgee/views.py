@@ -106,7 +106,7 @@ articles_data = [
 
 filter_options = ['Block Making RPG', 'Casual', 'Sports Simulation', '互動戲劇', '其他', '冒險', '動作', '動作冒險', '動作角色扮演', '家庭', '射擊', '恐怖', '戰略', '格鬥', '桌上遊戲', '模擬', '模擬角色扮演', '獨特遊戲', '益智', '第一人稱射擊', '策略角色扮演', '街機', '角色扮演', '賽車', '運動', '音樂', '音樂節奏']
 
-cities = ['台北市', '新北市', '台南市', '基隆市','嘉義市','台北市','嘉義縣', '新北市', '台南市', '桃園縣', '高雄市', '新竹市', '屏東縣', '新竹縣', '台東縣', '苗栗縣','花蓮縣','台中市','宜蘭縣','彰化縣','澎湖縣','南投縣','金門縣','雲林縣','連江縣']
+cities = ['北部', '中部', '南部', '東部']
 
 
 # 相關資源
@@ -118,8 +118,8 @@ def resources_accounting(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'multi': False, 'options': ['會計', '法務', '公司登記'], },
-            { 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': ['會計', '法務', '公司登記'], },
+            { 'name': '地區', 'multi': False, 'options': cities }
         ]
     }
     return render(request, 'resources/accounting.html', data)
@@ -129,8 +129,8 @@ def resources_community(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'multi': False, 'options': ['技術', '交流'], },
-            { 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': ['技術', '交流'], },
+            { 'name': '地區', 'multi': False, 'options': cities }
         ]
     }
     return render(request, 'resources/community.html', data)
@@ -140,8 +140,8 @@ def resources_competition(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'multi': False, 'options': ['學生', '公司行號', '不限定', '商務媒合'], },
-            { 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': ['學生', '公司行號', '不限定', '商務媒合'], },
+            { 'name': '地區', 'multi': False, 'options': cities }
         ]
     }
     return render(request, 'resources/competition.html', data)
@@ -151,8 +151,8 @@ def resources_government(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'multi': False, 'options': ['借貸', '補助', '培訓', '媒合'], },
-            { 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': ['借貸', '補助', '培訓', '媒合'], },
+            { 'name': '地區', 'multi': False, 'options': cities }
         ]
     }
     return render(request, 'resources/government.html', data)
@@ -185,8 +185,8 @@ def campaigns(request):
     data = {
         'campaigns': campaigns_data,
         'filters': [
-            { 'multi': False, 'options': ['玩家展覽', '商務媒合'], },
-            { 'multi': False, 'options': ['台灣','亞洲','歐洲','美洲','非洲', '大洋洲'] }
+            { 'name': '類型', 'multi': False, 'options': ['玩家展覽', '商務媒合'], },
+            { 'name': '地區', 'multi': False, 'options': ['台灣','亞洲','歐洲','美洲','非洲', '大洋洲'] }
         ]
     }
     return render(request, 'campaigns/index.html', data)
@@ -196,8 +196,8 @@ def campaigns_courses(request):
     data = {
         'campaigns': campaigns_data,
         'filters': [
-            { 'multi': False, 'options': ['學習','藝文','商業','娛樂', '科技'], },
-            { 'multi': False, 'options': cities, }
+            { 'name': '類型', 'multi': False, 'options': ['學習','藝文','商業','娛樂', '科技'], },
+            { 'name': '地區', 'multi': False, 'options': cities, }
         ]
     }
     return render(request, 'campaigns/courses.html', data)
@@ -219,8 +219,8 @@ def service_logged_in(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'multi': False, 'options': ['技術', '交流'], },
-            { 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': ['技術', '交流'], },
+            { 'name': '地區', 'multi': False, 'options': cities }
         ]
     }
     return render(request, 'service_logged_in.html', data)
@@ -255,8 +255,8 @@ def games(request):
     data = {
         'games': games_data,
         'filters': [
-            { 'multi': True, 'options': filter_options, },
-            { 'multi': False, 'options': filter_options, }
+            { 'name': '類型', 'multi': True, 'options': filter_options, },
+            { 'name': '平台', 'multi': False, 'options': ['PlayStation', 'XBOX', 'Switch', 'Steam', 'Humble Bundle', 'Ios', 'Android'], }
         ]
     }
     return render(request, 'games/index.html', data)

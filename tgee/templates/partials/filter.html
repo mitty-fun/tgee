@@ -4,7 +4,11 @@
   {% if my_filter.multi %}
   <div class="m-2 flex-grow-1">
     <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger"><span class="mr-auto">遊戲類型</span><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></div>
+      <div class="tgee-dropdown-trigger">
+        <span class="mr-auto">{{my_filter.name}}</span>
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-up"></i>
+      </div>
       <div class="tgee-dropdown-menu pb-0">
         <div class="tgee-dropdown-menu-extend">
           <div class="d-flex justify-content-between flex-wrap">
@@ -25,7 +29,11 @@
   {% else %}
   <div class="m-2 flex-grow-1">
     <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger"><span class="mr-auto">平台</span><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></div>
+      <div class="tgee-dropdown-trigger">
+        <span class="mr-auto">{{my_filter.name}}</span>
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-up"></i>
+      </div>
       <div class="tgee-dropdown-menu">
         {% for option in my_filter.options %}
         <p class="tgee-dropdown-item">{{option}}</p>
