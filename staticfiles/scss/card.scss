@@ -39,15 +39,6 @@
     background-size: 120%;
   }
 
-  // 臨時暫時給首頁的全背景卡片用
-  width: 100%;
-  background-size: 120%;
-  background-position: center;
-  transition: all .2s;
-  &:hover {
-    background-size: 140%;
-  }
-
   &.article-card {
     .tgee-card-img {
       height: 200px;
@@ -67,4 +58,15 @@
   border-color: #00000000;
   color: #fff;
   margin-left: auto;
+}
+
+.hover-bg-expend {
+  // 臨時暫時給首頁的全背景卡片用
+  width: 100%;
+  background-size: 120%;
+  background-position: center;
+  transition: all .2s;
+  &:hover {
+    background-size: 140%;
+  }
 }
