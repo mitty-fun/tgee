@@ -1,9 +1,16 @@
 <div class="modal" id="modal_game_show" tabindex="-1">
   <div class="modal-dialog modal-xl">
-    <div class="modal-content bg-gray-1"><button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 50px; height: 50px;"><span>&times;</span></button><img class="w-100" src="images/modal_game_show/game.png" />
+    <div class="modal-content bg-gray-1">
+      <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 25px; height: 25px;">
+        <span>&times;</span></button>
+        <div class="w-100 bg-cover" style="background-image: url({{static(game.imgs[0])}}); height: 300px;"></div>
       <div class="p-3">
-        <div class="d-flex mb-md-5"><img class="d-block mr-3" src="images/modal_game_show/game.png" style="width: 100px; height: 70px;" /><img class="d-block mr-3" src="images/modal_game_show/game.png" style="width: 100px; height: 70px;" /><img class="d-block mr-3" src="images/modal_game_show/game.png" style="width: 100px; height: 70px;" /><img class="d-block mr-3" src="images/modal_game_show/game.png" style="width: 100px; height: 70px;" /><img class="d-block mr-3" src="images/modal_game_show/game.png" style="width: 100px; height: 70px;" /></div>
-        <div class="row mb-md-5">
+        <div class="d-flex mb-md-4">
+          {% for img in game.imgs %}
+          <img class="d-block mr-3" src="{{static(img)}}" style="width: 100px; height: 70px;" />
+          {% endfor %}
+        </div>
+        <div class="row mb-md-4">
           <div class="col-md-4">
             <p class="text-gray-2">遊戲作品中文名稱</p>
             <p class="text-white">還願</p>
@@ -17,7 +24,7 @@
             <p class="text-white">1人</p>
           </div>
         </div>
-        <div class="row mb-md-5">
+        <div class="row mb-md-4">
           <div class="col-md-4">
             <p class="text-gray-2">遊戲影片</p>
             <p class="text-white">https:/www.com.tw/</p>
@@ -27,7 +34,7 @@
             <p class="text-white">https:/www.com.tw/</p>
           </div>
         </div>
-        <div class="row mb-md-5">
+        <div class="row mb-md-4">
           <div class="col-md-4">
             <p class="text-gray-2">遊戲類別</p>
             <p class="text-white">還願</p>
@@ -41,7 +48,7 @@
             <p class="text-white">TapTap/方塊遊戲/GOG/Microsoft Store</p>
           </div>
         </div>
-        <div class="row mb-md-5">
+        <div class="row mb-md-4">
           <div class="col-md-4">
             <p class="text-gray-2">遊戲上架日期</p>
             <p class="text-white">2019/10/08</p>
@@ -55,11 +62,11 @@
             <p class="text-white">會員限定</p>
           </div>
         </div>
-        <div class="mb-md-5">
+        <div class="mb-md-4">
           <p class="text-gray-2">遊戲中文介紹</p>
           <p class="text-white">2012 年，一群懷抱著遊戲夢的年輕人，在 18 樓合租宿舍結成團隊；三年後，以《麥克尼西亞》斬獲多座大獎的這群夥伴，正式成立光穹遊戲股份有限公司 (18Light Game Ltd.)，並獨立開發《螢幕判官》這款曾獲東南亞國際行動遊戲大賽 (IMGA SEA) 等海內外獎項肯定的劇情遊戲。隨後更與出版社異業合作，推出《螢幕判官》同名小說與設定集，另由發行商發行任天堂 Switch 版本，朝著把臺灣作品推向國際的目標穩步向前。</p>
         </div>
-        <div class="mb-md-5">
+        <div class="mb-md-4">
           <p class="text-gray-2">遊戲英文介紹</p>
           <p class="text-white">WASHINGTON — White House aides improperly intervened to falsely assert that a manuscript by the former national security adviser John R. Bolton contained classified information in an attempt to prevent its contents from becoming public, a lawyer for the career official overseeing the book’s prepublication review said in a letter filed in court on Wednesday.</p>
         </div>

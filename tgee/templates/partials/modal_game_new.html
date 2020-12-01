@@ -1,15 +1,15 @@
-<div class="modal" id="modal_game_edit" tabindex="-1">
+<div class="modal" id="modal_game_new" tabindex="-1">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 25px; height: 25px;">
         <span>&times;</span>
       </button>
-      <img class="w-100 bg-gray-4 bg-cover" style="height: 300px;" src="/static/games/1.jpg" />
+      <img class="w-100 bg-gray-3 bg-cover" style="height: 300px;"/>
       <div class="p-3 bg-gray-4">
         <form>
           <div class="p-3">
             <div class="d-flex mb-md-5 js-vue-imgs-uploader">    
-              {% for img in game.imgs %}
+              {% for img in [] %}
               <div class="position-relative mr-3">
                 <img class="d-block" src="{{static(img)}}" style="width: 100px; height: 70px;" />
                 <input class="position-absolute" style="top: 0; bottom: 0; left: 0; right: 0; opacity: 0;" type="text" />
@@ -30,25 +30,25 @@
             <div class="row mb-md-4">
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲作品中文名稱</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.title_zh}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲作品英文名稱</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.title_en}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲支援人數</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.participants}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
             </div>
             <div class="row mb-md-4">
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲影片</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.video}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲介紹社群頁面或網站</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.website}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
             </div>
             <div class="row mb-md-4">
@@ -105,15 +105,15 @@
             </div>
             <div class="mb-md-4">
               <p class="text-gray-2">遊戲中文介紹</p>
-              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字">{{game.content_zh}}</textarea>
+              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字"></textarea>
             </div>
             <div class="mb-md-4">
               <p class="text-gray-2">遊戲英文介紹</p>
-              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字">{{game.content_zh}}</textarea>
+              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字"></textarea>
             </div>
             <div class="mb-md-4 d-flex">
               <button class="btn btn-primary ml-auto">取消</button>
-              <button class="btn btn-orange ml-2">儲存</button>
+              <button class="btn btn-orange ml-2">發布</button>
             </div>
           </div>
         </form>
