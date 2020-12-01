@@ -8840,7 +8840,8 @@ input:focus ~ .close-btn {
 .home-banner .nav > .nav-item {
   cursor: pointer;
   border-top: 4px solid #fff;
-  width: 20%; }
+  width: 20%;
+  position: relative; }
   .home-banner .nav > .nav-item .img {
     width: 50px;
     height: 50px;
@@ -8849,6 +8850,14 @@ input:focus ~ .close-btn {
     border-radius: 50%; }
   .home-banner .nav > .nav-item.active {
     border-top-color: #136AD5; }
+  .home-banner .nav > .nav-item:not(.active)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff88; }
   @media (max-width: 767.98px) {
     .home-banner .nav > .nav-item:not(.active) .description {
       display: none; }
@@ -8992,6 +9001,9 @@ input:focus ~ .close-btn {
 body {
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 400; }
+
+.cursor-pointer {
+  cursor: pointer; }
 
 .collapse-trigger {
   display: flex;

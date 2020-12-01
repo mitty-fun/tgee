@@ -2,8 +2,8 @@
 .home-banner .nav > .nav-item {
   cursor: pointer;
   border-top: 4px solid #fff;
-
   width: 20%;
+  position: relative;
 
   .img {
     width: 50px;
@@ -15,6 +15,16 @@
 
   &.active {
     border-top-color: $primary;
+  }
+
+  &:not(.active)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff88;
   }
 
   @include media-breakpoint-down(sm) {

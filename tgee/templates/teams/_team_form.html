@@ -1,25 +1,29 @@
-<div class="my-4 p-5 shadow" id="vue-team-reward">
-  <div class="d-flex align-items-center">
-    <h2 class="mr-auto">團隊介紹</h2>
-    <div v-if="description_editing">
-      <span @click="cancel">取消</span>
-      <span @click="save_description">儲存變更</span>
-    </div>
-    <div v-if="!description_editing">
-      <span @click="description_editing = true">編輯</span>
-    </div>
-  </div>
-  <p v-if="!description_editing">[[team_data.description]]</p>
-  <textarea v-if="description_editing" name="" id="" cols="30" rows="10" v-model="form_data.description"></textarea>
-  <div>
-    <div class="d-flex align-items-center">
-      <h2 class="mr-auto">獲獎紀錄</h2>
-      <div v-if="rewards_editing">
+<div class="my-4 p-5 shadow bg-white rounded" id="vue-team-reward">
+  <div class="mb-4">
+    <div class="d-flex align-items-center border-bottom mb-2">
+      <h2 class="mr-auto">團隊介紹</h2>
+      <div v-if="description_editing" class="f-16 cursor-pointer">
         <span @click="cancel">取消</span>
+        <span class="border mx-1"></span>
+        <span @click="save_description">儲存變更</span>
+      </div>
+      <div v-if="!description_editing" class="f-16 cursor-pointer d-flex align-items-center" @click="description_editing = true">
+        <img src="{{static('icons/edit.svg')}}">&nbsp;編輯
+      </div>
+    </div>
+    <p v-if="!description_editing">[[team_data.description]]</p>
+    <textarea v-if="description_editing" cols="30" rows="10" v-model="form_data.description" class="form-control"></textarea>
+  </div>
+  <div class="mb-4">
+    <div class="d-flex align-items-center border-bottom mb-2">
+      <h2 class="mr-auto">獲獎紀錄</h2>
+      <div v-if="rewards_editing"  class="f-16 cursor-pointer">
+        <span @click="cancel">取消</span>
+        <span class="border mx-1"></span>
         <span @click="save_rewards">儲存變更</span>
       </div>
-      <div v-if="!rewards_editing">
-        <span @click="rewards_editing = true">編輯</span>
+      <div v-if="!rewards_editing" class="cursor-pointer d-flex align-items-center" @click="rewards_editing = true">
+        <img src="{{static('icons/edit.svg')}}">&nbsp;編輯
       </div>
     </div>
     <ul v-if="!rewards_editing">
@@ -32,26 +36,27 @@
         </button>
         <input class="form-control rounded-0" type="text" v-model="form_data.rewards[idx]">
       </div>
-      <div class="text-center">
+      <div class="text-center py-2">
         <div class="mx-auto d-inline-block text-center bg-primary text-white rounded-circle" style="width: 25px; height: 25px;" @click="form_data.rewards.push('')">
           <i class="fas fa-plus"></i>
         </div>
       </div>
     </div>
   </div>
-  <div>
-    <div class="d-flex align-items-center">
+  <div class="mb-4">
+    <div class="d-flex align-items-center border-bottom mb-2">
       <h2 class="mr-auto">相關報導</h2>
-      <div v-if="links_editing">
+      <div v-if="links_editing" class="f-16 cursor-pointer">
         <span @click="cancel">取消</span>
+        <span class="border mx-1"></span>
         <span @click="save_links">儲存變更</span>
       </div>
-      <div v-if="!links_editing">
-        <span @click="links_editing = true">編輯</span>
+      <div v-if="!links_editing" class="cursor-pointer d-flex align-items-center" @click="links_editing = true">
+        <img src="{{static('icons/edit.svg')}}">&nbsp;編輯
       </div>
     </div>
     <ul v-if="!links_editing">
-      <li v-for="link in team_data.links" class="py-1">
+      <li v-for="link in team_data.links">
         <a :href="link.href">[[link.text]]</a>
       </li>
     </ul>
@@ -63,7 +68,7 @@
         <input class="form-control rounded-0" type="text" v-model="link.text">
         <input class="form-control rounded-0" type="text" v-model="link.href">
       </div>
-      <div class="text-center">
+      <div class="text-center py-2">
         <div class="mx-auto d-inline-block text-center bg-primary text-white rounded-circle" style="width: 25px; height: 25px;" @click="form_data.links.push({text: '', href: ''})">
           <i class="fas fa-plus"></i>
         </div>
