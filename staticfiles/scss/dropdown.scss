@@ -69,12 +69,13 @@ $height: 40px;
   }
 
   .tgee-dropdown-menu-extend {
-    min-width: 500px;
+    min-width: 600px;
     background-color: $gray-4;
     @extend .shadow;
     border-radius: 20px;
     padding-bottom: 20px;
     padding: 15px;
+    font-size: 14px;
   }
 }
 

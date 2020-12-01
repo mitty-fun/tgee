@@ -256,7 +256,7 @@ def games(request):
         'games': games_data,
         'filters': [
             { 'name': '類型', 'multi': True, 'options': filter_options, },
-            { 'name': '平台', 'multi': False, 'options': ['PlayStation', 'XBOX', 'Switch', 'Steam', 'Humble Bundle', 'Ios', 'Android'], }
+            { 'name': '平台', 'multi': True, 'options': ['PlayStation', 'XBOX', 'Switch', 'Steam', 'Humble Bundle', 'Ios', 'Android'], }
         ]
     }
     return render(request, 'games/index.html', data)
