@@ -1,9 +1,8 @@
 <div class="modal" id="modal_game_show" tabindex="-1">
   <div class="modal-dialog modal-xl">
     <div class="modal-content bg-gray-1">
-      <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 25px; height: 25px;">
-        <span>&times;</span></button>
-        <div class="w-100 bg-cover" style="background-image: url({{static(game.imgs[0])}}); height: 300px;"></div>
+      <button class="tgee-btn-close" data-dismiss="modal"></button>
+      <div class="w-100 bg-cover" style="background-image: url({{static(game.imgs[0])}}); height: 300px;"></div>
       <div class="p-3">
         <div class="d-flex mb-md-4">
           {% for img in game.imgs %}

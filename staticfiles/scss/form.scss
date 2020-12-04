@@ -1,3 +1,19 @@
+.tgee-input-box {
+  @extend .rounded;
+  background-color: #fff;
+  border: $gray-3 solid 1px;
+  > * {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 0 !important;
+  }
+}
+
+.tgee-input {
+  background-color: #fff;
+}
+
 .tgee-checkbox {
   width: 15px;
   height: 15px;

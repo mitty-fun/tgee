@@ -1,0 +1,19 @@
+<!-- 列表頁面上方 navbar 底下的小 nav -->
+<div class="px-1 px-md-4 bg-white shadow">
+  <div class="position-relative">
+    <div class="py-2 position-absolute" style="left: 0;">{{title}}</div>
+    <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
+      {% for text, link in options %}
+      {% if url(link) == request.path %}<span>{{text}}</span>{% endif %}
+      {% endfor %}
+      &nbsp;<i class="fas fa-chevron-up ml-auto"></i>
+    </span>
+    <div class="collapse d-md-block" id="navbar-collapse-tabs">
+      <div class="d-flex flex-column flex-md-row justify-content-center">
+        {% for text, link in options %}
+        <a class="text-center px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url(link) else '' }}" href="{{url(link)}}" >{{text}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../vendor/slick.css);
 @import url(../vendor/slick-theme.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300,400,500&display=swap");
@@ -8,7 +9,7 @@
   -o-user-select: none;
   user-select: none; }
 
-.btn, .tgee-circle-button, .tgee-btn-outline, .tgee-btn {
+.btn {
   box-sizing: border-box; }
 
 /*!
@@ -1914,7 +1915,7 @@ textarea.form-control {
       justify-content: center; }
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
-.btn, .tgee-circle-button, .tgee-btn-outline, .tgee-btn {
+.btn {
   display: inline-block;
   font-weight: 400;
   color: #292929;
@@ -1928,25 +1929,22 @@ textarea.form-control {
   line-height: 1.5;
   border-radius: 3rem;
   transition: none; }
-  .btn:hover, .tgee-circle-button:hover, .tgee-btn-outline:hover, .tgee-btn:hover {
+  .btn:hover {
     color: #292929;
     text-decoration: none; }
-  .btn:focus, .tgee-circle-button:focus, .tgee-btn-outline:focus, .tgee-btn:focus, .btn.focus, .focus.tgee-circle-button, .focus.tgee-btn-outline, .focus.tgee-btn {
+  .btn:focus, .btn.focus {
     outline: 0;
     box-shadow: none; }
-  .btn.disabled, .disabled.tgee-circle-button, .disabled.tgee-btn-outline, .disabled.tgee-btn, .btn:disabled, .tgee-circle-button:disabled, .tgee-btn-outline:disabled, .tgee-btn:disabled {
+  .btn.disabled, .btn:disabled {
     opacity: 0.65;
     box-shadow: none; }
-  .btn:not(:disabled):not(.disabled), .tgee-circle-button:not(:disabled):not(.disabled), .tgee-btn-outline:not(:disabled):not(.disabled), .tgee-btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled) {
     cursor: pointer; }
-    .btn:not(:disabled):not(.disabled):active, .tgee-circle-button:not(:disabled):not(.disabled):active, .tgee-btn-outline:not(:disabled):not(.disabled):active, .tgee-btn:not(:disabled):not(.disabled):active, .btn.active:not(:disabled):not(.disabled), .tgee-circle-button.active:not(:disabled):not(.disabled), .tgee-btn-outline.active:not(:disabled):not(.disabled), .tgee-btn.active:not(:disabled):not(.disabled) {
+    .btn:not(:disabled):not(.disabled):active, .btn.active:not(:disabled):not(.disabled) {
       box-shadow: none; }
 
-a.btn.disabled, a.disabled.tgee-circle-button, a.disabled.tgee-btn-outline, a.disabled.tgee-btn,
-fieldset:disabled a.btn,
-fieldset:disabled a.tgee-circle-button,
-fieldset:disabled a.tgee-btn-outline,
-fieldset:disabled a.tgee-btn {
+a.btn.disabled,
+fieldset:disabled a.btn {
   pointer-events: none; }
 
 .btn-primary {
@@ -1974,29 +1972,29 @@ fieldset:disabled a.tgee-btn {
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(54, 128, 219, 0.5); }
 
-.btn-secondary, .tgee-btn {
+.btn-secondary {
   color: #212529;
   background-color: #FF8A2E;
   border-color: #FF8A2E;
   box-shadow: none; }
-  .btn-secondary:hover, .tgee-btn:hover {
+  .btn-secondary:hover {
     color: #fff;
     background-color: #ff7508;
     border-color: #fa6e00; }
-  .btn-secondary:focus, .tgee-btn:focus, .btn-secondary.focus, .focus.tgee-btn {
+  .btn-secondary:focus, .btn-secondary.focus {
     color: #fff;
     background-color: #ff7508;
     border-color: #fa6e00;
     box-shadow: 0 0 0 0 rgba(222, 123, 45, 0.5); }
-  .btn-secondary.disabled, .disabled.tgee-btn, .btn-secondary:disabled, .tgee-btn:disabled {
+  .btn-secondary.disabled, .btn-secondary:disabled {
     color: #212529;
     background-color: #FF8A2E;
     border-color: #FF8A2E; }
-  .btn-secondary:not(:disabled):not(.disabled):active, .tgee-btn:not(:disabled):not(.disabled):active, .btn-secondary.active:not(:disabled):not(.disabled), .tgee-btn.active:not(:disabled):not(.disabled), .show > .btn-secondary.dropdown-toggle, .show > .dropdown-toggle.tgee-btn {
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary.active:not(:disabled):not(.disabled), .show > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #fa6e00;
     border-color: #ed6800; }
-    .btn-secondary:not(:disabled):not(.disabled):active:focus, .tgee-btn:not(:disabled):not(.disabled):active:focus, .btn-secondary.active:not(:disabled):not(.disabled):focus, .tgee-btn.active:not(:disabled):not(.disabled):focus, .show > .btn-secondary.dropdown-toggle:focus, .show > .dropdown-toggle.tgee-btn:focus {
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary.active:not(:disabled):not(.disabled):focus, .show > .btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(222, 123, 45, 0.5); }
 
 .btn-success {
@@ -2507,23 +2505,23 @@ fieldset:disabled a.tgee-btn {
     .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(248, 249, 250, 0.5); }
 
-.btn-outline-dark, .tgee-circle-button {
+.btn-outline-dark {
   color: #343a40;
   border-color: #343a40; }
-  .btn-outline-dark:hover, .tgee-circle-button:hover {
+  .btn-outline-dark:hover {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-  .btn-outline-dark:focus, .tgee-circle-button:focus, .btn-outline-dark.focus, .focus.tgee-circle-button {
+  .btn-outline-dark:focus, .btn-outline-dark.focus {
     box-shadow: 0 0 0 0 rgba(52, 58, 64, 0.5); }
-  .btn-outline-dark.disabled, .disabled.tgee-circle-button, .btn-outline-dark:disabled, .tgee-circle-button:disabled {
+  .btn-outline-dark.disabled, .btn-outline-dark:disabled {
     color: #343a40;
     background-color: transparent; }
-  .btn-outline-dark:not(:disabled):not(.disabled):active, .tgee-circle-button:not(:disabled):not(.disabled):active, .btn-outline-dark.active:not(:disabled):not(.disabled), .tgee-circle-button.active:not(:disabled):not(.disabled), .show > .btn-outline-dark.dropdown-toggle, .show > .dropdown-toggle.tgee-circle-button {
+  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark.active:not(:disabled):not(.disabled), .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .tgee-circle-button:not(:disabled):not(.disabled):active:focus, .btn-outline-dark.active:not(:disabled):not(.disabled):focus, .tgee-circle-button.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-dark.dropdown-toggle:focus, .show > .dropdown-toggle.tgee-circle-button:focus {
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(52, 58, 64, 0.5); }
 
 .btn-outline-blue {
@@ -2583,23 +2581,23 @@ fieldset:disabled a.tgee-btn {
     .btn-outline-gray-1:not(:disabled):not(.disabled):active:focus, .btn-outline-gray-1.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-gray-1.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(41, 41, 41, 0.5); }
 
-.btn-outline-gray-2, .tgee-btn-outline {
+.btn-outline-gray-2 {
   color: #707070;
   border-color: #707070; }
-  .btn-outline-gray-2:hover, .tgee-btn-outline:hover {
+  .btn-outline-gray-2:hover {
     color: #fff;
     background-color: #707070;
     border-color: #707070; }
-  .btn-outline-gray-2:focus, .tgee-btn-outline:focus, .btn-outline-gray-2.focus, .focus.tgee-btn-outline {
+  .btn-outline-gray-2:focus, .btn-outline-gray-2.focus {
     box-shadow: 0 0 0 0 rgba(112, 112, 112, 0.5); }
-  .btn-outline-gray-2.disabled, .disabled.tgee-btn-outline, .btn-outline-gray-2:disabled, .tgee-btn-outline:disabled {
+  .btn-outline-gray-2.disabled, .btn-outline-gray-2:disabled {
     color: #707070;
     background-color: transparent; }
-  .btn-outline-gray-2:not(:disabled):not(.disabled):active, .tgee-btn-outline:not(:disabled):not(.disabled):active, .btn-outline-gray-2.active:not(:disabled):not(.disabled), .tgee-btn-outline.active:not(:disabled):not(.disabled), .show > .btn-outline-gray-2.dropdown-toggle, .show > .dropdown-toggle.tgee-btn-outline {
+  .btn-outline-gray-2:not(:disabled):not(.disabled):active, .btn-outline-gray-2.active:not(:disabled):not(.disabled), .show > .btn-outline-gray-2.dropdown-toggle {
     color: #fff;
     background-color: #707070;
     border-color: #707070; }
-    .btn-outline-gray-2:not(:disabled):not(.disabled):active:focus, .tgee-btn-outline:not(:disabled):not(.disabled):active:focus, .btn-outline-gray-2.active:not(:disabled):not(.disabled):focus, .tgee-btn-outline.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-gray-2.dropdown-toggle:focus, .show > .dropdown-toggle.tgee-btn-outline:focus {
+    .btn-outline-gray-2:not(:disabled):not(.disabled):active:focus, .btn-outline-gray-2.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-gray-2.dropdown-toggle:focus {
       box-shadow: 0 0 0 0 rgba(112, 112, 112, 0.5); }
 
 .btn-outline-gray-3 {
@@ -2710,13 +2708,13 @@ fieldset:disabled a.tgee-btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .tgee-btn-outline, .btn-group-lg > .btn, .btn-group-lg > .tgee-circle-button, .btn-group-lg > .tgee-btn-outline, .btn-group-lg > .tgee-btn {
+.btn-lg, .btn-group-lg > .btn {
   padding: 0.703125rem 1.875rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .tgee-circle-button, .btn-group-sm > .tgee-btn-outline, .btn-group-sm > .tgee-btn {
+.btn-sm, .btn-group-sm > .btn {
   padding: 0.28125rem 1.875rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -2960,32 +2958,17 @@ input.btn-block[type="button"] {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .tgee-circle-button, .btn-group > .tgee-btn-outline, .btn-group > .tgee-btn,
-  .btn-group-vertical > .btn,
-  .btn-group-vertical > .tgee-circle-button,
-  .btn-group-vertical > .tgee-btn-outline,
-  .btn-group-vertical > .tgee-btn {
+  .btn-group > .btn,
+  .btn-group-vertical > .btn {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, .btn-group > .tgee-circle-button:hover, .btn-group > .tgee-btn-outline:hover, .btn-group > .tgee-btn:hover,
-    .btn-group-vertical > .btn:hover,
-    .btn-group-vertical > .tgee-circle-button:hover,
-    .btn-group-vertical > .tgee-btn-outline:hover,
-    .btn-group-vertical > .tgee-btn:hover {
+    .btn-group > .btn:hover,
+    .btn-group-vertical > .btn:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .tgee-circle-button:focus, .btn-group > .tgee-btn-outline:focus, .btn-group > .tgee-btn:focus, .btn-group > .btn:active, .btn-group > .tgee-circle-button:active, .btn-group > .tgee-btn-outline:active, .btn-group > .tgee-btn:active, .btn-group > .btn.active, .btn-group > .active.tgee-circle-button, .btn-group > .active.tgee-btn-outline, .btn-group > .active.tgee-btn,
+    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
     .btn-group-vertical > .btn:focus,
-    .btn-group-vertical > .tgee-circle-button:focus,
-    .btn-group-vertical > .tgee-btn-outline:focus,
-    .btn-group-vertical > .tgee-btn:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .tgee-circle-button:active,
-    .btn-group-vertical > .tgee-btn-outline:active,
-    .btn-group-vertical > .tgee-btn:active,
-    .btn-group-vertical > .btn.active,
-    .btn-group-vertical > .active.tgee-circle-button,
-    .btn-group-vertical > .active.tgee-btn-outline,
-    .btn-group-vertical > .active.tgee-btn {
+    .btn-group-vertical > .btn.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2995,23 +2978,17 @@ input.btn-block[type="button"] {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .tgee-circle-button:not(:first-child), .btn-group > .tgee-btn-outline:not(:first-child), .btn-group > .tgee-btn:not(:first-child),
+.btn-group > .btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -2px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .tgee-circle-button:not(:last-child):not(.dropdown-toggle), .btn-group > .tgee-btn-outline:not(:last-child):not(.dropdown-toggle), .btn-group > .tgee-btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .tgee-circle-button,
-.btn-group > .btn-group:not(:last-child) > .tgee-btn-outline,
-.btn-group > .btn-group:not(:last-child) > .tgee-btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .btn-group > .tgee-circle-button:not(:first-child), .btn-group > .tgee-btn-outline:not(:first-child), .btn-group > .tgee-btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .tgee-circle-button,
-.btn-group > .btn-group:not(:first-child) > .tgee-btn-outline,
-.btn-group > .btn-group:not(:first-child) > .tgee-btn {
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -3023,11 +3000,11 @@ input.btn-block[type="button"] {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .tgee-circle-button + .dropdown-toggle-split, .btn-group-sm > .tgee-btn-outline + .dropdown-toggle-split, .btn-group-sm > .tgee-btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 1.40625rem;
   padding-left: 1.40625rem; }
 
-.btn-lg + .dropdown-toggle-split, .tgee-btn-outline + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .tgee-circle-button + .dropdown-toggle-split, .btn-group-lg > .tgee-btn-outline + .dropdown-toggle-split, .btn-group-lg > .tgee-btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 1.40625rem;
   padding-left: 1.40625rem; }
 
@@ -3040,38 +3017,26 @@ input.btn-block[type="button"] {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical > .btn, .btn-group-vertical > .tgee-circle-button, .btn-group-vertical > .tgee-btn-outline, .btn-group-vertical > .tgee-btn,
+  .btn-group-vertical > .btn,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .tgee-circle-button:not(:first-child), .btn-group-vertical > .tgee-btn-outline:not(:first-child), .btn-group-vertical > .tgee-btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -2px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .tgee-circle-button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .tgee-btn-outline:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .tgee-btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  .btn-group-vertical > .btn-group:not(:last-child) > .tgee-circle-button,
-  .btn-group-vertical > .btn-group:not(:last-child) > .tgee-btn-outline,
-  .btn-group-vertical > .btn-group:not(:last-child) > .tgee-btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .tgee-circle-button:not(:first-child), .btn-group-vertical > .tgee-btn-outline:not(:first-child), .btn-group-vertical > .tgee-btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  .btn-group-vertical > .btn-group:not(:first-child) > .tgee-circle-button,
-  .btn-group-vertical > .btn-group:not(:first-child) > .tgee-btn-outline,
-  .btn-group-vertical > .btn-group:not(:first-child) > .tgee-btn {
+  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .btn-group-toggle > .tgee-circle-button, .btn-group-toggle > .tgee-btn-outline, .btn-group-toggle > .tgee-btn,
-.btn-group-toggle > .btn-group > .btn,
-.btn-group-toggle > .btn-group > .tgee-circle-button,
-.btn-group-toggle > .btn-group > .tgee-btn-outline,
-.btn-group-toggle > .btn-group > .tgee-btn {
+.btn-group-toggle > .btn,
+.btn-group-toggle > .btn-group > .btn {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .tgee-circle-button input[type="radio"], .btn-group-toggle > .tgee-btn-outline input[type="radio"], .btn-group-toggle > .tgee-btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
-  .btn-group-toggle > .tgee-circle-button input[type="checkbox"],
-  .btn-group-toggle > .tgee-btn-outline input[type="checkbox"],
-  .btn-group-toggle > .tgee-btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
     position: absolute;
@@ -3133,54 +3098,21 @@ input.btn-block[type="button"] {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .tgee-circle-button, .input-group-prepend .tgee-btn-outline, .input-group-prepend .tgee-btn,
-  .input-group-append .btn,
-  .input-group-append .tgee-circle-button,
-  .input-group-append .tgee-btn-outline,
-  .input-group-append .tgee-btn {
+  .input-group-prepend .btn,
+  .input-group-append .btn {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .tgee-circle-button:focus, .input-group-prepend .tgee-btn-outline:focus, .input-group-prepend .tgee-btn:focus,
-    .input-group-append .btn:focus,
-    .input-group-append .tgee-circle-button:focus,
-    .input-group-append .tgee-btn-outline:focus,
-    .input-group-append .tgee-btn:focus {
+    .input-group-prepend .btn:focus,
+    .input-group-append .btn:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .tgee-circle-button + .btn, .input-group-prepend .btn + .tgee-circle-button, .input-group-prepend .tgee-circle-button + .tgee-circle-button, .input-group-prepend .tgee-btn-outline + .btn, .input-group-prepend .tgee-btn-outline + .tgee-circle-button, .input-group-prepend .btn + .tgee-btn-outline, .input-group-prepend .tgee-circle-button + .tgee-btn-outline, .input-group-prepend .tgee-btn-outline + .tgee-btn-outline, .input-group-prepend .tgee-btn + .btn, .input-group-prepend .tgee-btn + .tgee-circle-button, .input-group-prepend .tgee-btn + .tgee-btn-outline, .input-group-prepend .btn + .tgee-btn, .input-group-prepend .tgee-circle-button + .tgee-btn, .input-group-prepend .tgee-btn-outline + .tgee-btn, .input-group-prepend .tgee-btn + .tgee-btn,
+  .input-group-prepend .btn + .btn,
   .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .tgee-circle-button + .input-group-text,
-  .input-group-prepend .tgee-btn-outline + .input-group-text,
-  .input-group-prepend .tgee-btn + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend .input-group-text + .tgee-circle-button,
-  .input-group-prepend .input-group-text + .tgee-btn-outline,
-  .input-group-prepend .input-group-text + .tgee-btn,
   .input-group-append .btn + .btn,
-  .input-group-append .tgee-circle-button + .btn,
-  .input-group-append .btn + .tgee-circle-button,
-  .input-group-append .tgee-circle-button + .tgee-circle-button,
-  .input-group-append .tgee-btn-outline + .btn,
-  .input-group-append .tgee-btn-outline + .tgee-circle-button,
-  .input-group-append .btn + .tgee-btn-outline,
-  .input-group-append .tgee-circle-button + .tgee-btn-outline,
-  .input-group-append .tgee-btn-outline + .tgee-btn-outline,
-  .input-group-append .tgee-btn + .btn,
-  .input-group-append .tgee-btn + .tgee-circle-button,
-  .input-group-append .tgee-btn + .tgee-btn-outline,
-  .input-group-append .btn + .tgee-btn,
-  .input-group-append .tgee-circle-button + .tgee-btn,
-  .input-group-append .tgee-btn-outline + .tgee-btn,
-  .input-group-append .tgee-btn + .tgee-btn,
   .input-group-append .btn + .input-group-text,
-  .input-group-append .tgee-circle-button + .input-group-text,
-  .input-group-append .tgee-btn-outline + .input-group-text,
-  .input-group-append .tgee-btn + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn,
-  .input-group-append .input-group-text + .tgee-circle-button,
-  .input-group-append .input-group-text + .tgee-btn-outline,
-  .input-group-append .input-group-text + .tgee-btn {
+  .input-group-append .input-group-text + .btn {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3216,13 +3148,7 @@ input.btn-block[type="button"] {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-prepend > .tgee-circle-button,
-.input-group-lg > .input-group-prepend > .tgee-btn-outline,
-.input-group-lg > .input-group-prepend > .tgee-btn,
-.input-group-lg > .input-group-append > .btn,
-.input-group-lg > .input-group-append > .tgee-circle-button,
-.input-group-lg > .input-group-append > .tgee-btn-outline,
-.input-group-lg > .input-group-append > .tgee-btn {
+.input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3237,13 +3163,7 @@ input.btn-block[type="button"] {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-prepend > .tgee-circle-button,
-.input-group-sm > .input-group-prepend > .tgee-btn-outline,
-.input-group-sm > .input-group-prepend > .tgee-btn,
-.input-group-sm > .input-group-append > .btn,
-.input-group-sm > .input-group-append > .tgee-circle-button,
-.input-group-sm > .input-group-append > .tgee-btn-outline,
-.input-group-sm > .input-group-append > .tgee-btn {
+.input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3253,32 +3173,20 @@ input.btn-block[type="button"] {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .tgee-circle-button, .input-group > .input-group-prepend > .tgee-btn-outline, .input-group > .input-group-prepend > .tgee-btn,
+.input-group > .input-group-prepend > .btn,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-.input-group > .input-group-append:not(:last-child) > .tgee-circle-button,
-.input-group > .input-group-append:not(:last-child) > .tgee-btn-outline,
-.input-group > .input-group-append:not(:last-child) > .tgee-btn,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .tgee-circle-button:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .tgee-btn-outline:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .tgee-btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .tgee-circle-button, .input-group > .input-group-append > .tgee-btn-outline, .input-group > .input-group-append > .tgee-btn,
+.input-group > .input-group-append > .btn,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .tgee-circle-button,
-.input-group > .input-group-prepend:not(:first-child) > .tgee-btn-outline,
-.input-group > .input-group-prepend:not(:first-child) > .tgee-btn,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .tgee-circle-button:not(:first-child),
-.input-group > .input-group-prepend:first-child > .tgee-btn-outline:not(:first-child),
-.input-group > .input-group-prepend:first-child > .tgee-btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4277,7 +4185,7 @@ input.btn-block[type="button"] {
   .badge:empty {
     display: none; }
 
-.btn .badge, .tgee-circle-button .badge, .tgee-btn-outline .badge, .tgee-btn .badge {
+.btn .badge {
   position: relative;
   top: -1px; }
 
@@ -5873,7 +5781,7 @@ button.bg-dark-blue:focus {
 .rounded-sm {
   border-radius: 0.2rem !important; }
 
-.rounded, .tgee-circle-button, .tgee-card {
+.rounded, .tgee-input-box, .tgee-card {
   border-radius: 0.25rem !important; }
 
 .rounded-top {
@@ -5895,10 +5803,11 @@ button.bg-dark-blue:focus {
 .rounded-lg {
   border-radius: 0.3rem !important; }
 
-.rounded-circle, .btn-circle, .tgee-circle-button {
+.rounded-circle {
   border-radius: 50% !important; }
 
-.rounded-pill, .contact-btn {
+.rounded-pill, .contact-btn, .tgee-btn-primary,
+.tgee-btn-secondary {
   border-radius: 50rem !important; }
 
 .rounded-0 {
@@ -6782,7 +6691,9 @@ button.bg-dark-blue:focus {
   padding: 0.46875rem !important; }
 
 .pt-1,
-.py-1 {
+.py-1,
+.tgee-btn-primary,
+.tgee-btn-secondary {
   padding-top: 0.46875rem !important; }
 
 .pr-1,
@@ -6790,7 +6701,9 @@ button.bg-dark-blue:focus {
   padding-right: 0.46875rem !important; }
 
 .pb-1,
-.py-1 {
+.py-1,
+.tgee-btn-primary,
+.tgee-btn-secondary {
   padding-bottom: 0.46875rem !important; }
 
 .pl-1,
@@ -6805,7 +6718,9 @@ button.bg-dark-blue:focus {
   padding-top: 0.9375rem !important; }
 
 .pr-2,
-.px-2 {
+.px-2,
+.tgee-btn-primary,
+.tgee-btn-secondary {
   padding-right: 0.9375rem !important; }
 
 .pb-2,
@@ -6813,7 +6728,9 @@ button.bg-dark-blue:focus {
   padding-bottom: 0.9375rem !important; }
 
 .pl-2,
-.px-2 {
+.px-2,
+.tgee-btn-primary,
+.tgee-btn-secondary {
   padding-left: 0.9375rem !important; }
 
 .p-3, #faq .faq-a > p, #faq .faq-q {
@@ -8309,7 +8226,7 @@ button.bg-dark-blue:focus {
 .font-italic {
   font-style: italic !important; }
 
-.text-white {
+.text-white, .tgee-btn-primary {
   color: #fff !important; }
 
 .text-primary {
@@ -8455,7 +8372,7 @@ a.text-dark-blue:hover, a.text-dark-blue:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.tgee-circle-button):not(.tgee-btn-outline):not(.tgee-btn) {
+  a:not(.btn) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -8552,60 +8469,60 @@ a.text-dark-blue:hover, a.text-dark-blue:focus {
   .hover-bg-expend:hover {
     background-size: 140%; }
 
-.tgee-btn {
-  color: #fff; }
+.tgee-btn-primary,
+.tgee-btn-secondary {
+  min-width: 150px;
+  text-align: center;
+  display: inline-block; }
 
-.tgee-btn-outline:hover {
-  color: #136AD5;
-  background-color: #fff; }
-
-.btn-orange {
-  color: #fff; }
-
-.btn.rounded-circle, .btn.btn-circle, .tgee-circle-button, .rounded-circle.tgee-btn, .tgee-btn.btn-circle, .rounded-circle.tgee-btn-outline, .tgee-btn-outline.btn-circle {
-  padding: 0;
-  width: 1.875rem;
-  height: 1.875rem;
-  line-height: 1.875rem; }
-
-.tgee-circle-button {
-  position: relative;
-  width: 29px;
-  height: 29px;
-  transition: background-color 0.2s; }
-  .tgee-circle-button > i {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-color: #00000000; }
-
-.btn-circle {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  background-color: #d8d8d8;
+.tgee-btn-primary {
   border-width: 0;
-  outline: none; }
-  .btn-circle .focus, .btn-circle:hover {
-    background-color: #007bff; }
-  .btn-circle > span {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  background-color: #FF8A2E; }
+  .tgee-btn-primary:hover {
+    background-color: #FF8A2E55; }
 
-.close-btn {
+.tgee-btn-secondary {
+  color: #292929;
+  border: #292929 solid 2px;
+  background-color: #fff; }
+  .tgee-btn-secondary:hover {
+    color: #136AD5;
+    border-color: #136AD5; }
+
+.tgee-btn-close {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, -50%); }
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #707070;
+  outline: none;
+  border-width: 0; }
+  .tgee-btn-close .focus, .tgee-btn-close:hover {
+    background-color: #007bff; }
+  .tgee-btn-close::after {
+    content: '×';
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); }
 
-input:focus ~ .close-btn {
-  background-color: #007bff; }
+.tgee-circle-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  color: #707070;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #707070; }
+  .tgee-circle-button > * {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); }
 
 .tgee-underline {
   cursor: pointer;
@@ -8619,6 +8536,10 @@ input:focus ~ .close-btn {
     bottom: 0px;
     left: 0;
     background-color: #007bff; }
+
+@media (max-width: 991.98px) {
+  .tgee-underline::after {
+    height: 0; } }
 
 .tgee-block-tabs .item {
   cursor: pointer;
@@ -8635,6 +8556,18 @@ input:focus ~ .close-btn {
     bottom: 0px;
     left: 0;
     background-color: #007bff; }
+
+.tgee-input-box {
+  background-color: #fff;
+  border: #d8d8d8 solid 1px; }
+  .tgee-input-box > * {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 0 !important; }
+
+.tgee-input {
+  background-color: #fff; }
 
 .tgee-checkbox {
   width: 15px;
@@ -8849,7 +8782,6 @@ input:focus ~ .close-btn {
 .home-banner .nav > .nav-item {
   cursor: pointer;
   border-top: 4px solid #fff;
-  width: 20%;
   position: relative; }
   .home-banner .nav > .nav-item .img {
     width: 50px;
@@ -8867,6 +8799,9 @@ input:focus ~ .close-btn {
     left: 0;
     bottom: 0;
     background-color: #ffffff88; }
+  @media (min-width: 768px) {
+    .home-banner .nav > .nav-item {
+      width: 20%; } }
   @media (max-width: 767.98px) {
     .home-banner .nav > .nav-item:not(.active) .description {
       display: none; }
@@ -8892,7 +8827,8 @@ input:focus ~ .close-btn {
     overflow-x: scroll;
     white-space: nowrap;
     padding-top: 1.875rem;
-    padding-bottom: 1.875rem; }
+    padding-bottom: 1.875rem;
+    justify-content: left; }
     .mobile-scroll-x > div {
       min-width: 267px; } }
 
@@ -8930,6 +8866,40 @@ input:focus ~ .close-btn {
     top: 50%;
     right: 0;
     transform: translate(100%, -50%); } }
+
+.home .fancy-bg {
+  position: relative;
+  background: #ededed;
+  background: linear-gradient(90deg, #ededed 0%, #c2c2c2 34%, #b5b5b5 51%, #e3e3e3 100%); }
+
+.home .fancy-bg::after {
+  content: '';
+  background-color: #1161C4;
+  position: absolute;
+  width: 150px;
+  height: 1000px;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%) rotate(15deg); }
+
+@media (max-width: 991.98px) {
+  .home .fancy-bg::after {
+    display: none; }
+  .home .fancy-bg-desc {
+    padding-left: 10px;
+    position: relative;
+    color: #fff; }
+    .home .fancy-bg-desc > div {
+      z-index: 1; }
+  .home .fancy-bg-desc::before {
+    content: '';
+    background-color: #1161C4;
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    transform: translateY(0px) rotate(10deg); } }
 
 .terms .faq::after {
   display: block;

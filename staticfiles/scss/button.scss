@@ -1,89 +1,72 @@
-.tgee-btn {
-  @extend .btn;
-  @extend .btn-secondary;
-  color: #fff;
+.tgee-btn-primary,
+.tgee-btn-secondary {
+  @extend .py-1;
+  @extend .px-2;
+  @extend .rounded-pill;
 
+  min-width: 150px;
+  text-align: center;
+  display: inline-block;
+}
+
+.tgee-btn-primary {
+  @extend .text-white;
+  border-width: 0;
+  background-color: $secondary;
   &:hover {
-    // color: $primary;
-    // border-color: $primary;
-    // background-color: #fff;
+    background-color: #FF8A2E55;
   }
 }
 
-.tgee-btn-outline {
-  @extend .btn;
-  @extend .btn-lg;
-  @extend .btn-outline-gray-2;
+.tgee-btn-secondary {
+  color: $gray-1;
+  border: $gray-1 solid 2px;
+  background-color: #fff;
   &:hover {
     color: $primary;
-    background-color: #fff;
+    border-color: $primary;
   }
 }
 
-.btn-orange {
-  color: #fff;
-}
-
-.btn.rounded-circle {
-  padding: 0;
-  width: $spacer * 2;
-  height: $spacer * 2;
-  line-height: $spacer * 2;
-}
-
-.tgee-circle-button {
-  @extend .rounded;
-  @extend .btn;
-  @extend .btn-outline-dark;
-  @extend .rounded-circle;
-
-  position: relative;
-  width: 29px;
-  height: 29px;
-  transition: background-color 0.2s;
-
-  > i {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-color: #00000000;
-  }
-}
-
-.btn-circle {
-  @extend .rounded-circle;
-
-  position: relative;
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  background-color: $gray-3;
-  border-width: 0;
-  outline: none;
-  
-  .focus, &:hover {
-    background-color: $blue;
-  }
-
-  > span {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-
-.close-btn {
+.tgee-btn-close {
   position: absolute;
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: $gray-2;
+  outline: none;
+  border-width: 0;
+
+  .focus, &:hover {
+    background-color: $blue;
+  }
+
+  &::after {
+    content: '×';
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
 }
 
-input:focus ~ .close-btn {
-  background-color: $blue;
+.tgee-circle-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  color: $gray-2;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid $gray-2;
+
+  > * {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
 }

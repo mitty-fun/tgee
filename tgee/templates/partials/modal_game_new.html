@@ -1,9 +1,7 @@
 <div class="modal" id="modal_game_new" tabindex="-1">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
-      <button class="btn-circle btn-primary close-btn" data-dismiss="modal" style="width: 25px; height: 25px;">
-        <span>&times;</span>
-      </button>
+      <button class="tgee-btn-close" data-dismiss="modal"></button>
       <img class="w-100 bg-gray-3 bg-cover" style="height: 300px;"/>
       <div class="p-3 bg-gray-4">
         <form>
@@ -84,12 +82,14 @@
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲開發時長</p>
-                <div class="p-2 border rounded bg-white">
+                <div class="tgee-input-box">
                   <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
-                  <small class="text-gray-3">隱私設定</small>
-                  <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
-                  <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
-                  <div class="mr-3"><input type="radio" />&nbsp;不公開</div>
+                  <div class="p-2">
+                    <small class="text-gray-3">隱私設定</small>
+                    <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
+                    <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
+                    <div class="mr-3"><input type="radio" />&nbsp;不公開</div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -112,8 +112,8 @@
               <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字"></textarea>
             </div>
             <div class="mb-md-4 d-flex">
-              <button class="btn btn-primary ml-auto" data-dismiss="modal">取消</button>
-              <button class="btn btn-orange ml-2">發布</button>
+              <button class="tgee-btn-secondary ml-auto" data-dismiss="modal">取消</button>
+              <button class="tgee-btn-primary ml-2">儲存</button>
             </div>
           </div>
         </form>

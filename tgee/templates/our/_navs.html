@@ -1,13 +1,3 @@
-<div class="bg-white shadow">
-  <div class="p-2 position-absolute" style="left: 0;">條款相關</div>
-  <span class="p-2 collapse-trigger collapsed d-md-none ml-auto" data-toggle="collapse" data-target="#navbar-collapse-tabs" style="width: 150px;">
-    條款相關&nbsp;<i class="fas fa-chevron-up ml-auto"></i>
-  </span>
-  <div class="collapse d-md-block" id="navbar-collapse-tabs">
-    <div class="d-flex flex-column flex-md-row justify-content-center">
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('faq') else '' }}" href="{{url('faq')}}" >常見說明</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('terms') else '' }}" href="{{url('terms')}}" >版權說明</a>
-      <a class="px-1 py-2 mx-md-2 text-gray-1 {{'tgee-underline' if request.path == url('privacy') else '' }}" href="{{url('privacy')}}" >隱私權政策</a>
-    </div>
-  </div>
-</div>
+{% with title= '條款相關', options = [('常見說明', 'faq'), ('版權說明', 'terms'), ('隱私權政策', 'privacy')] %}
+{% include './partials/mini_navbar.html' %}
+{% endwith %}
