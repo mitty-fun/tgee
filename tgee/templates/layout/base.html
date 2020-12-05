@@ -8,7 +8,12 @@
     <link href="{{ static('slick-1.8.1/slick/slick-theme.css') }}" rel="stylesheet">
     <link href="{% sass_src 'scss/index.scss' %}" rel="stylesheet" type="text/css" />
   </head>
-  <body style="background-image: url({{ static('background.svg') }}); background-size: 100%; background-repeat: repeat-y;">
+  <body class="position-relative">
+    <!-- https://stackoverflow.com/questions/63563969/svg-background-image-blurriness-in-chrome-with-repeating-background -->
+    <div class="position-absolute overflow-hidden" style="top: 0; right: 0; bottom: 0; left: 0; z-index: -1;">
+      <img src="{{static('background.svg')}}" alt="" class="w-100">
+      <img src="{{static('background.svg')}}" alt="" class="w-100">
+    </div>
     {% include 'partials/navbar.html' %}
     <div style="padding-top: 62px;"></div>
     {% block content %}
