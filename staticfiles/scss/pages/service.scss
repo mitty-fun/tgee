@@ -8,12 +8,12 @@
     margin: 0 -$spacer;
 
     .step {
+      min-height: 80px;
       display: flex;
       flex-direction: row;
       @extend .flex-md-column;
-      @extend .align-items-md-center;
+      @extend .align-items-center;
       flex-grow: 1;
-      margin-bottom: $spacer * 2;
       color: $primary;
 
       &-circle {

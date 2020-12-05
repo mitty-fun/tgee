@@ -74,7 +74,7 @@
       <div class="only-mobile">
         <div class="js-slick" data-slides-to-show="1">
           {% for img, title, content, tags in team.games %}
-          <div class="px-1 py-4">
+          <div class="px-1 py-2 py-md-4">
             <div class="tgee-card bg-cover" style="background-image: url({{ static(img) }}); height: 250px;">
               <div class="p-2 fancy-bg-gradient h-100 d-flex justify-content-between flex-column">
                 <div><span class="badge badge-pill badge-gray-1">遊戲新聞</span></div>
@@ -118,7 +118,7 @@
       <div class="only-mobile">
         <div class="js-slick" data-slides-to-show="1">
           {% for img in team.member_images %}
-          <div class="px-1 py-4">
+          <div class="px-1 py-2 py-md-4">
             <div class="tgee-card bg-cover" style="background-image: url({{ static(img) }}); height: 250px;"></div>
           </div>
           {% endfor %}
@@ -134,7 +134,7 @@
         </div>
       </div>
     </div>
-    <div class="py-5">
+    <div class="py-2 py-md-5">
       <h2 class="h1">團隊文章</h2>
       <div class="mobile-scroll-x">
         {% for id, img, title, content, tags in posts %}
@@ -155,7 +155,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="py-5">
+    <div class="py-2 py-md-5">
       <h2 class="h1">新聞稿區</h2>
       <div class="mobile-scroll-x">
         {% for id, img, title, content, tags in posts %}

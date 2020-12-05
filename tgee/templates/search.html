@@ -4,7 +4,7 @@
 
 {% if search %}
 <div class="bg-cover" style="background-image: url(images/搜尋結果頁/main-short-gray-bg.jpg)">
-  <div class="container py-5">
+  <div class="container py-2 py-md-5">
     <h2>關於「{{request.GET['q'] or '電競活動文字最多15個字...'}}」，我們幫你找到了：</h2><small class="text-gray-2">共有 74 項搜尋結果</small>
   </div>
 </div>
@@ -29,12 +29,12 @@
 {% else %}
 
 <div class="bg-cover" style="background-image: url(images/搜尋結果頁/main-short-gray-bg.jpg)">
-  <div class="container py-5">
+  <div class="container py-2 py-md-5">
     <h2>關於「電競活動文字最多15個字...」，我們幫你找到了：</h2><small class="text-gray-2">共有 74 項搜尋結果</small>
   </div>
 </div>
 <div class="container">
-  <div class="d-flex py-5">
+  <div class="d-flex py-2 py-md-5">
     <div class="mr-auto">
       <p>建議</p>
       <ul class="small">

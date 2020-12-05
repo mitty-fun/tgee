@@ -3,25 +3,27 @@
 {% block content %}
 <div class="service-page bg-white">
   <div class="container">
-    <div class="py-5 row">
-      <div class="col-md-6 d-flex flex-column justify-content-center">
+    <div class="py-4 py-md-5 row">
+      <div class="col-md-6 order-md-2">
+        <img class="w-100" src="{{ static('service/service-main-img.png') }}" />
+      </div>
+      <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center">
         <h1 class="mb-2">專屬服務</h1>
         <h2 class="mb-2">創夢獨家為遊戲量身打造升級服務</h2>
         <p>現在就申請加入專屬服務，即可享有獨家企劃協助，包含行銷方針指導、企業合作案規劃輔導。更有資金找尋、曝光等等優惠等你。</p>
-        <div class="mt-3">
+        <div class="mt-3 order-md-1">
           <a href="{{url('signup_premium')}}" class="tgee-btn-primary">立即申請專屬服務</a>
         </div>
       </div>
-      <div class="col-md-6"><img class="w-100" src="{{ static('service/service-main-img.png') }}" /></div>
     </div>
   </div>
   <div style="background-color: #FAFAFA;">
-    <div class="py-5" style="background-image: url({{ static('service/bg_1.svg') }}); background-repeat: no-repeat; background-position: right;">
+    <div class="py-2 py-md-5" style="background-image: url({{ static('service/bg_1.svg') }}); background-repeat: no-repeat; background-position: right;">
       <div class="container">
         <h1 class="mt-3">服務項目</h1>
         <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。沒有的話就刪掉。</p>
         {% include './partials/four_service.html' %}
-        <h3 class="mt-5">驗證會員福利</h3>
+        <h3 class="mt-2 mt-md-5">驗證會員福利</h3>
         <ul>
           <li class="mt-2">指定課程活動免費參與或報名優惠</li>
           <li class="mt-2">限定會員專屬活動</li>
@@ -31,29 +33,29 @@
     </div>
   </div>
   <div class="container">
-    <div class="py-5">
+    <div class="py-4 py-md-5">
       <h1 class="mb-2">申請資格</h1>
       <p>描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。描述文字，最好能夠有二至三行的文字，描述文字，最好能夠有二至三行的文字。</p>
-      <div class="row mt-5 justify-content-around">
-        <div class="col-md-3 text-center">
-          <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
+      <div class="mobile-scroll-x mt-3 mt-md-5">
+        <div class="text-md-center">
+          <div class="mx-md-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
         </div>
-        <div class="col-md-3 text-center">
-          <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
+        <div class="text-md-center">
+          <div class="mx-md-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
         </div>
-        <div class="col-md-3 text-center">
-          <div class="mx-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
+        <div class="text-md-center">
+          <div class="mx-md-auto bg-gray-3 rounded-circle" style="width: 160px; height: 160px;"></div>
           <h3 class="h2 mt-3">加入創夢會員</h3>
           <p class="mt-2">描述文字，最好能夠有二至三行的文字，描述文字。</p>
         </div>
       </div>
     </div>
-    <div class="py-5 px-4 bg-gray-4">
-      <h2 class="mb-3 text-primary text-center text-md-left">流程申請</h2>
+    <div class="py-4 px-4 bg-gray-4">
+      <h2 class="mb-4 text-primary text-center text-md-left">流程申請</h2>
       <div class="steps-container">
         <div class="steps-line-desktop"></div>
         <div class="steps-line-mobile"></div>
@@ -75,29 +77,32 @@
         </div>
       </div>
     </div>
-    <div class="py-5">
+    <div class="py-2 py-md-5">
       <p>現在就申請加入專屬服務，即可享有獨家企劃協助，包含行銷方針指導、企業合作案規劃輔導。更有資金找尋、曝光等等優惠等你。現在就申請加入專屬服務，即可享有獨家企劃協助，包含行銷方針指導、企業合作案規劃輔導。</p>
-      <div class="row pt-3 align-items-center">
-        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
+      <div class="row align-items-center">
+        <div class="m-1 col-md-2 text-center d-flex flex-row flex-md-column align-items-md-center">
+          <img class="mr-2" src="{{ static('icons/icon_1.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
-        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_5.svg') }}" style="width: 30px;" />
+        <div class="m-1 col-md-2 text-center d-flex flex-row flex-md-column align-items-md-center">
+          <img class="mr-2" src="{{ static('icons/icon_5.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
-        <div class="col-md-2 text-center"><img src="{{ static('icons/icon_6.svg') }}" style="width: 30px;" />
+        <div class="m-1 col-md-2 text-center d-flex flex-row flex-md-column align-items-md-center">
+          <img class="mr-2" src="{{ static('icons/icon_6.svg') }}" style="width: 30px;" />
           <p class="mt-2">競賽獎項</p>
         </div>
-        <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+        <div class="m-2 col-md-6 d-flex justify-content-center justify-content-md-end">
           <a href="{{url('signup_premium')}}" class="tgee-btn-primary">立即申請專屬服務</a>
         </div>
       </div>
     </div>
-    <div class="py-5">
+    <div class="py-4 py-md-5">
       <h1>合作支持單位</h1>
       <div class="only-desktop">
         <div class="js-slick" data-slides-to-show="4">
           {% for i in range(10) %}
-          <div class="py-4 px-2">
+          <div class="py-2 py-md-4 px-2">
             <div class="tgee-card d-flex flex-column align-items-center justify-content-center bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
               <div><img src="{{ static('service/company_logo.png') }}" style="height: 50px;" /></div>
               <p class="mt-2">競賽獎項</p>
@@ -118,9 +123,9 @@
       <div class="only-mobile">
         <div class="js-slick" data-slides-to-show="1">
           {% for i in range(10) %}
-          <div class="py-4 px-2">
+          <div class="py-2 py-md-4 px-2">
             <div class="tgee-card d-flex flex-column align-items-center justify-content-center bg-cover" style="background-image: url({{ static('card/resources-card.png') }}); height: 218px;">
-              <div><img src="{{ static('service/company_logo_1.png') }}" style="height: 50px;" /></div>
+              <div><img src="{{ static('service/company_logo.png') }}" style="height: 50px;" /></div>
               <p class="mt-2">競賽獎項</p>
             </div>
           </div>

@@ -2,28 +2,11 @@
 
 {% block content %}
 {% include './campaigns/_navs.html' %}
-<div class="container py-5">
-  <h1 class="my-3">國際會展</h1>
-  {% include './partials/filter.html' %}
-  <div class="row">
-    {% for id, img, title in campaigns %}
-    <div class="col-md-6 mt-2">
-      <a href="/campaigns/{{id}}/show">
-        <div class="tgee-card flex-md-row">
-          <div class="tgee-card-img" style="background-image: url({{ static(img) }});"></div>
-          <div class="tgee-card-body" style="min-width: 200px;"><strong>台北國際電玩展</strong>
-            <p>地區：台灣<br />時間：08/21/2020</p>
-            <div class="tgee-card-footer"><small class="mr-1 badge badge-pill badge-gray-4">#玩家展覽</small>
-              <div class="tgee-circle-button"><i class="fas fa-chevron-right"> </i></div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    {% endfor %}
+<div class="container p-2 px-md-0 py-md-5">
+  <h1 class="mt-3 mb-1">國際會展</h1>
+  <div class="my-2">
+    {% include './partials/filter.html' %}
   </div>
-  <div class="py-4 text-center">
-    <button class="tgee-btn-secondary">展開看更多</button>
-  </div>
+  {% include './campaigns/_campaigns.html' %}
 </div>
 {% endblock %}

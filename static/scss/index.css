@@ -6036,7 +6036,7 @@ button.bg-dark-blue:focus {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center {
+.align-items-center, .service-page .steps-container .step {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -6190,7 +6190,7 @@ button.bg-dark-blue:focus {
     align-items: flex-start !important; }
   .align-items-md-end {
     align-items: flex-end !important; }
-  .align-items-md-center, .service-page .steps-container .step {
+  .align-items-md-center {
     align-items: center !important; }
   .align-items-md-baseline {
     align-items: baseline !important; }
@@ -8920,10 +8920,10 @@ a.text-dark-blue:hover, a.text-dark-blue:focus {
   flex-direction: column;
   margin: -0.9375rem; }
   .service-page .steps-container .step {
+    min-height: 80px;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    margin-bottom: 1.875rem;
     color: #136AD5; }
     .service-page .steps-container .step-circle {
       width: 50px;
