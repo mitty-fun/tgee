@@ -1,17 +1,29 @@
+<!-- 
 <div class="tgee-dropdown js-tgee-dropdown">
-  <div class="tgee-dropdown-trigger"><span class="mr-auto">種類</span><i class="fas fa-chevron-down"></i></div>
+  <div class="tgee-dropdown-trigger">
+    <span class="mr-auto">種類</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
   <div class="tgee-dropdown-menu">
     <div class="tgee-dropdown-menu-body">
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
-      <p class="w-100 py-1 item">互動戲劇</p>
+      <p class="w-100 py-1 item" value="1">選項1</p>
+      <p class="w-100 py-1 item" value="2">選項2</p>
+      <p class="w-100 py-1 item" value="3">選項3</p>
     </div>
   </div>
+  <select style="display: none;">
+    <option value="1">選項1</option>
+    <option value="2">選項2</option>
+    <option value="3">選項3</option>
+  </select>
+</div>
+-->
+
+<div class="tgee-dropdown js-tgee-select">
+  <select>
+    <option class="default-text" selected>{{default_text}}</option>
+    {% for value, text in options %}
+      <option value="{{value}}">{{text}}</option>
+    {% endfor %}
+  </select>
 </div>

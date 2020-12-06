@@ -1,67 +1,77 @@
-<div class="modal" id="modal_game_edit" tabindex="-1">
+<div class="modal" id="modal_game_new" tabindex="-1">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <button class="tgee-btn-close" data-dismiss="modal"></button>
-      <img class="w-100 bg-gray-4 bg-cover" style="height: 300px;" src="/static/games/1.jpg" />
+      <img class="w-100 bg-gray-3 bg-cover" style="height: 300px;"/>
       <div class="p-3 bg-gray-4">
         <form>
           <div class="p-3">
             <div class="d-flex mb-md-5 js-vue-imgs-uploader">    
-              {% for img in game.imgs %}
+              {% for img in [] %}
               <div class="position-relative mr-3">
                 <img class="d-block" src="{{static(img)}}" style="width: 100px; height: 70px;" />
                 <input class="position-absolute" style="top: 0; bottom: 0; left: 0; right: 0; opacity: 0;" type="text" />
-                <button class="tgee-btn-close"></button>
+                <button class="btn-circle btn-primary close-btn">
+                  <span>&times;</span>
+                </button>
               </div>
               {% endfor %}
               <div class="position-relative mr-3" v-for="img, index in images">
                 <img class="d-block" :src="img.src" style="width: 100px; height: 70px;" />
                 <input class="position-absolute" style="top: 0; bottom: 0; left: 0; right: 0; opacity: 0;" type="file"
                   @change="update_image(index, $event)" />
-                <button class="tgee-btn-close" @click="images.splice(index, 1)"></button>
+                <button class="btn-circle btn-primary close-btn" @click="images.splice(index, 1)">
+                  <span>&times;</span>
+                </button>
               </div>
             </div>
             <div class="row mb-md-4">
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲作品中文名稱</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.title_zh}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲作品英文名稱</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.title_en}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲支援人數</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.participants}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
             </div>
             <div class="row mb-md-4">
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲影片</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.video}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲介紹社群頁面或網站</p>
-                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" value="{{game.website}}"/>
+                <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
               </div>
             </div>
             <div class="row mb-md-4">
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲類別</p>
                 <div class="p-2 border rounded bg-white">
-                  {% include './partials/select.html' %}
+                  {% with default_text='類別', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+                    {% include './partials/select.html' %}
+                  {% endwith %}
                 </div>
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲語言</p>
                 <div class="p-2 border rounded bg-white">
-                  {% include './partials/select.html' %}
+                  {% with default_text='語言', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+                    {% include './partials/select.html' %}
+                  {% endwith %}
                 </div>
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲平台</p>
                 <div class="p-2 border rounded bg-white">
-                  {% include './partials/select.html' %}
+                  {% with default_text='平台', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+                    {% include './partials/select.html' %}
+                  {% endwith %}
                 </div>
               </div>
             </div>
@@ -78,18 +88,22 @@
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲開發時長</p>
-                <div class="p-2 border rounded bg-white">
-                  <input class="form-control rounded" placeholder="中文名稱不超過 20 字" />
-                  <small class="text-gray-3">隱私設定</small>
-                  <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
-                  <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
-                  <div class="mr-3"><input type="radio" />&nbsp;不公開</div>
+                <div class="form-group bg-white">
+                  <input class="form-control rounded-0 rounded-top" placeholder="約三年" />
+                  <div class="p-2 border border-top-0 rounded-bottom">
+                    <small class="text-gray-3">隱私設定</small>
+                    <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
+                    <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
+                    <div class="mr-3"><input type="radio" />&nbsp;不公開</div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <p class="text-gray-2">遊戲製作引擎</p>
                 <div class="p-2 border rounded bg-white">
-                  {% include './partials/select.html' %}
+                  {% with default_text='框架', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+                    {% include './partials/select.html' %}
+                  {% endwith %}
                   <small class="text-gray-3">隱私設定</small>
                   <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
                   <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
@@ -99,11 +113,11 @@
             </div>
             <div class="mb-md-4">
               <p class="text-gray-2">遊戲中文介紹</p>
-              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字">{{game.content_zh}}</textarea>
+              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字"></textarea>
             </div>
             <div class="mb-md-4">
               <p class="text-gray-2">遊戲英文介紹</p>
-              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字">{{game.content_zh}}</textarea>
+              <textarea class="form-control rounded" rows="10" placeholder="中文名稱不超過 20 字"></textarea>
             </div>
             <div class="mb-md-4 d-flex">
               <button class="tgee-btn-secondary ml-auto" data-dismiss="modal">取消</button>

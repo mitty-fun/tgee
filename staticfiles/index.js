@@ -18,26 +18,8 @@ $('.js-slick').each(function () {
     nextArrow: $(this).next().find('.next-arrow'),
     prevArrow: $(this).next().find('.prev-arrow'),
     appendDots: $(this).next().find('.dots'),
-    // fade: true
   });
 })
-
-
-
-$('.js-tgee-dropdown > .tgee-dropdown-trigger').click(function (event) {
-  $(this).parent('.js-tgee-dropdown').toggleClass('active');
-  event.stopPropagation()
-})
-
-$('.js-mobile-toggle-menu > .toggle-trigger').click(function (event) {
-  $('.js-mobile-toggle-menu').toggleClass('active')
-  event.stopPropagation()
-})
-
-$('body').click(function () {
-  $('.js-tgee-dropdown').removeClass('active')
-})
-
 
 new Vue({
   el: '.js-vue-imgs-uploader',
@@ -112,11 +94,6 @@ new Vue({
 
 
 
-
-
-
-
-
 $('#js-games-gallary').on('click', '.js-game-show', function (event){
   event.stopPropagation()
   $('#modal_game_show').modal('show')
@@ -127,3 +104,92 @@ $('#js-games-gallary').on('click', '.js-game-edit', function (event){
   $('#modal_game_edit').modal('show')
 });
 
+
+// 客製化下拉選單
+(function () {
+  $('.js-tgee-select').each(function () {
+
+    var el_root = $(this)
+    var el_select = $(this).find('select')
+    var el_default_text = $(this).find('.default-text')
+    var el_options = $(this).find('option:not(".default-text")')
+    var el_trigger = $('<div class="tgee-dropdown-trigger"></div>')
+    var el_trigger_text = $('<span class="mr-auto"></span>')
+    var el_trigger_icon = $('<i class="fas fa-chevron-down"></i>')
+    var el_dropdown_menu = $('<div class="tgee-dropdown-menu"></div>')
+    var el_dropdown_menu_body = $('<div class="tgee-dropdown-menu-body"></div>')
+
+    el_trigger_text.text(el_default_text.text())
+    el_trigger.append(el_trigger_text)
+    el_trigger.append(el_trigger_icon)
+    el_dropdown_menu.append(el_dropdown_menu_body)
+    el_root.append(el_trigger)
+    el_root.append(el_dropdown_menu)
+    
+    el_options.each(function () {
+      var el = $('<p class="tgee-dropdown-item"></p>')
+      var value = $(this).val()
+      var text = $(this).text()
+      el.text(text)
+      el.data('value', value)
+
+      function onclick() {
+        el_select.val(value)
+        el_trigger_text.text(text)
+      }
+      el.click(onclick)
+      el_dropdown_menu_body.append(el)
+    })
+
+    $(el_select).hide()
+
+    el_trigger.click(function (event) {
+      $(el_root).toggleClass('active')
+      event.stopPropagation()
+    });
+    
+    $('body').click(function () {
+      $(el_root).removeClass('active')
+    })
+  });
+})();
+
+
+//客製化下拉多選單
+(function () {
+  $('.js-tgee-select-multi').each(function () {
+    
+    var el_root = $(this)
+    var el_trigger = $(this).find('.tgee-dropdown-trigger')
+    var el_trigger_text = el_trigger.find('span')
+    var el_dropdown_menu = $(this).find('.tgee-dropdown-menu')
+    var inputs = $(this).find('input')
+
+    inputs.on('change', function () {
+      var texts = []
+      inputs.each(function () {
+        if (this.checked) texts.push($(this).val())
+      })
+
+      if (texts.length > 3) {
+        texts.length = 3
+        texts.push('...')
+      }
+      if (texts.length == 0) texts.push('平台')
+      el_trigger_text.text(texts.join(', '))
+    })
+    
+    el_trigger.click(function (event) {
+      el_root.toggleClass('active')
+      event.stopPropagation()
+    })
+
+    el_dropdown_menu.click(function (event) {
+      event.stopPropagation()
+    })
+
+    $('body').click(function () {
+      $(el_root).removeClass('active')
+    })
+  })
+})();

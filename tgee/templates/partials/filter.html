@@ -1,49 +1,23 @@
-<div class="p-2 rounded w-100 shadow d-md-flex align-items-center">
-  <div class="m-2"><span class="h3 mb-0">分類搜尋</span></div>
+<div class="p-2 p-md-3 rounded w-100 shadow d-md-flex align-items-center">
+  <div class="p-1 p-md-2">
+    <span class="h3 mb-0">分類搜尋</span>
+  </div>
   {% for my_filter in filters %}
-  {% if my_filter.multi %}
-  <div class="m-2 flex-grow-1">
-    <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger">
-        <span class="mr-auto">{{my_filter.name}}</span>
-        <i class="fas fa-chevron-down"></i>
-        <i class="fas fa-chevron-up"></i>
-      </div>
-      <div class="tgee-dropdown-menu pb-0">
-        <div class="tgee-dropdown-menu-extend">
-          <div class="d-flex flex-wrap">
-            {% for option in my_filter.options %}
-            <div class="p-1 w-25 d-flex">
-              <div class="tgee-checkbox mr-1"> 
-                <input class="mr-1" type="checkbox"/>
-                <div class="checkmark"></div>
-              </div>
-              {{option}}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
+    {% if my_filter.multi %}
+    <div class="p-1 p-md-2 flex-grow-1">
+      {% with default_text = my_filter.name, options = my_filter.options %}
+        {% include './partials/select_multi.html' %}
+      {% endwith %}
     </div>
-  </div>
-  {% else %}
-  <div class="m-2 flex-grow-1">
-    <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger">
-        <span class="mr-auto">{{my_filter.name}}</span>
-        <i class="fas fa-chevron-down"></i>
-        <i class="fas fa-chevron-up"></i>
-      </div>
-      <div class="tgee-dropdown-menu">
-        {% for option in my_filter.options %}
-        <p class="tgee-dropdown-item">{{option}}</p>
-        {% endfor %}
-      </div>
+    {% else %}
+    <div class="p-1 p-md-2 flex-grow-1">
+      {% with default_text = my_filter.name, options = my_filter.options %}
+        {% include './partials/select.html' %}
+      {% endwith %}
     </div>
-  </div>
-  {% endif %}
+    {% endif %}
   {% endfor %}
-  <div class="m-2">
+  <div class="p-1 p-md-2">
     <button class="tgee-btn-primary">搜尋</button>
   </div>
 </div>

@@ -6,19 +6,10 @@
 <div class="form-group">
   <label>公司型態<span class="text-secondary pl-1">*</span></label>
   <div class="border p-2">
-    <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger">
-        <span class="mr-auto">種類</span>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="tgee-dropdown-menu">
-        <div class="tgee-dropdown-menu-body">
-          <p>選項1</p>
-          <p>選項2</p>
-          <p>選項3</p>
-        </div>
-      </div>
-    </div><small class="text-gray-3">隱私設定</small>
+    {% with default_text='股份有限公司', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+      {% include './partials/select.html' %}
+    {% endwith %}
+    <small class="text-gray-3">隱私設定</small>
     <div class="d-flex">
       <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
       <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>
@@ -59,19 +50,10 @@
 </div>
 <div class="form-group"><label>如已成立公司，「負責人」對公司的出資或持股比例為多少？</label>
   <div class="border p-2">
-    <div class="tgee-dropdown js-tgee-dropdown">
-      <div class="tgee-dropdown-trigger">
-        <span class="mr-auto">種類</span>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="tgee-dropdown-menu">
-        <div class="tgee-dropdown-menu-body">
-          <p>選項1</p>
-          <p>選項2</p>
-          <p>選項3</p>
-        </div>
-      </div>
-    </div><small class="text-gray-3">隱私設定</small>
+    {% with default_text='種類', options=[(0, '選項1'), (1, '選項2'), (2, '選項3')] %}
+      {% include './partials/select.html' %}
+    {% endwith %}
+    <small class="text-gray-3">隱私設定</small>
     <div class="d-flex">
       <div class="mr-3"><input type="radio" />&nbsp;不設限</div>
       <div class="mr-3"><input type="radio" />&nbsp;對會員公開</div>

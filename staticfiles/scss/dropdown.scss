@@ -3,19 +3,22 @@ $height: 40px;
 .tgee-dropdown {
   position: relative;
   z-index: 10;
-  padding: $spacer/2 $spacer;
   background-color: $gray-4;
   height: 40px;
   min-width: 200px;
   border-radius: 20px;
   
   &-trigger {
+    @extend .noselect;
     display: flex;
     align-items: center;
-    @extend .noselect;
     position: relative;
+    padding: $spacer/2 $spacer;
     z-index: 10;
     cursor: pointer;
+    > span {
+      white-space: nowrap;
+    }
   }
 
   &-menu {
@@ -45,12 +48,12 @@ $height: 40px;
     display: none;
   }
 
-  &:not(.active) &-trigger i.fas.fa-chevron-up {
-    display: none;
+  &-trigger i.fas.fa-chevron-down {
+    transition: all 0.1s;
   }
 
   &.active &-trigger i.fas.fa-chevron-down {
-    display: none;
+    transform: rotate(180deg);
   }
 
   &:not(.active)::after {
@@ -69,7 +72,6 @@ $height: 40px;
   }
 
   .tgee-dropdown-menu-extend {
-    min-width: 600px;
     background-color: $gray-4;
     @extend .shadow;
     border-radius: 20px;
@@ -77,31 +79,38 @@ $height: 40px;
     padding: 15px;
     font-size: 14px;
   }
-}
 
+  @include media-breakpoint-up(md) {
+    .tgee-dropdown-menu-extend {
+      min-width: 600px;
+    }
+  }
 
-@include media-breakpoint-down(md) {
-  .tgee-dropdown.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1081;
-    border-radius: 0;
-
-    .tgee-dropdown-trigger {
-      background-color: #eeeeee;
+  @include media-breakpoint-down(md) {
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1081;
+      border-radius: 0;
+    }
+    &::after {
+      display: none;
+    }
+    &.active &-trigger {
       border-bottom: 1px solid #cccccc;
     }
-
-    .tgee-dropdown-menu {
+    &-menu {
       height: 100vh;
       width: 100vw;
+      padding-top: 40px;
+      background-color: #ffffff;
+      border-radius: 0px;
     }
-
-    .tgee-dropdown-item {
-      border: 1px solid #cccccc;
+    &-item {
+      border-bottom: 1px solid #cccccc;
     }
   }
 }

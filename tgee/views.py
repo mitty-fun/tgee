@@ -104,9 +104,8 @@ articles_data = [
     ('遊戲新聞', '文章標題文章標題文章標題文，章標題文標題文...', '隔著螢幕，誰是判官？以媒體識讀與輿論殺人等社會議題為主軸、上市以來廣受好評的臺灣原創遊戲《螢幕判官》隔著螢幕，誰是判官？以媒體識讀與輿論殺...'),
 ]
 
-filter_options = ['Block Making RPG', 'Casual', 'Sports Simulation', '互動戲劇', '其他', '冒險', '動作', '動作冒險', '動作角色扮演', '家庭', '射擊', '恐怖', '戰略', '格鬥', '桌上遊戲', '模擬', '模擬角色扮演', '獨特遊戲', '益智', '第一人稱射擊', '策略角色扮演', '街機', '角色扮演', '賽車', '運動', '音樂', '音樂節奏']
-
-cities = ['北部', '中部', '南部', '東部']
+# value, text
+options_cities = [(0, '北部'), (1, '中部'), (2, '南部'), (3, '東部')]
 
 
 # 相關資源
@@ -118,8 +117,8 @@ def resources_accounting(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['會計', '法務', '公司登記'], },
-            { 'name': '地區', 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': [(0, '會計'), (1, '法務'), (2, '公司登記')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities }
         ]
     }
     return render(request, 'resources/accounting.html', data)
@@ -129,8 +128,8 @@ def resources_community(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['技術', '交流'], },
-            { 'name': '地區', 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': [(0, '技術'), (1, '交流')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities }
         ]
     }
     return render(request, 'resources/community.html', data)
@@ -140,8 +139,8 @@ def resources_competition(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['學生', '公司行號', '不限定', '商務媒合'], },
-            { 'name': '地區', 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': [(0, '學生'), (1, '公司行號'), (2, '不限定'), (3, '商務媒合')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities }
         ]
     }
     return render(request, 'resources/competition.html', data)
@@ -151,8 +150,8 @@ def resources_government(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['借貸', '補助', '培訓', '媒合'], },
-            { 'name': '地區', 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': [(0, '借貸'), (1, '補助'), (2, '培訓'), (3, '媒合')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities }
         ]
     }
     return render(request, 'resources/government.html', data)
@@ -178,15 +177,15 @@ def terms(request):
 
 # 常見問題
 def faq(request):
-    return render(request, 'our/faq.html', {'faq_data': faq_data, 'filter_options': filter_options})
+    return render(request, 'our/faq.html', {'faq_data': faq_data })
 
 # 國際會展
 def campaigns(request):
     data = {
         'campaigns': campaigns_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['玩家展覽', '商務媒合'], },
-            { 'name': '地區', 'multi': False, 'options': ['台灣','亞洲','歐洲','美洲','非洲', '大洋洲'] }
+            { 'name': '類型', 'multi': False, 'options': [(0, '玩家展覽'), (1, '商務媒合')], },
+            { 'name': '地區', 'multi': False, 'options': [(0, '台灣'), (1, '亞洲'), (2, '歐洲'), (3, '美洲'), (4, '非洲'), (5, '大洋洲')] }
         ]
     }
     return render(request, 'campaigns/index.html', data)
@@ -196,8 +195,8 @@ def campaigns_courses(request):
     data = {
         'campaigns': campaigns_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['學習','藝文','商業','娛樂', '科技'], },
-            { 'name': '地區', 'multi': False, 'options': cities, }
+            { 'name': '類型', 'multi': False, 'options': [(0, '學習'), (1, '藝文'), (2, '商業'), (3, '娛樂'), (4, '科技')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities, }
         ]
     }
     return render(request, 'campaigns/courses.html', data)
@@ -219,8 +218,8 @@ def service_logged_in(request):
     data = {
         'resources': resources_data,
         'filters': [
-            { 'name': '類型', 'multi': False, 'options': ['技術', '交流'], },
-            { 'name': '地區', 'multi': False, 'options': cities }
+            { 'name': '類型', 'multi': False, 'options': [(0, '技術'), (1, '交流')], },
+            { 'name': '地區', 'multi': False, 'options': options_cities }
         ]
     }
     return render(request, 'service_logged_in.html', data)
@@ -255,8 +254,8 @@ def games(request):
     data = {
         'games': games_data,
         'filters': [
-            { 'name': '類型', 'multi': True, 'options': filter_options, },
-            { 'name': '平台', 'multi': True, 'options': ['PlayStation', 'XBOX', 'Switch', 'Steam', 'Humble Bundle', 'Ios', 'Android'], }
+            { 'name': '類型', 'multi': True, 'options': [(0, 'Block Making RPG'), (0,  'Casual'), (0,  'Sports Simulation'), (0,  '互動戲劇'), (0,  '其他'), (0,  '冒險'), (0,  '動作'), (0,  '動作冒險'), (0,  '動作角色扮演'), (0,  '家庭'), (0,  '射擊'), (0,  '恐怖'), (0,  '戰略'), (0,  '格鬥'), (0,  '桌上遊戲'), (0,  '模擬'), (0,  '模擬角色扮演'), (0,  '獨特遊戲'), (0,  '益智'), (0,  '第一人稱射擊'), (0,  '策略角色扮演'), (0,  '街機'), (0,  '角色扮演'), (0,  '賽車'), (0,  '運動'), (0,  '音樂'), (0,  '音樂節奏')], },
+            { 'name': '平台', 'multi': True, 'options': [(0, 'PlayStation'), (1, 'XBOX'), (2, 'Switch'), (3, 'Steam'), (4, 'Humble Bundle'), (5, 'Ios'), (6, 'Android')], }
         ]
     }
     return render(request, 'games/index.html', data)
@@ -280,6 +279,10 @@ def articles_show(request, hash_id):
 # 文章管理
 def articles_manage(request):
     return render(request, f'articles/manage.html', { 'posts': articles_data })
+
+# 新增文章
+def articles_new(request):
+    return render(request, 'articles/new.html')
 
 # 文章慣例
 def search(request):

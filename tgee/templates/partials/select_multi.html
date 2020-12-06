@@ -1,0 +1,21 @@
+<div class="tgee-dropdown js-tgee-select-multi">
+  <div class="tgee-dropdown-trigger">
+    <span class="mr-auto">{{my_filter.name}}</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="tgee-dropdown-menu pb-0">
+    <div class="tgee-dropdown-menu-extend">
+      <div class="row">
+        {% for value, text in options %}
+        <div class="col-6 col-md-3 p-1 d-flex">
+          <div class="tgee-checkbox mr-1"> 
+            <input class="mr-1" type="checkbox" value="{{text}}" name="{{text}}"/>
+            <div class="checkmark"></div>
+          </div>
+          <label for="">{{text}}</label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
